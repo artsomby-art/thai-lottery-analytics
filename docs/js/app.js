@@ -30,22 +30,28 @@ document.addEventListener('DOMContentLoaded', async () => {
  * Fetch all 4 JSON files in parallel with graceful fallback to mock data
  */
 async function loadAllData() {
-  const fetchWithFallback = async (url, fallbackObj) => {
+  const fetchWithFallback = async (primaryUrl, fallbackUrl, fallbackObj) => {
     try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    } catch (err) {
-      console.warn(`Could not load ${url} (${err.message}) — using mock data fallback.`);
-      return fallbackObj;
-    }
+      const res = await fetch(primaryUrl);
+      if (res.ok) return await res.json();
+    } catch (e) {}
+
+    try {
+      if (fallbackUrl) {
+        const res2 = await fetch(fallbackUrl);
+        if (res2.ok) return await res2.json();
+      }
+    } catch (e) {}
+
+    console.warn(`Could not load ${primaryUrl} or ${fallbackUrl} — using mock data fallback.`);
+    return fallbackObj;
   };
 
   const [results, statistics, predictions, backtesting] = await Promise.all([
-    fetchWithFallback('../data/results.json', typeof MOCK_RESULTS !== 'undefined' ? MOCK_RESULTS : null),
-    fetchWithFallback('../data/statistics.json', typeof MOCK_STATISTICS !== 'undefined' ? MOCK_STATISTICS : null),
-    fetchWithFallback('../data/predictions.json', typeof MOCK_PREDICTIONS !== 'undefined' ? MOCK_PREDICTIONS : null),
-    fetchWithFallback('../data/backtesting.json', typeof MOCK_BACKTESTING !== 'undefined' ? MOCK_BACKTESTING : null)
+    fetchWithFallback('data/results.json', '../data/results.json', typeof MOCK_RESULTS !== 'undefined' ? MOCK_RESULTS : null),
+    fetchWithFallback('data/statistics.json', '../data/statistics.json', typeof MOCK_STATISTICS !== 'undefined' ? MOCK_STATISTICS : null),
+    fetchWithFallback('data/predictions.json', '../data/predictions.json', typeof MOCK_PREDICTIONS !== 'undefined' ? MOCK_PREDICTIONS : null),
+    fetchWithFallback('data/backtesting.json', '../data/backtesting.json', typeof MOCK_BACKTESTING !== 'undefined' ? MOCK_BACKTESTING : null)
   ]);
 
   window.APP_DATA.results = results;

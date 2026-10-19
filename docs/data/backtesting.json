@@ -1,0 +1,284 @@
+{
+  "generated_at": "2026-10-19",
+  "methodology": "walk_forward",
+  "window_size": 24,
+  "test_draws_evaluated": 12,
+  "models": {
+    "frequency": {
+      "overall_accuracy": {
+        "last_two": 0.312,
+        "last_three_b": 0.148,
+        "last_three_f": 0.156
+      },
+      "history": [
+        {
+          "draw": "2026-10-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-10-01",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-09-01",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-08-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        }
+      ]
+    },
+    "arima": {
+      "overall_accuracy": {
+        "last_two": 0.278,
+        "last_three_b": 0.134,
+        "last_three_f": 0.142
+      },
+      "history": [
+        {
+          "draw": "2026-10-16",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-08-01",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-07-01",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-06-01",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        }
+      ]
+    },
+    "prophet": {
+      "overall_accuracy": {
+        "last_two": 0.334,
+        "last_three_b": 0.162,
+        "last_three_f": 0.171
+      },
+      "history": [
+        {
+          "draw": "2026-10-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-10-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-06-01",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        }
+      ]
+    },
+    "lstm": {
+      "overall_accuracy": {
+        "last_two": 0.298,
+        "last_three_b": 0.151,
+        "last_three_f": 0.158
+      },
+      "history": [
+        {
+          "draw": "2026-10-16",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": true
+        },
+        {
+          "draw": "2026-09-01",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "last_two_hit": false,
+          "last_three_b_hit": true,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-01",
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        }
+      ]
+    }
+  }
+}

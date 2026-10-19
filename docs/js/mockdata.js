@@ -12,82 +12,112 @@ const MOCK_RESULTS = {
     {
       date: "2026-10-16",
       draw_id: "2026-10-16",
-      first: "543219",
-      last_three_f: ["123", "456"],
-      last_three_b: ["789", "012"],
-      last_two: "19"
+      first: "011781",
+      first_prize: "011781",
+      last_three_f: ["392", "402"],
+      front_three: ["392", "402"],
+      last_three_b: ["171", "255"],
+      back_three: ["171", "255"],
+      last_two: "48"
     },
     {
       date: "2026-10-01",
       draw_id: "2026-10-01",
-      first: "287654",
-      last_three_f: ["234", "567"],
-      last_three_b: ["890", "123"],
-      last_two: "54"
+      first: "402701",
+      first_prize: "402701",
+      last_three_f: ["791", "912"],
+      front_three: ["791", "912"],
+      last_three_b: ["058", "396"],
+      back_three: ["058", "396"],
+      last_two: "70"
     },
     {
       date: "2026-09-16",
       draw_id: "2026-09-16",
-      first: "761234",
-      last_three_f: ["345", "678"],
-      last_three_b: ["901", "234"],
-      last_two: "34"
+      first: "730640",
+      first_prize: "730640",
+      last_three_f: ["060", "521"],
+      front_three: ["060", "521"],
+      last_three_b: ["266", "041"],
+      back_three: ["266", "041"],
+      last_two: "64"
     },
     {
       date: "2026-09-01",
       draw_id: "2026-09-01",
-      first: "439876",
-      last_three_f: ["456", "789"],
-      last_three_b: ["012", "345"],
-      last_two: "76"
+      first: "417212",
+      first_prize: "417212",
+      last_three_f: ["257", "346"],
+      front_three: ["257", "346"],
+      last_three_b: ["136", "740"],
+      back_three: ["136", "740"],
+      last_two: "04"
     },
     {
       date: "2026-08-16",
       draw_id: "2026-08-16",
-      first: "158423",
-      last_three_f: ["567", "890"],
-      last_three_b: ["123", "456"],
-      last_two: "23"
+      first: "004615",
+      first_prize: "004615",
+      last_three_f: ["731", "429"],
+      front_three: ["731", "429"],
+      last_three_b: ["937", "094"],
+      back_three: ["937", "094"],
+      last_two: "53"
     },
     {
       date: "2026-08-01",
       draw_id: "2026-08-01",
-      first: "672189",
-      last_three_f: ["678", "901"],
-      last_three_b: ["234", "567"],
-      last_two: "89"
+      first: "932479",
+      first_prize: "932479",
+      last_three_f: ["413", "672"],
+      front_three: ["413", "672"],
+      last_three_b: ["154", "039"],
+      back_three: ["154", "039"],
+      last_two: "69"
     },
     {
       date: "2026-07-16",
       draw_id: "2026-07-16",
-      first: "304567",
-      last_three_f: ["789", "012"],
-      last_three_b: ["345", "678"],
-      last_two: "67"
+      first: "639214",
+      first_prize: "639214",
+      last_three_f: ["683", "709"],
+      front_three: ["683", "709"],
+      last_three_b: ["746", "427"],
+      back_three: ["746", "427"],
+      last_two: "71"
     },
     {
       date: "2026-07-01",
       draw_id: "2026-07-01",
-      first: "891234",
-      last_three_f: ["890", "123"],
-      last_three_b: ["456", "789"],
-      last_two: "34"
+      first: "751495",
+      first_prize: "751495",
+      last_three_f: ["001", "980"],
+      front_three: ["001", "980"],
+      last_three_b: ["304", "531"],
+      back_three: ["304", "531"],
+      last_two: "62"
     },
     {
       date: "2026-06-16",
       draw_id: "2026-06-16",
-      first: "526789",
-      last_three_f: ["901", "234"],
-      last_three_b: ["567", "890"],
-      last_two: "89"
+      first: "287184",
+      first_prize: "287184",
+      last_three_f: ["758", "434"],
+      front_three: ["758", "434"],
+      last_three_b: ["007", "721"],
+      back_three: ["007", "721"],
+      last_two: "48"
     },
     {
       date: "2026-06-01",
       draw_id: "2026-06-01",
-      first: "148963",
-      last_three_f: ["012", "345"],
-      last_three_b: ["678", "901"],
-      last_two: "63"
+      first: "173770",
+      first_prize: "173770",
+      last_three_f: ["415", "848"],
+      front_three: ["415", "848"],
+      last_three_b: ["410", "938"],
+      back_three: ["410", "938"],
+      last_two: "95"
     }
   ]
 };

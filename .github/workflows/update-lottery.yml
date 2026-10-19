@@ -1,0 +1,103 @@
+name: Update Lottery Data
+
+on:
+  schedule:
+    # 1st of every month at 11:00 UTC (18:00 ICT)
+    - cron: '0 11 1 * *'
+    # 16th of every month at 11:00 UTC (18:00 ICT)
+    - cron: '0 11 16 * *'
+  workflow_dispatch:  # Manual trigger
+    inputs:
+      force_full_scrape:
+        description: 'Force full historical re-scrape'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write  # Need write to commit data
+  pages: write
+  id-token: write
+  issues: write
+  actions: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run lottery data pipeline
+        run: python scripts/main.py
+        env:
+          FORCE_FULL_SCRAPE: ${{ github.event.inputs.force_full_scrape }}
+
+      - name: Commit and push data files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add data/
+          git diff --staged --quiet || git commit -m "data: update lottery results $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  retry-on-failure:
+    needs: update-data
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait 2 hours before retry
+        run: sleep 7200
+      - name: Trigger retry
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'update-lottery.yml',
+              ref: 'main'
+            })
+
+  create-issue-on-failure:
+    needs: [update-data, retry-on-failure]
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 Lottery Data Update Failed - ${new Date().toLocaleDateString('th-TH')}`,
+              body: 'The automated lottery data update pipeline failed. Please check the Actions log.',
+              labels: ['bug', 'automated']
+            })

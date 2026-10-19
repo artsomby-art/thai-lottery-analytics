@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+venv/
+.venv/
+env/
+.env/
+
+# ML model weights (large files, regenerated each run)
+scripts/models/weights/
+*.h5
+*.keras
+*.pkl
+*.joblib
+
+# Development
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data (managed by GitHub Actions, committed selectively)
+data/raw/*
+!data/raw/.gitkeep
+# Note: data/*.json and data/*.csv ARE committed (tracked)
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage

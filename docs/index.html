@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="th" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thai Lottery Analytics — วิเคราะห์และคาดการณ์สถิติสลากกินแบ่งรัฐบาล</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎰</text></svg>">
+  
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Google Fonts: Sarabun & Kanit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="#">
+        <span class="fs-3">🎰</span>
+        <div>
+          <div class="brand-title lh-1">THAI LOTTERY <span class="accent">ANALYTICS</span></div>
+          <small class="text-muted" style="font-size: 0.75rem;">ระบบสถิติและความน่าจะเป็นสลากกินแบ่งรัฐบาลไทย</small>
+        </div>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <div class="ms-auto d-flex align-items-center flex-wrap gap-2 mt-3 mt-lg-0">
+          <span id="navbar-last-updated" class="badge bg-dark border border-secondary px-3 py-2 text-muted">
+            <i class="bi bi-clock-history me-1"></i> กำลังโหลด...
+          </span>
+          <span id="navbar-next-draw" class="badge bg-warning text-dark px-3 py-2 fw-bold">
+            <i class="bi bi-calendar-event me-1"></i> งวดถัดไป: --
+          </span>
+          <a href="https://github.com" target="_blank" class="btn btn-outline-secondary btn-sm px-3 ms-lg-2">
+            <i class="bi bi-github me-1"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container-xl py-4 flex-grow-1">
+
+    <!-- Disclaimer Banner -->
+    <div class="disclaimer-banner p-3 mb-4 d-flex align-items-center justify-content-between fade-in shadow-sm">
+      <div class="d-flex align-items-center gap-3">
+        <i class="bi bi-exclamation-triangle-fill fs-3 text-warning"></i>
+        <div class="small">
+          <strong>ข้อจำกัดความรับผิดชอบ (Disclaimer):</strong>
+          การออกรางวัลสลากกินแบ่งรัฐบาลเป็นการสุ่มอิสระ (Independent Random Events) ในทางสถิติไม่มีสูตรใดการันตีผลลัพธ์ได้ ข้อมูลและโมเดลทั้งหมดมีไว้เพื่อการศึกษาเชิงสถิติและการวิเคราะห์ทางวิทยาศาสตร์ข้อมูลเท่านั้น
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats Metric Row -->
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-md-3">
+        <div class="dash-card p-3 d-flex align-items-center gap-3">
+          <div class="rounded-circle p-3 bg-dark border border-secondary text-warning fs-4">
+            <i class="bi bi-database-check"></i>
+          </div>
+          <div>
+            <div class="text-muted small">จำนวนงวดที่ประมวลผล</div>
+            <div id="stat-total-draws" class="fs-4 fw-bold text-light">--</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="dash-card p-3 d-flex align-items-center gap-3">
+          <div class="rounded-circle p-3 bg-dark border border-secondary text-info fs-4">
+            <i class="bi bi-hourglass-split"></i>
+          </div>
+          <div>
+            <div class="text-muted small">ช่วงเวลาย้อนหลัง</div>
+            <div id="stat-years-span" class="fs-4 fw-bold text-light">20+ ปี</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="dash-card p-3 d-flex align-items-center gap-3">
+          <div class="rounded-circle p-3 bg-dark border border-secondary text-success fs-4">
+            <i class="bi bi-cpu"></i>
+          </div>
+          <div>
+            <div class="text-muted small">โมเดลประมวลผล</div>
+            <div class="fs-4 fw-bold text-light">4 โมเดล (Ensemble)</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="dash-card p-3 d-flex align-items-center gap-3">
+          <div class="rounded-circle p-3 bg-dark border border-secondary text-danger fs-4">
+            <i class="bi bi-bullseye"></i>
+          </div>
+          <div>
+            <div class="text-muted small">งวดเป้าหมายถัดไป</div>
+            <div id="stat-next-date" class="fs-6 fw-bold text-warning pt-1">--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Tabs Navigation -->
+    <ul class="nav nav-pills nav-pills-custom mb-4" id="mainTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-overview-btn" data-bs-toggle="pill" data-bs-target="#tab-overview" type="button" role="tab">
+          <i class="bi bi-bar-chart-fill me-1"></i> 📊 ภาพรวม
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-stats-btn" data-bs-toggle="pill" data-bs-target="#tab-stats" type="button" role="tab">
+          <i class="bi bi-graph-up-arrow me-1"></i> 📈 สถิติเชิงลึก
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-predictions-btn" data-bs-toggle="pill" data-bs-target="#tab-predictions" type="button" role="tab">
+          <i class="bi bi-robot me-1"></i> 🤖 คาดการณ์ ML
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-history-btn" data-bs-toggle="pill" data-bs-target="#tab-history" type="button" role="tab">
+          <i class="bi bi-table me-1"></i> 📋 ผลย้อนหลัง
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-about-btn" data-bs-toggle="pill" data-bs-target="#tab-about" type="button" role="tab">
+          <i class="bi bi-info-circle-fill me-1"></i> ℹ️ เกี่ยวกับ
+        </button>
+      </li>
+    </ul>
+
+    <!-- Tab Contents -->
+    <div class="tab-content" id="mainTabContent">
+
+      <!-- ========================================== -->
+      <!-- TAB 1: 📊 ภาพรวม (Overview)                 -->
+      <!-- ========================================== -->
+      <div class="tab-pane fade show active" id="tab-overview" role="tabpanel">
+        
+        <!-- Hero: Latest Draw Results -->
+        <div class="dash-card p-4 mb-4">
+          <div class="d-flex align-items-center justify-content-between mb-3 border-bottom border-dark pb-2">
+            <h5 class="fw-bold mb-0 text-light"><i class="bi bi-trophy-fill text-warning me-2"></i>ผลรางวัลสลากกินแบ่งรัฐบาลล่าสุด</h5>
+            <span id="hero-draw-date" class="badge bg-dark border border-secondary text-warning fs-6">กำลังโหลด...</span>
+          </div>
+
+          <div class="row g-3 text-center">
+            <!-- รางวัลที่ 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="p-3 rounded h-100" style="background: var(--bg-tertiary);">
+                <div class="text-muted small mb-1">รางวัลที่ 1 (6 ตัว)</div>
+                <div id="hero-first-prize" class="prize-number prize-number-hero">------</div>
+                <div class="text-muted small mt-1">รางวัลละ 6,000,000 บาท</div>
+              </div>
+            </div>
+            <!-- เลขหน้า 3 ตัว -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="p-3 rounded h-100" style="background: var(--bg-tertiary);">
+                <div class="text-muted small mb-1">เลขหน้า 3 ตัว (2 รางวัล)</div>
+                <div id="hero-front-three" class="prize-number prize-number-sub text-light">---   ---</div>
+                <div class="text-muted small mt-1">รางวัลละ 4,000 บาท</div>
+              </div>
+            </div>
+            <!-- เลขท้าย 3 ตัว -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="p-3 rounded h-100" style="background: var(--bg-tertiary);">
+                <div class="text-muted small mb-1">เลขท้าย 3 ตัว (2 รางวัล)</div>
+                <div id="hero-back-three" class="prize-number prize-number-sub text-light">---   ---</div>
+                <div class="text-muted small mt-1">รางวัลละ 4,000 บาท</div>
+              </div>
+            </div>
+            <!-- เลขท้าย 2 ตัว -->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="p-3 rounded h-100" style="background: var(--bg-tertiary);">
+                <div class="text-muted small mb-1">เลขท้าย 2 ตัว (1 รางวัล)</div>
+                <div id="hero-last-two" class="prize-number prize-number-hero text-info">--</div>
+                <div class="text-muted small mt-1">รางวัลละ 2,000 บาท</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hot & Cold Section + Chart -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-7">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-3">
+                <span><i class="bi bi-fire text-danger me-2"></i>การเปรียบเทียบเลขร้อน vs เลขเย็น (เลขท้าย 2 ตัว)</span>
+                <span class="badge bg-dark border border-secondary text-muted">24 งวดล่าสุด</span>
+              </div>
+              <div id="chart-hotcold" class="chart-box"></div>
+            </div>
+          </div>
+          
+          <div class="col-lg-5">
+            <div class="dash-card p-3 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="dash-card-header mb-3">
+                  <span><i class="bi bi-stars text-warning me-2"></i>สรุปตัวเลขเด่นประจำงวด</span>
+                </div>
+                
+                <div class="mb-3">
+                  <div class="text-danger small fw-bold mb-2"><i class="bi bi-thermometer-high"></i> เลขร้อน (ออกบ่อยที่สุดใน 24 งวด):</div>
+                  <div id="overview-hot-list" class="d-flex flex-wrap"></div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="text-primary small fw-bold mb-2"><i class="bi bi-thermometer-snow"></i> เลขเย็น (ไม่ออกนานที่สุด):</div>
+                  <div id="overview-cold-list" class="d-flex flex-wrap"></div>
+                </div>
+              </div>
+
+              <div class="alert alert-dark border border-secondary small mb-0">
+                <i class="bi bi-lightbulb-fill text-warning me-1"></i>
+                <strong>คำแนะนำเชิงสถิติ:</strong> ผู้ซื้อสลากมักเลือกระหว่าง "เลขร้อน" ตามกระแสความถี่สูง หรือ "เลขเย็น" ที่รอการเฉลี่ยเข้าสู่ค่ากลาง (Regression to the mean)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ensemble Top 5 Predictions Preview -->
+        <div class="dash-card p-4">
+          <div class="dash-card-header mb-3">
+            <span><i class="bi bi-cpu-fill text-warning me-2"></i>สรุปตัวเลขคาดการณ์ยอดนิยม (Ensemble Combined Model Top 5)</span>
+            <small class="text-muted">ประมวลผลจากการรวม 4 โมเดล</small>
+          </div>
+          <div id="overview-top-predictions"></div>
+        </div>
+
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 2: 📈 สถิติเชิงลึก (Deep Statistics)     -->
+      <!-- ========================================== -->
+      <div class="tab-pane fade" id="tab-stats" role="tabpanel">
+        
+        <!-- Sub-filter buttons -->
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+          <div class="btn-group btn-filter-group" role="group">
+            <button type="button" class="btn stats-filter-btn active" data-prize="last_two">เลขท้าย 2 ตัว</button>
+            <button type="button" class="btn stats-filter-btn" data-prize="last_three_b">เลขท้าย 3 ตัว</button>
+            <button type="button" class="btn stats-filter-btn" data-prize="last_three_f">เลขหน้า 3 ตัว</button>
+            <button type="button" class="btn stats-filter-btn" data-prize="first_prize">รางวัลที่ 1</button>
+          </div>
+          <span class="text-muted small"><i class="bi bi-funnel me-1"></i>เลือกประเภทรางวัลเพื่อดูการแจกแจงทางสถิติ</span>
+        </div>
+
+        <!-- Row 1: Heatmap & Gap Analysis -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-6">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-2">
+                <span><i class="bi bi-grid-3x3-gap-fill text-warning me-2"></i>Heatmap ความถี่ตัวเลขรายตำแหน่ง (0-9)</span>
+              </div>
+              <div id="chart-heatmap" class="chart-box"></div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-2">
+                <span><i class="bi bi-clock-history text-info me-2"></i>Gap Analysis (จำนวนงวดที่ตัวเลขไม่ออก)</span>
+              </div>
+              <div id="chart-gap" class="chart-box"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Monthly Pattern & Even/Odd/High/Low -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-6">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-2">
+                <span><i class="bi bi-calendar3 text-success me-2"></i>แนวโน้มความถี่จำแนกตามเดือน (Monthly Seasonality)</span>
+              </div>
+              <div id="chart-month" class="chart-box"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-2">
+                <span><i class="bi bi-pie-chart-fill text-warning me-2"></i>สัดส่วน คู่/คี่ (Even/Odd) และ สูง/ต่ำ (High/Low)</span>
+              </div>
+              <div class="row g-2">
+                <div class="col-6">
+                  <div id="chart-evenodd" class="chart-box-sm"></div>
+                </div>
+                <div class="col-6">
+                  <div id="chart-highlow" class="chart-box-sm"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 3: 🤖 คาดการณ์ ML (ML Predictions)       -->
+      <!-- ========================================== -->
+      <div class="tab-pane fade" id="tab-predictions" role="tabpanel">
+        
+        <!-- Sub-filter buttons -->
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+          <div class="btn-group btn-filter-group" role="group">
+            <button type="button" class="btn pred-filter-btn active" data-prize="last_two">เลขท้าย 2 ตัว</button>
+            <button type="button" class="btn pred-filter-btn" data-prize="last_three_b">เลขท้าย 3 ตัว</button>
+            <button type="button" class="btn pred-filter-btn" data-prize="last_three_f">เลขหน้า 3 ตัว</button>
+            <button type="button" class="btn pred-filter-btn" data-prize="first_prize">รางวัลที่ 1</button>
+          </div>
+          <span class="text-muted small"><i class="bi bi-sliders me-1"></i>แสดงผลลัพธ์แยกรายโมเดลและการรวม Ensemble</span>
+        </div>
+
+        <!-- 4 Model Gauges Row -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-md-3">
+            <div class="dash-card p-3 text-center">
+              <div class="text-muted small mb-1 fw-bold">Frequency Model</div>
+              <div id="chart-gauge-frequency" style="height: 140px;"></div>
+              <small class="text-warning">Backtesting Hit Rate</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="dash-card p-3 text-center">
+              <div class="text-muted small mb-1 fw-bold">ARIMA Model</div>
+              <div id="chart-gauge-arima" style="height: 140px;"></div>
+              <small class="text-info">Backtesting Hit Rate</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="dash-card p-3 text-center">
+              <div class="text-muted small mb-1 fw-bold">Prophet Model</div>
+              <div id="chart-gauge-prophet" style="height: 140px;"></div>
+              <small class="text-success">Backtesting Hit Rate</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="dash-card p-3 text-center">
+              <div class="text-muted small mb-1 fw-bold">LSTM Neural Net</div>
+              <div id="chart-gauge-lstm" style="height: 140px;"></div>
+              <small class="text-purple" style="color: var(--accent-purple);">Backtesting Hit Rate</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ensemble Top 10 Ranked Table -->
+        <div class="dash-card p-4 mb-4">
+          <div class="dash-card-header mb-3">
+            <span><i class="bi bi-award-fill text-warning me-2"></i>อันดับความน่าจะเป็นสูงสุด (Ensemble Combined Score Top 10)</span>
+            <span class="badge bg-warning text-dark">น้ำหนักคำนวณจาก Walk-Forward Validation</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-custom table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th class="text-center" style="width: 80px;">อันดับ</th>
+                  <th style="width: 140px;">ตัวเลข</th>
+                  <th>คะแนนความเชื่อมั่น (Confidence Score)</th>
+                  <th>โมเดลที่ให้คะแนนตรงกัน</th>
+                </tr>
+              </thead>
+              <tbody id="pred-ensemble-table-body">
+                <tr><td colspan="4" class="text-center text-muted py-3">กำลังโหลดข้อมูล...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Per-Model Breakdown Columns -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-lg-3">
+            <div class="dash-card p-3 h-100">
+              <div class="fw-bold small text-warning mb-2 border-bottom border-dark pb-1">
+                <i class="bi bi-bar-chart"></i> 1. Frequency Model
+              </div>
+              <div id="pred-list-frequency"></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="dash-card p-3 h-100">
+              <div class="fw-bold small text-info mb-2 border-bottom border-dark pb-1">
+                <i class="bi bi-graph-up"></i> 2. ARIMA (2,1,2)
+              </div>
+              <div id="pred-list-arima"></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="dash-card p-3 h-100">
+              <div class="fw-bold small text-success mb-2 border-bottom border-dark pb-1">
+                <i class="bi bi-calendar2-range"></i> 3. Prophet
+              </div>
+              <div id="pred-list-prophet"></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="dash-card p-3 h-100">
+              <div class="fw-bold small text-purple mb-2 border-bottom border-dark pb-1" style="color: var(--accent-purple);">
+                <i class="bi bi-layers"></i> 4. LSTM Net
+              </div>
+              <div id="pred-list-lstm"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ML Evaluation Charts Row -->
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-2">
+                <span><i class="bi bi-activity text-warning me-2"></i>ความแม่นยำย้อนหลังของแต่ละโมเดล (Historical Accuracy Trend)</span>
+              </div>
+              <div id="chart-hist-accuracy" class="chart-box"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-2">
+                <span><i class="bi bi-pie-chart text-info me-2"></i>สัดส่วนน้ำหนัก Ensemble</span>
+              </div>
+              <div id="chart-weights" class="chart-box"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 4: 📋 ผลย้อนหลัง (Historical Results)   -->
+      <!-- ========================================== -->
+      <div class="tab-pane fade" id="tab-history" role="tabpanel">
+        
+        <div class="dash-card p-4">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+            <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 450px;">
+              <div class="input-group">
+                <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
+                <input type="text" id="history-search-input" class="form-control bg-dark border-secondary text-light" placeholder="ค้นหาตัวเลข เช่น 23, 567 หรือ วันที่...">
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+              <button id="history-export-btn" class="btn btn-outline-warning btn-sm px-3">
+                <i class="bi bi-download me-1"></i> ส่งออก CSV
+              </button>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-custom table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>งวดประจำวันที่</th>
+                  <th>รางวัลที่ 1</th>
+                  <th>เลขหน้า 3 ตัว</th>
+                  <th>เลขท้าย 3 ตัว</th>
+                  <th>เลขท้าย 2 ตัว</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body">
+                <tr><td colspan="5" class="text-center text-muted py-4">กำลังโหลดข้อมูล...</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination Controls -->
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-4 pt-3 border-top border-dark">
+            <span id="history-page-info" class="text-muted small">กำลังคำนวณ...</span>
+            <div class="btn-group">
+              <button id="history-prev-btn" class="btn btn-dark border-secondary btn-sm px-3" disabled>
+                <i class="bi bi-chevron-left me-1"></i> ก่อนหน้า
+              </button>
+              <button id="history-next-btn" class="btn btn-dark border-secondary btn-sm px-3">
+                ถัดไป <i class="bi bi-chevron-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 5: ℹ️ เกี่ยวกับ (About & Methodology)     -->
+      <!-- ========================================== -->
+      <div class="tab-pane fade" id="tab-about" role="tabpanel">
+        
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="dash-card p-4 mb-4">
+              <h5 class="fw-bold text-warning mb-3"><i class="bi bi-shield-shaded me-2"></i>ข้อพึงตระหนักและความโปร่งใส (Transparency & Disclaimer)</h5>
+              <p class="text-light">
+                ระบบ <strong>Thai Lottery Analytics</strong> ได้รับการพัฒนาขึ้นโดยมีเป้าหมายเพื่อเป็นเครื่องมือประมวลผลข้อมูลทางสถิติและแบบจำลองวิทยาศาสตร์ข้อมูล (Data Science) 
+                ผลสลากกินแบ่งรัฐบาลแต่ละงวดเป็นปรากฏการณ์สุ่มแบบอิสระ (Independent and Identically Distributed Random Variables)
+              </p>
+              <div class="alert alert-dark border border-secondary mb-3">
+                <i class="bi bi-info-circle-fill text-warning me-2"></i>
+                แบบจำลองทางสถิติไม่สามารถทดแทนการสุ่มได้ และผลคะแนนความน่าจะเป็น (Confidence Score) ไม่ใช่คำสัญญาหรือการรับประกันผลรางวัลใดๆ ทั้งสิ้น ผู้ใช้งานควรใช้วิจารณญาณและความรับผิดชอบในการตัดสินใจทางการเงิน
+              </div>
+            </div>
+
+            <div class="dash-card p-4 mb-4">
+              <h5 class="fw-bold text-light mb-3"><i class="bi bi-diagram-3-fill text-info me-2"></i>สถาปัตยกรรมและการทำงานของระบบ</h5>
+              <p class="text-muted small">
+                ระบบใช้รูปแบบ <strong>Pre-computed Static Site Architecture</strong> ดำเนินการผ่าน GitHub Actions ทุกวันที่ 1 และ 16 ของเดือน:
+              </p>
+              <ol class="text-light small d-flex flex-column gap-2 mb-0">
+                <li><strong>Data Ingestion:</strong> รวบรวมข้อมูลด้วยสถาปัตยกรรม Fallback 3 แหล่ง (myhora.com → sanook.com → glo.or.th) เพื่อความต่อเนื่องของข้อมูล</li>
+                <li><strong>Feature Engineering:</strong> คำนวณความถี่, Gap Analysis (ระยะห่างการไม่ออก), คู่/คี่, สูง/ต่ำ, ข้างขึ้นข้างแรม และ Pattern รายเดือน</li>
+                <li><strong>Machine Learning Ensemble:</strong>
+                  <ul>
+                    <li><strong>Frequency Model:</strong> คำนวณการแจกแจงความถี่ถ่วงน้ำหนักตามประวัติศาสตร์</li>
+                    <li><strong>ARIMA (2,1,2):</strong> ตรวจจับแนวโน้มความถี่และ Autocorrelation ตามลำดับเวลา</li>
+                    <li><strong>Prophet:</strong> วิเคราะห์ปัจจัยฤดูกาลและผลกระทบของช่วงวัน/เดือน</li>
+                    <li><strong>LSTM Deep Learning:</strong> โครงข่ายประสาทเทียมตรวจจับรูปแบบลำดับตัวเลข 24 งวดย้อนหลัง</li>
+                  </ul>
+                </li>
+                <li><strong>Walk-Forward Backtesting:</strong> ประเมินความแม่นยำย้อนหลังแบบจำลองจริงทีละงวด เพื่อนำค่า Hit-Rate มากำหนดน้ำหนัก Dynamic Weight ให้กับ Ensemble</li>
+                <li><strong>Automated Export:</strong> บันทึกผลลัพธ์ลง JSON/CSV และแสดงผลผ่าน GitHub Pages ทันทีโดยไม่ต้องมีค่าใช้จ่ายเซิร์ฟเวอร์</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="dash-card p-4 mb-4">
+              <h6 class="fw-bold text-light mb-3"><i class="bi bi-hdd-network me-2"></i>แหล่งข้อมูลอ้างอิง</h6>
+              <ul class="list-unstyled small text-muted d-flex flex-column gap-2 mb-0">
+                <li><i class="bi bi-link-45deg text-warning"></i> <a href="https://myhora.com/lottery/" target="_blank" class="text-decoration-none text-light">myhora.com/lottery</a> (แหล่งข้อมูลหลัก)</li>
+                <li><i class="bi bi-link-45deg text-warning"></i> <a href="https://news.sanook.com/lotto/" target="_blank" class="text-decoration-none text-light">sanook.com/lottery</a> (แหล่งสำรองที่ 1)</li>
+                <li><i class="bi bi-link-45deg text-warning"></i> <a href="https://glo.or.th" target="_blank" class="text-decoration-none text-light">glo.or.th</a> (สำนักงานสลากกินแบ่งรัฐบาล)</li>
+              </ul>
+            </div>
+
+            <div class="dash-card p-4">
+              <h6 class="fw-bold text-light mb-3"><i class="bi bi-code-slash me-2"></i>สัญญาอนุญาต (License)</h6>
+              <p class="small text-muted mb-2">
+                โปรเจกต์นี้เผยแพร่ภายใต้สัญญาอนุญาตแบบโอเพนซอร์ส <strong>MIT License</strong> สามารถนำไปศึกษา ค้นคว้า และพัฒนาต่อยอดได้อย่างเสรี
+              </p>
+              <span class="badge bg-dark border border-secondary text-light">Version 1.0.0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3">
+    <div class="container-xl d-flex align-items-center justify-content-between flex-wrap gap-2 text-muted">
+      <div>
+        <span>© 2026 Thai Lottery Analytics. All rights reserved.</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Powered by Apache ECharts & Bootstrap 5</span>
+        <a href="https://github.com" target="_blank" class="text-muted text-decoration-none hover-light">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDN Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/mockdata.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

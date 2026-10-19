@@ -1,0 +1,942 @@
+{
+  "generated_at": "2026-10-16",
+  "next_draw_date": "2026-11-01",
+  "prize_types": {
+    "first_prize": {
+      "models": {
+        "frequency": {
+          "top10": [
+            {
+              "number": "142619",
+              "score": 1.4667
+            },
+            {
+              "number": "142679",
+              "score": 1.4667
+            },
+            {
+              "number": "142689",
+              "score": 1.4667
+            },
+            {
+              "number": "143619",
+              "score": 1.4667
+            },
+            {
+              "number": "143679",
+              "score": 1.4667
+            },
+            {
+              "number": "143689",
+              "score": 1.4667
+            },
+            {
+              "number": "144619",
+              "score": 1.4667
+            },
+            {
+              "number": "144679",
+              "score": 1.4667
+            },
+            {
+              "number": "144689",
+              "score": 1.4667
+            },
+            {
+              "number": "342619",
+              "score": 1.4667
+            }
+          ],
+          "weight": 0.312
+        },
+        "arima": {
+          "top10": [
+            {
+              "number": "142619",
+              "score": 9e-06
+            },
+            {
+              "number": "142679",
+              "score": 9e-06
+            },
+            {
+              "number": "142689",
+              "score": 9e-06
+            },
+            {
+              "number": "143619",
+              "score": 9e-06
+            },
+            {
+              "number": "143679",
+              "score": 9e-06
+            },
+            {
+              "number": "143689",
+              "score": 9e-06
+            },
+            {
+              "number": "144619",
+              "score": 9e-06
+            },
+            {
+              "number": "144679",
+              "score": 9e-06
+            },
+            {
+              "number": "144689",
+              "score": 9e-06
+            },
+            {
+              "number": "342619",
+              "score": 9e-06
+            }
+          ],
+          "weight": 0.278
+        },
+        "prophet": {
+          "top10": [
+            {
+              "number": "142619",
+              "score": 9e-06
+            },
+            {
+              "number": "142679",
+              "score": 9e-06
+            },
+            {
+              "number": "142689",
+              "score": 9e-06
+            },
+            {
+              "number": "143619",
+              "score": 9e-06
+            },
+            {
+              "number": "143679",
+              "score": 9e-06
+            },
+            {
+              "number": "143689",
+              "score": 9e-06
+            },
+            {
+              "number": "144619",
+              "score": 9e-06
+            },
+            {
+              "number": "144679",
+              "score": 9e-06
+            },
+            {
+              "number": "144689",
+              "score": 9e-06
+            },
+            {
+              "number": "342619",
+              "score": 9e-06
+            }
+          ],
+          "weight": 0.334
+        },
+        "lstm": {
+          "top10": [
+            {
+              "number": "142619",
+              "score": 0.1326
+            },
+            {
+              "number": "142619",
+              "score": 0.1326
+            },
+            {
+              "number": "142619",
+              "score": 0.1326
+            },
+            {
+              "number": "142619",
+              "score": 0.1326
+            },
+            {
+              "number": "323172",
+              "score": 0.1186
+            },
+            {
+              "number": "434483",
+              "score": 0.1186
+            },
+            {
+              "number": "323172",
+              "score": 0.1186
+            },
+            {
+              "number": "434483",
+              "score": 0.1186
+            },
+            {
+              "number": "323172",
+              "score": 0.1186
+            },
+            {
+              "number": "434483",
+              "score": 0.1186
+            }
+          ],
+          "weight": 0.298
+        }
+      },
+      "ensemble": {
+        "top10": [
+          {
+            "number": "142619",
+            "score": 1.0
+          },
+          {
+            "number": "142679",
+            "score": 0.7433
+          },
+          {
+            "number": "142689",
+            "score": 0.7433
+          },
+          {
+            "number": "143619",
+            "score": 0.7433
+          },
+          {
+            "number": "143679",
+            "score": 0.7433
+          },
+          {
+            "number": "143689",
+            "score": 0.7433
+          },
+          {
+            "number": "144619",
+            "score": 0.7433
+          },
+          {
+            "number": "144679",
+            "score": 0.7433
+          },
+          {
+            "number": "144689",
+            "score": 0.7433
+          },
+          {
+            "number": "342619",
+            "score": 0.7433
+          }
+        ],
+        "weights": {
+          "frequency": 0.312,
+          "arima": 0.278,
+          "prophet": 0.334,
+          "lstm": 0.298
+        }
+      }
+    },
+    "front_three": {
+      "models": {
+        "frequency": {
+          "top10": [
+            {
+              "number": "456",
+              "score": 1.2
+            },
+            {
+              "number": "457",
+              "score": 1.2
+            },
+            {
+              "number": "466",
+              "score": 1.2
+            },
+            {
+              "number": "467",
+              "score": 1.2
+            },
+            {
+              "number": "556",
+              "score": 1.2
+            },
+            {
+              "number": "557",
+              "score": 1.2
+            },
+            {
+              "number": "566",
+              "score": 1.2
+            },
+            {
+              "number": "567",
+              "score": 1.2
+            },
+            {
+              "number": "156",
+              "score": 1.1333
+            },
+            {
+              "number": "157",
+              "score": 1.1333
+            }
+          ],
+          "weight": 0.312
+        },
+        "arima": {
+          "top10": [
+            {
+              "number": "456",
+              "score": 0.001728
+            },
+            {
+              "number": "457",
+              "score": 0.001728
+            },
+            {
+              "number": "466",
+              "score": 0.001728
+            },
+            {
+              "number": "467",
+              "score": 0.001728
+            },
+            {
+              "number": "556",
+              "score": 0.001728
+            },
+            {
+              "number": "557",
+              "score": 0.001728
+            },
+            {
+              "number": "566",
+              "score": 0.001728
+            },
+            {
+              "number": "567",
+              "score": 0.001728
+            },
+            {
+              "number": "450",
+              "score": 0.00144
+            },
+            {
+              "number": "453",
+              "score": 0.00144
+            }
+          ],
+          "weight": 0.278
+        },
+        "prophet": {
+          "top10": [
+            {
+              "number": "456",
+              "score": 0.001728
+            },
+            {
+              "number": "457",
+              "score": 0.001728
+            },
+            {
+              "number": "466",
+              "score": 0.001728
+            },
+            {
+              "number": "467",
+              "score": 0.001728
+            },
+            {
+              "number": "556",
+              "score": 0.001728
+            },
+            {
+              "number": "557",
+              "score": 0.001728
+            },
+            {
+              "number": "566",
+              "score": 0.001728
+            },
+            {
+              "number": "567",
+              "score": 0.001728
+            },
+            {
+              "number": "450",
+              "score": 0.00144
+            },
+            {
+              "number": "453",
+              "score": 0.00144
+            }
+          ],
+          "weight": 0.334
+        },
+        "lstm": {
+          "top10": [
+            {
+              "number": "123",
+              "score": 0.1143
+            },
+            {
+              "number": "234",
+              "score": 0.1143
+            },
+            {
+              "number": "345",
+              "score": 0.1143
+            },
+            {
+              "number": "123",
+              "score": 0.1143
+            },
+            {
+              "number": "234",
+              "score": 0.1143
+            },
+            {
+              "number": "345",
+              "score": 0.1143
+            },
+            {
+              "number": "123",
+              "score": 0.1143
+            },
+            {
+              "number": "234",
+              "score": 0.1143
+            },
+            {
+              "number": "345",
+              "score": 0.1143
+            },
+            {
+              "number": "123",
+              "score": 0.1143
+            }
+          ],
+          "weight": 0.298
+        }
+      },
+      "ensemble": {
+        "top10": [
+          {
+            "number": "456",
+            "score": 1.0
+          },
+          {
+            "number": "457",
+            "score": 1.0
+          },
+          {
+            "number": "466",
+            "score": 1.0
+          },
+          {
+            "number": "467",
+            "score": 1.0
+          },
+          {
+            "number": "556",
+            "score": 1.0
+          },
+          {
+            "number": "557",
+            "score": 1.0
+          },
+          {
+            "number": "566",
+            "score": 1.0
+          },
+          {
+            "number": "567",
+            "score": 1.0
+          },
+          {
+            "number": "156",
+            "score": 0.9418
+          },
+          {
+            "number": "157",
+            "score": 0.9418
+          }
+        ],
+        "weights": {
+          "frequency": 0.312,
+          "arima": 0.278,
+          "prophet": 0.334,
+          "lstm": 0.298
+        }
+      }
+    },
+    "back_three": {
+      "models": {
+        "frequency": {
+          "top10": [
+            {
+              "number": "012",
+              "score": 1.2
+            },
+            {
+              "number": "013",
+              "score": 1.2
+            },
+            {
+              "number": "022",
+              "score": 1.2
+            },
+            {
+              "number": "023",
+              "score": 1.2
+            },
+            {
+              "number": "112",
+              "score": 1.2
+            },
+            {
+              "number": "113",
+              "score": 1.2
+            },
+            {
+              "number": "122",
+              "score": 1.2
+            },
+            {
+              "number": "123",
+              "score": 1.2
+            },
+            {
+              "number": "002",
+              "score": 1.1333
+            },
+            {
+              "number": "003",
+              "score": 1.1333
+            }
+          ],
+          "weight": 0.312
+        },
+        "arima": {
+          "top10": [
+            {
+              "number": "012",
+              "score": 0.001728
+            },
+            {
+              "number": "013",
+              "score": 0.001728
+            },
+            {
+              "number": "022",
+              "score": 0.001728
+            },
+            {
+              "number": "023",
+              "score": 0.001728
+            },
+            {
+              "number": "112",
+              "score": 0.001728
+            },
+            {
+              "number": "113",
+              "score": 0.001728
+            },
+            {
+              "number": "122",
+              "score": 0.001728
+            },
+            {
+              "number": "123",
+              "score": 0.001728
+            },
+            {
+              "number": "010",
+              "score": 0.00144
+            },
+            {
+              "number": "011",
+              "score": 0.00144
+            }
+          ],
+          "weight": 0.278
+        },
+        "prophet": {
+          "top10": [
+            {
+              "number": "012",
+              "score": 0.001728
+            },
+            {
+              "number": "013",
+              "score": 0.001728
+            },
+            {
+              "number": "022",
+              "score": 0.001728
+            },
+            {
+              "number": "023",
+              "score": 0.001728
+            },
+            {
+              "number": "112",
+              "score": 0.001728
+            },
+            {
+              "number": "113",
+              "score": 0.001728
+            },
+            {
+              "number": "122",
+              "score": 0.001728
+            },
+            {
+              "number": "123",
+              "score": 0.001728
+            },
+            {
+              "number": "010",
+              "score": 0.00144
+            },
+            {
+              "number": "011",
+              "score": 0.00144
+            }
+          ],
+          "weight": 0.334
+        },
+        "lstm": {
+          "top10": [
+            {
+              "number": "000",
+              "score": 0.1143
+            },
+            {
+              "number": "111",
+              "score": 0.1143
+            },
+            {
+              "number": "722",
+              "score": 0.1143
+            },
+            {
+              "number": "000",
+              "score": 0.1143
+            },
+            {
+              "number": "111",
+              "score": 0.1143
+            },
+            {
+              "number": "722",
+              "score": 0.1143
+            },
+            {
+              "number": "000",
+              "score": 0.1143
+            },
+            {
+              "number": "111",
+              "score": 0.1143
+            },
+            {
+              "number": "722",
+              "score": 0.1143
+            },
+            {
+              "number": "000",
+              "score": 0.1143
+            }
+          ],
+          "weight": 0.298
+        }
+      },
+      "ensemble": {
+        "top10": [
+          {
+            "number": "012",
+            "score": 1.0
+          },
+          {
+            "number": "013",
+            "score": 1.0
+          },
+          {
+            "number": "022",
+            "score": 1.0
+          },
+          {
+            "number": "023",
+            "score": 1.0
+          },
+          {
+            "number": "112",
+            "score": 1.0
+          },
+          {
+            "number": "113",
+            "score": 1.0
+          },
+          {
+            "number": "122",
+            "score": 1.0
+          },
+          {
+            "number": "123",
+            "score": 1.0
+          },
+          {
+            "number": "002",
+            "score": 0.9418
+          },
+          {
+            "number": "003",
+            "score": 0.9418
+          }
+        ],
+        "weights": {
+          "frequency": 0.312,
+          "arima": 0.278,
+          "prophet": 0.334,
+          "lstm": 0.298
+        }
+      }
+    },
+    "last_two": {
+      "models": {
+        "frequency": {
+          "top10": [
+            {
+              "number": "19",
+              "score": 1.6
+            },
+            {
+              "number": "79",
+              "score": 1.6
+            },
+            {
+              "number": "89",
+              "score": 1.6
+            },
+            {
+              "number": "12",
+              "score": 1.4
+            },
+            {
+              "number": "13",
+              "score": 1.4
+            },
+            {
+              "number": "16",
+              "score": 1.4
+            },
+            {
+              "number": "17",
+              "score": 1.4
+            },
+            {
+              "number": "18",
+              "score": 1.4
+            },
+            {
+              "number": "29",
+              "score": 1.4
+            },
+            {
+              "number": "59",
+              "score": 1.4
+            }
+          ],
+          "weight": 0.312
+        },
+        "arima": {
+          "top10": [
+            {
+              "number": "19",
+              "score": 0.0256
+            },
+            {
+              "number": "79",
+              "score": 0.0256
+            },
+            {
+              "number": "89",
+              "score": 0.0256
+            },
+            {
+              "number": "12",
+              "score": 0.0192
+            },
+            {
+              "number": "13",
+              "score": 0.0192
+            },
+            {
+              "number": "16",
+              "score": 0.0192
+            },
+            {
+              "number": "17",
+              "score": 0.0192
+            },
+            {
+              "number": "18",
+              "score": 0.0192
+            },
+            {
+              "number": "29",
+              "score": 0.0192
+            },
+            {
+              "number": "59",
+              "score": 0.0192
+            }
+          ],
+          "weight": 0.278
+        },
+        "prophet": {
+          "top10": [
+            {
+              "number": "19",
+              "score": 0.0256
+            },
+            {
+              "number": "79",
+              "score": 0.0256
+            },
+            {
+              "number": "89",
+              "score": 0.0256
+            },
+            {
+              "number": "12",
+              "score": 0.0192
+            },
+            {
+              "number": "13",
+              "score": 0.0192
+            },
+            {
+              "number": "16",
+              "score": 0.0192
+            },
+            {
+              "number": "17",
+              "score": 0.0192
+            },
+            {
+              "number": "18",
+              "score": 0.0192
+            },
+            {
+              "number": "29",
+              "score": 0.0192
+            },
+            {
+              "number": "59",
+              "score": 0.0192
+            }
+          ],
+          "weight": 0.334
+        },
+        "lstm": {
+          "top10": [
+            {
+              "number": "19",
+              "score": 1.0
+            },
+            {
+              "number": "79",
+              "score": 1.0
+            },
+            {
+              "number": "89",
+              "score": 1.0
+            },
+            {
+              "number": "12",
+              "score": 0.7999
+            },
+            {
+              "number": "13",
+              "score": 0.7999
+            },
+            {
+              "number": "16",
+              "score": 0.7999
+            },
+            {
+              "number": "17",
+              "score": 0.7999
+            },
+            {
+              "number": "18",
+              "score": 0.7999
+            },
+            {
+              "number": "29",
+              "score": 0.7999
+            },
+            {
+              "number": "59",
+              "score": 0.7999
+            }
+          ],
+          "weight": 0.298
+        }
+      },
+      "ensemble": {
+        "top10": [
+          {
+            "number": "19",
+            "score": 1.0
+          },
+          {
+            "number": "79",
+            "score": 1.0
+          },
+          {
+            "number": "89",
+            "score": 1.0
+          },
+          {
+            "number": "12",
+            "score": 0.8451
+          },
+          {
+            "number": "13",
+            "score": 0.8451
+          },
+          {
+            "number": "16",
+            "score": 0.8451
+          },
+          {
+            "number": "17",
+            "score": 0.8451
+          },
+          {
+            "number": "18",
+            "score": 0.8451
+          },
+          {
+            "number": "29",
+            "score": 0.8451
+          },
+          {
+            "number": "59",
+            "score": 0.8451
+          }
+        ],
+        "weights": {
+          "frequency": 0.312,
+          "arima": 0.278,
+          "prophet": 0.334,
+          "lstm": 0.298
+        }
+      }
+    }
+  }
+}

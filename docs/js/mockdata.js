@@ -269,6 +269,15 @@ const MOCK_PREDICTIONS = {
           {"number": "789", "score": 0.70, "rank": 3},
           {"number": "456", "score": 0.66, "rank": 4},
           {"number": "901", "score": 0.62, "rank": 5}
+        ],
+        first_prize: [
+          {"number": "107614", "score": 0.89, "rank": 1},
+          {"number": "107619", "score": 0.85, "rank": 2},
+          {"number": "107714", "score": 0.82, "rank": 3},
+          {"number": "137614", "score": 0.78, "rank": 4},
+          {"number": "807614", "score": 0.74, "rank": 5},
+          {"number": "807714", "score": 0.71, "rank": 6},
+          {"number": "137719", "score": 0.67, "rank": 7}
         ]
       }
     },
@@ -302,6 +311,15 @@ const MOCK_PREDICTIONS = {
           {"number": "567", "score": 0.67, "rank": 3},
           {"number": "890", "score": 0.63, "rank": 4},
           {"number": "123", "score": 0.59, "rank": 5}
+        ],
+        first_prize: [
+          {"number": "107614", "score": 0.86, "rank": 1},
+          {"number": "137614", "score": 0.81, "rank": 2},
+          {"number": "107619", "score": 0.77, "rank": 3},
+          {"number": "807619", "score": 0.73, "rank": 4},
+          {"number": "107719", "score": 0.69, "rank": 5},
+          {"number": "137714", "score": 0.65, "rank": 6},
+          {"number": "807719", "score": 0.61, "rank": 7}
         ]
       }
     },
@@ -335,6 +353,15 @@ const MOCK_PREDICTIONS = {
           {"number": "345", "score": 0.71, "rank": 3},
           {"number": "012", "score": 0.67, "rank": 4},
           {"number": "789", "score": 0.63, "rank": 5}
+        ],
+        first_prize: [
+          {"number": "107614", "score": 0.88, "rank": 1},
+          {"number": "107714", "score": 0.83, "rank": 2},
+          {"number": "807614", "score": 0.79, "rank": 3},
+          {"number": "137619", "score": 0.75, "rank": 4},
+          {"number": "107619", "score": 0.72, "rank": 5},
+          {"number": "807714", "score": 0.68, "rank": 6},
+          {"number": "137714", "score": 0.64, "rank": 7}
         ]
       }
     },
@@ -368,6 +395,15 @@ const MOCK_PREDICTIONS = {
           {"number": "123", "score": 0.73, "rank": 3},
           {"number": "678", "score": 0.69, "rank": 4},
           {"number": "345", "score": 0.65, "rank": 5}
+        ],
+        first_prize: [
+          {"number": "107614", "score": 0.87, "rank": 1},
+          {"number": "137619", "score": 0.82, "rank": 2},
+          {"number": "107719", "score": 0.78, "rank": 3},
+          {"number": "807614", "score": 0.74, "rank": 4},
+          {"number": "107619", "score": 0.70, "rank": 5},
+          {"number": "137714", "score": 0.66, "rank": 6},
+          {"number": "807719", "score": 0.62, "rank": 7}
         ]
       }
     }
@@ -398,6 +434,18 @@ const MOCK_PREDICTIONS = {
       {"number": "789", "score": 0.815, "rank": 3, "model_votes": ["frequency","lstm"]},
       {"number": "901", "score": 0.783, "rank": 4, "model_votes": ["arima","prophet"]},
       {"number": "012", "score": 0.751, "rank": 5, "model_votes": ["arima"]}
+    ],
+    first_prize: [
+      {"number": "107614", "score": 1.000, "rank": 1, "model_votes": ["frequency","arima","prophet","lstm"]},
+      {"number": "107619", "score": 0.762, "rank": 2, "model_votes": ["frequency","arima","prophet","lstm"]},
+      {"number": "107714", "score": 0.762, "rank": 3, "model_votes": ["frequency","prophet"]},
+      {"number": "137614", "score": 0.762, "rank": 4, "model_votes": ["frequency","arima"]},
+      {"number": "807614", "score": 0.762, "rank": 5, "model_votes": ["frequency","prophet","lstm"]},
+      {"number": "107719", "score": 0.762, "rank": 6, "model_votes": ["arima","lstm"]},
+      {"number": "137619", "score": 0.762, "rank": 7, "model_votes": ["prophet","lstm"]},
+      {"number": "137714", "score": 0.762, "rank": 8, "model_votes": ["arima","prophet"]},
+      {"number": "807619", "score": 0.762, "rank": 9, "model_votes": ["arima"]},
+      {"number": "807714", "score": 0.762, "rank": 10, "model_votes": ["frequency","prophet"]}
     ]
   }
 };
@@ -411,76 +459,80 @@ const MOCK_BACKTESTING = {
       overall_accuracy: {
         last_two: 0.312,
         last_three_b: 0.148,
-        last_three_f: 0.156
+        last_three_f: 0.156,
+        first_prize: 0.085
       },
       history: [
-        {"draw": "2026-06-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-06-16", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-07-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-07-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-08-01", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-08-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-09-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-10-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-10-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false}
+        {"draw": "2026-06-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-06-16", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-07-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-07-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-08-01", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-08-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-09-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-10-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-10-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false}
       ]
     },
     arima: {
       overall_accuracy: {
         last_two: 0.278,
         last_three_b: 0.134,
-        last_three_f: 0.142
+        last_three_f: 0.142,
+        first_prize: 0.072
       },
       history: [
-        {"draw": "2026-06-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-07-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-07-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-08-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-08-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-09-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-09-16", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-10-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false}
+        {"draw": "2026-06-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-07-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-07-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-08-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-08-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-09-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-09-16", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-10-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false}
       ]
     },
     prophet: {
       overall_accuracy: {
         last_two: 0.334,
         last_three_b: 0.162,
-        last_three_f: 0.171
+        last_three_f: 0.171,
+        first_prize: 0.091
       },
       history: [
-        {"draw": "2026-06-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-07-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-07-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-08-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-08-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-09-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-10-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true}
+        {"draw": "2026-06-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-07-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-07-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-08-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-08-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-09-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-10-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false}
       ]
     },
     lstm: {
       overall_accuracy: {
         last_two: 0.298,
         last_three_b: 0.151,
-        last_three_f: 0.158
+        last_three_f: 0.158,
+        first_prize: 0.088
       },
       history: [
-        {"draw": "2026-06-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-07-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-07-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-08-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-08-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true},
-        {"draw": "2026-09-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false},
-        {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false},
-        {"draw": "2026-10-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true}
+        {"draw": "2026-06-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-07-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-07-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-08-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-08-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-09-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-10-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false}
       ]
     }
   }

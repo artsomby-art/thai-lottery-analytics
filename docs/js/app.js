@@ -176,26 +176,25 @@ function renderOverviewPredictions(preds) {
   if (!container || !preds) return;
 
   const prizeTypes = [
-    { key: 'last_two', name: 'เลขท้าย 2 ตัว' },
+    { key: 'last_two', altKey: 'last_two', name: 'เลขท้าย 2 ตัว' },
     { key: 'last_three_b', altKey: 'back_three', name: 'เลขท้าย 3 ตัว' },
     { key: 'last_three_f', altKey: 'front_three', name: 'เลขหน้า 3 ตัว' },
-    { key: 'first_prize', name: 'รางวัลที่ 1' }
+    { key: 'first_prize', altKey: 'first', name: 'รางวัลที่ 1' }
   ];
 
   let html = '<div class="row g-3">';
   prizeTypes.forEach(pt => {
-    let topList = preds?.ensemble?.[pt.key] || preds?.prize_types?.[pt.key]?.ensemble?.top10;
-    if (!topList && pt.altKey) {
-      topList = preds?.ensemble?.[pt.altKey] || preds?.prize_types?.[pt.altKey]?.ensemble?.top10;
-    }
-    topList = topList || [];
+    let topList = preds?.prize_types?.[pt.key]?.ensemble?.top10 ||
+                  preds?.prize_types?.[pt.altKey]?.ensemble?.top10 ||
+                  preds?.ensemble?.[pt.key] ||
+                  preds?.ensemble?.[pt.altKey] || [];
 
     html += `
       <div class="col-md-6 col-lg-3">
         <div class="dash-card p-3 h-100">
           <div class="text-muted small mb-2 fw-bold text-uppercase">${pt.name}</div>
           <div class="d-flex flex-column gap-2">
-            ${topList.slice(0, 5).map((item, idx) => `
+            ${topList.length === 0 ? '<div class="text-muted small text-center py-2">ไม่มีข้อมูล</div>' : topList.slice(0, 5).map((item, idx) => `
               <div class="d-flex align-items-center justify-content-between p-2 rounded" style="background: var(--bg-tertiary);">
                 <div class="d-flex align-items-center gap-2">
                   <span class="badge ${idx === 0 ? 'bg-warning text-dark' : 'bg-secondary'} rounded-pill">${idx + 1}</span>
@@ -222,14 +221,16 @@ function renderPredictionsTables(prizeType) {
   const preds = window.APP_DATA.predictions;
   if (!preds) return;
 
-  // Resolve normalized key (e.g. 'last_two' or 'back_three' / 'last_three_b')
-  const altKey = prizeType === 'last_three_b' ? 'back_three' : (prizeType === 'last_three_f' ? 'front_three' : prizeType);
+  // Resolve normalized keys
+  const altKey = prizeType === 'last_three_b' ? 'back_three'
+               : prizeType === 'last_three_f' ? 'front_three'
+               : (prizeType === 'first_prize' ? 'first' : (prizeType === 'first' ? 'first_prize' : prizeType));
 
   // 1. Combined Ensemble Table
-  const ensembleList = preds?.ensemble?.[prizeType] ||
-                       preds?.ensemble?.[altKey] ||
-                       preds?.prize_types?.[prizeType]?.ensemble?.top10 ||
-                       preds?.prize_types?.[altKey]?.ensemble?.top10 || [];
+  const ensembleList = preds?.prize_types?.[prizeType]?.ensemble?.top10 ||
+                       preds?.prize_types?.[altKey]?.ensemble?.top10 ||
+                       preds?.ensemble?.[prizeType] ||
+                       preds?.ensemble?.[altKey] || [];
 
   const ensembleTableBody = document.getElementById('pred-ensemble-table-body');
   if (ensembleTableBody) {
@@ -238,7 +239,9 @@ function renderPredictionsTables(prizeType) {
     } else {
       ensembleTableBody.innerHTML = ensembleList.slice(0, 10).map((item, idx) => {
         const pct = Math.round((item.score || 0) * 100);
-        const votes = (item.model_votes || []).join(', ') || 'Ensemble Consensus';
+        const votes = (item.model_votes && item.model_votes.length > 0)
+          ? item.model_votes.join(', ')
+          : 'Ensemble Consensus';
         return `
           <tr>
             <td class="text-center"><span class="badge ${idx === 0 ? 'bg-warning text-dark' : 'bg-dark border border-secondary'} rounded-pill">${idx + 1}</span></td>
@@ -264,10 +267,10 @@ function renderPredictionsTables(prizeType) {
     const listEl = document.getElementById(`pred-list-${m}`);
     if (!listEl) return;
 
-    let subList = preds?.models?.[m]?.predictions?.[prizeType] ||
-                  preds?.models?.[m]?.predictions?.[altKey] ||
-                  preds?.prize_types?.[prizeType]?.models?.[m]?.top10 ||
-                  preds?.prize_types?.[altKey]?.models?.[m]?.top10 || [];
+    let subList = preds?.prize_types?.[prizeType]?.models?.[m]?.top10 ||
+                  preds?.prize_types?.[altKey]?.models?.[m]?.top10 ||
+                  preds?.models?.[m]?.predictions?.[prizeType] ||
+                  preds?.models?.[m]?.predictions?.[altKey] || [];
 
     if (subList.length === 0) {
       listEl.innerHTML = '<div class="text-muted small text-center py-2">ไม่มีข้อมูล</div>';

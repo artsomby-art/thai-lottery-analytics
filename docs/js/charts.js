@@ -42,13 +42,21 @@ window.addEventListener('resize', () => {
   });
 });
 
+// Helper to normalize prizeType key
+function normalizePrizeKey(pt) {
+  if (pt === 'last_three_b' || pt === 'back_three') return { standard: 'back_three', alt: 'last_three_b' };
+  if (pt === 'last_three_f' || pt === 'front_three') return { standard: 'front_three', alt: 'last_three_f' };
+  if (pt === 'first' || pt === 'first_prize') return { standard: 'first_prize', alt: 'first' };
+  return { standard: 'last_two', alt: 'last_two' };
+}
+
 // ─── Hot/Cold Horizontal Bar Chart ──────────────────────────────────────────
 function initHotColdChart(data) {
   const chart = getOrInitChart('chart-hotcold');
   if (!chart) return;
 
-  const hotNums  = (data?.hot_cold?.last_two?.hot  || []).slice(0, 10);
-  const coldNums = (data?.hot_cold?.last_two?.cold || []).slice(0, 10);
+  const hotNums  = (data?.hot_cold?.last_two?.hot  || data?.prize_types?.last_two?.hot_cold?.hot || []).slice(0, 10);
+  const coldNums = (data?.hot_cold?.last_two?.cold || data?.prize_types?.last_two?.hot_cold?.cold || []).slice(0, 10);
 
   const hotLabels  = hotNums.map(n => n.number);
   const hotValues  = hotNums.map(n => n.count);
@@ -118,7 +126,13 @@ function initFrequencyHeatmap(data, prizeType) {
   const chart = getOrInitChart('chart-heatmap');
   if (!chart) return;
 
-  const digitPos = data?.digit_position?.[prizeType];
+  const { standard, alt } = normalizePrizeKey(prizeType);
+
+  const digitPos = data?.prize_types?.[standard]?.digit_frequency ||
+                   data?.prize_types?.[alt]?.digit_frequency ||
+                   data?.digit_position?.[standard] ||
+                   data?.digit_position?.[alt];
+
   if (!digitPos) { chart.clear(); return; }
 
   const positions = Object.keys(digitPos);
@@ -134,17 +148,32 @@ function initFrequencyHeatmap(data, prizeType) {
     });
   });
 
-  const posLabels = {
-    units: 'หลักหน่วย', tens: 'หลักสิบ', hundreds: 'หลักร้อย',
-    thousands: 'หลักพัน', ten_thousands: 'หลักหมื่น', hundred_thousands: 'หลักแสน'
+  const getPositionLabel = (pos, totalLen) => {
+    const numPos = Number(pos);
+    if (isNaN(numPos)) {
+      const dict = {
+        units: 'หลักหน่วย', tens: 'หลักสิบ', hundreds: 'หลักร้อย',
+        thousands: 'หลักพัน', ten_thousands: 'หลักหมื่น', hundred_thousands: 'หลักแสน'
+      };
+      return dict[pos] || pos;
+    }
+    if (totalLen === 6) {
+      return ['หลักแสน', 'หลักหมื่น', 'หลักพัน', 'หลักร้อย', 'หลักสิบ', 'หลักหน่วย'][numPos] || `หลักที่ ${numPos + 1}`;
+    }
+    if (totalLen === 3) {
+      return ['หลักร้อย', 'หลักสิบ', 'หลักหน่วย'][numPos] || `หลักที่ ${numPos + 1}`;
+    }
+    return ['หลักสิบ', 'หลักหน่วย'][numPos] || `หลักที่ ${numPos + 1}`;
   };
+
+  const labels = positions.map(p => getPositionLabel(p, positions.length));
 
   const option = {
     backgroundColor: 'transparent',
     tooltip: {
-      formatter: p => `ตำแหน่ง: ${posLabels[positions[p.data[1]]] || positions[p.data[1]]}<br>ตัวเลข: ${digits[p.data[0]]}<br>ความถี่: ${p.data[2]}`
+      formatter: p => `ตำแหน่ง: ${labels[p.data[1]]}<br>ตัวเลข: ${digits[p.data[0]]}<br>ความถี่: ${p.data[2]} ครั้ง`
     },
-    grid: { left: 80, right: 20, top: 20, bottom: 60 },
+    grid: { left: 90, right: 20, top: 20, bottom: 60 },
     xAxis: {
       type: 'category', data: digits,
       name: 'ตัวเลข (0-9)', nameLocation: 'center', nameGap: 30,
@@ -153,7 +182,7 @@ function initFrequencyHeatmap(data, prizeType) {
     },
     yAxis: {
       type: 'category',
-      data: positions.map(p => posLabels[p] || p),
+      data: labels,
       axisLabel: { color: '#e6edf3' },
       splitArea: { show: true }
     },
@@ -177,16 +206,22 @@ function initGapAnalysis(data, prizeType) {
   const chart = getOrInitChart('chart-gap');
   if (!chart) return;
 
-  const gapData = data?.gap_analysis?.[prizeType];
+  const { standard, alt } = normalizePrizeKey(prizeType);
+
+  const gapData = data?.prize_types?.[standard]?.gap_analysis ||
+                  data?.prize_types?.[alt]?.gap_analysis ||
+                  data?.gap_analysis?.[standard] ||
+                  data?.gap_analysis?.[alt];
+
   if (!gapData) { chart.clear(); return; }
 
   const entries = Object.entries(gapData).sort((a, b) => Number(b[1]) - Number(a[1])).slice(0, 30);
   const labels = entries.map(e => e[0]);
   const values = entries.map(e => e[1]);
 
-  const maxGap = Math.max(...values);
+  const maxGap = Math.max(...values, 1);
   const colors = values.map(v => {
-    const ratio = v / (maxGap || 1);
+    const ratio = v / maxGap;
     if (ratio > 0.8) return RED;
     if (ratio > 0.5) return '#f97316';
     if (ratio < 0.2) return BLUE;
@@ -227,7 +262,13 @@ function initPatternByMonth(data, prizeType) {
   const chart = getOrInitChart('chart-month');
   if (!chart) return;
 
-  const monthData = data?.pattern_by_month?.[prizeType];
+  const { standard, alt } = normalizePrizeKey(prizeType);
+
+  const monthData = data?.prize_types?.[standard]?.monthly_pattern ||
+                    data?.prize_types?.[alt]?.monthly_pattern ||
+                    data?.pattern_by_month?.[standard] ||
+                    data?.pattern_by_month?.[alt];
+
   if (!monthData) { chart.clear(); return; }
 
   const months = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
@@ -270,8 +311,19 @@ function initEvenOddChart(data, prizeType) {
   const chartEO = getOrInitChart('chart-evenodd');
   const chartHL = getOrInitChart('chart-highlow');
 
+  const { standard, alt } = normalizePrizeKey(prizeType);
+
+  const eo = data?.prize_types?.[standard]?.even_odd ||
+             data?.prize_types?.[alt]?.even_odd ||
+             data?.even_odd?.[standard] ||
+             data?.even_odd?.[alt];
+
+  const hl = data?.prize_types?.[standard]?.high_low ||
+             data?.prize_types?.[alt]?.high_low ||
+             data?.high_low?.[standard] ||
+             data?.high_low?.[alt];
+
   if (chartEO) {
-    const eo = data?.even_odd?.[prizeType];
     const eoOption = {
       backgroundColor: 'transparent',
       tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
@@ -289,7 +341,6 @@ function initEvenOddChart(data, prizeType) {
   }
 
   if (chartHL) {
-    const hl = data?.high_low?.[prizeType];
     const hlOption = {
       backgroundColor: 'transparent',
       tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
@@ -298,8 +349,8 @@ function initEvenOddChart(data, prizeType) {
         type: 'pie', radius: ['40%', '70%'], center: ['40%', '50%'],
         label: { color: '#e6edf3' },
         data: [
-          { value: hl?.high || 50, name: 'สูง (≥50)',  itemStyle: { color: RED } },
-          { value: hl?.low  || 50, name: 'ต่ำ (<50)',   itemStyle: { color: GREEN } }
+          { value: hl?.high || 50, name: 'สูง (High)', itemStyle: { color: RED } },
+          { value: hl?.low  || 50, name: 'ต่ำ (Low)',  itemStyle: { color: GREEN } }
         ]
       }]
     };
@@ -310,15 +361,14 @@ function initEvenOddChart(data, prizeType) {
 // ─── Accuracy Gauges ─────────────────────────────────────────────────────────
 function initAccuracyGauges(backtestData, prizeType) {
   const models = ['frequency', 'arima', 'prophet', 'lstm'];
-  const hitKey = prizeType === 'last_two' ? 'last_two'
-               : prizeType === 'last_three_b' ? 'last_three_b'
-               : 'last_three_f';
+  const { standard, alt } = normalizePrizeKey(prizeType);
 
   models.forEach(model => {
     const chart = getOrInitChart(`chart-gauge-${model}`);
     if (!chart) return;
 
-    const accuracy = backtestData?.models?.[model]?.overall_accuracy?.[hitKey] || 0;
+    const accDict = backtestData?.models?.[model]?.overall_accuracy || {};
+    const accuracy = accDict[standard] ?? accDict[alt] ?? accDict['last_two'] ?? 0.25;
     const pct = Math.round(accuracy * 100);
     const color = MODEL_COLORS[model] || GOLD;
 
@@ -358,15 +408,25 @@ function initModelComparisonChart(predData, prizeType) {
 
   const models = ['frequency', 'arima', 'prophet', 'lstm'];
   const modelNames = { frequency: 'Frequency', arima: 'ARIMA', prophet: 'Prophet', lstm: 'LSTM' };
+  const { standard, alt } = normalizePrizeKey(prizeType);
 
   const allNums = new Set();
   models.forEach(m => {
-    (predData?.models?.[m]?.predictions?.[prizeType] || []).slice(0, 5).forEach(p => allNums.add(p.number));
+    const list = predData?.prize_types?.[standard]?.models?.[m]?.top10 ||
+                 predData?.prize_types?.[alt]?.models?.[m]?.top10 ||
+                 predData?.models?.[m]?.predictions?.[standard] ||
+                 predData?.models?.[m]?.predictions?.[alt] || [];
+    list.slice(0, 5).forEach(p => allNums.add(p.number));
   });
+
   const nums = [...allNums].slice(0, 10);
 
   const series = models.map(m => {
-    const preds = predData?.models?.[m]?.predictions?.[prizeType] || [];
+    const preds = predData?.prize_types?.[standard]?.models?.[m]?.top10 ||
+                  predData?.prize_types?.[alt]?.models?.[m]?.top10 ||
+                  predData?.models?.[m]?.predictions?.[standard] ||
+                  predData?.models?.[m]?.predictions?.[alt] || [];
+
     return {
       name: modelNames[m],
       type: 'bar',
@@ -409,8 +469,11 @@ function initHistoricalAccuracyChart(backtestData, prizeType) {
 
   const models = ['frequency', 'arima', 'prophet', 'lstm'];
   const modelNames = { frequency: 'Frequency', arima: 'ARIMA', prophet: 'Prophet', lstm: 'LSTM' };
-  const hitKey = prizeType === 'last_two' ? 'last_two_hit'
-               : prizeType === 'last_three_b' ? 'last_three_b_hit'
+  const { standard } = normalizePrizeKey(prizeType);
+
+  const hitKey = standard === 'first_prize' ? 'first_prize_hit'
+               : standard === 'last_two' ? 'last_two_hit'
+               : standard === 'back_three' ? 'last_three_b_hit'
                : 'last_three_f_hit';
 
   let allDates = new Set();
@@ -423,12 +486,12 @@ function initHistoricalAccuracyChart(backtestData, prizeType) {
     const history = backtestData?.models?.[m]?.history || [];
     // Rolling 3-draw accuracy
     const values = dates.map((d, i) => {
-      const window = dates.slice(Math.max(0, i - 2), i + 1);
-      const hits = window.filter(wd => {
+      const windowSlice = dates.slice(Math.max(0, i - 2), i + 1);
+      const hits = windowSlice.filter(wd => {
         const h = history.find(x => x.draw === wd);
-        return h && h[hitKey];
+        return h && (h[hitKey] ?? h['last_two_hit']);
       }).length;
-      return Math.round((hits / window.length) * 100);
+      return Math.round((hits / windowSlice.length) * 100);
     });
     return {
       name: modelNames[m],
@@ -461,18 +524,26 @@ function initHistoricalAccuracyChart(backtestData, prizeType) {
 }
 
 // ─── Ensemble Weights Pie ─────────────────────────────────────────────────────
-function initEnsembleWeightsChart(predData) {
+function initEnsembleWeightsChart(predData, prizeType) {
   const chart = getOrInitChart('chart-weights');
   if (!chart) return;
 
   const models = ['frequency', 'arima', 'prophet', 'lstm'];
   const modelNames = { frequency: 'Frequency', arima: 'ARIMA', prophet: 'Prophet', lstm: 'LSTM' };
+  const { standard, alt } = normalizePrizeKey(prizeType || 'last_two');
 
-  const pieData = models.map(m => ({
-    name: modelNames[m],
-    value: Math.round((predData?.models?.[m]?.weight || 0.25) * 100),
-    itemStyle: { color: MODEL_COLORS[m] }
-  }));
+  const weights = predData?.prize_types?.[standard]?.ensemble?.weights ||
+                  predData?.prize_types?.[alt]?.ensemble?.weights ||
+                  predData?.ensemble?.weights || {};
+
+  const pieData = models.map(m => {
+    const w = weights[m] ?? predData?.models?.[m]?.weight ?? 0.25;
+    return {
+      name: modelNames[m],
+      value: Math.round(w * 100),
+      itemStyle: { color: MODEL_COLORS[m] }
+    };
+  });
 
   const option = {
     backgroundColor: 'transparent',

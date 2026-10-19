@@ -73,6 +73,7 @@ class EnsembleModel:
 
         # Calculate combined weighted score
         combined_scores: dict[str, float] = defaultdict(float)
+        model_support: dict[str, list[str]] = defaultdict(list)
 
         for model_name, preds in sub_preds.items():
             w = self.weights.get(model_name, 0.25)
@@ -80,13 +81,19 @@ class EnsembleModel:
                 num = item["number"]
                 score = float(item["score"])
                 combined_scores[num] += score * w
+                if model_name not in model_support[num]:
+                    model_support[num].append(model_name)
 
         # Sort and normalize top ensemble candidates
         sorted_combined = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
         max_score = sorted_combined[0][1] if sorted_combined else 1.0
 
         ensemble_top = [
-            {"number": num, "score": round(score / max_score, 4)}
+            {
+                "number": num,
+                "score": round(score / max_score, 4),
+                "model_votes": model_support.get(num, [list(sub_preds.keys())[0]]),
+            }
             for num, score in sorted_combined[:top_n]
         ]
 

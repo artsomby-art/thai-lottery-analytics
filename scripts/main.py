@@ -109,18 +109,18 @@ def run_pipeline(force_scrape: bool = False, skip_scraper: bool = False) -> None
     logger.info("Feature engineering complete across %d draws", stats.get("total_draws", len(records)))
 
     # 3. Backtesting Step
-    logger.info("Step 3/5: Running walk-forward model backtesting...")
-    backtester = Backtester(window_size=24)
-    backtest_data = backtester.run(records, test_draws=24)
+    logger.info("Step 3/5: Running walk-forward model backtesting across 6 models (48 draws window)...")
+    backtester = Backtester(window_size=48)
+    backtest_data = backtester.run(records, test_draws=48)
 
     # Derive ensemble weights dynamically from backtesting accuracy
     model_weights = {}
     for m_name, m_info in backtest_data.get("models", {}).items():
-        acc = m_info.get("overall_accuracy", {}).get("last_two", 0.25)
-        model_weights[m_name] = max(0.1, acc)
+        acc = m_info.get("overall_accuracy", {}).get("last_two", 0.20)
+        model_weights[m_name] = max(0.08, acc)
 
     # 4. ML Model Training & Ensemble Prediction
-    logger.info("Step 4/5: Fitting ML models (Frequency, ARIMA, Prophet, LSTM) & Ensemble...")
+    logger.info("Step 4/5: Fitting 6 ML Models & Two-Stage Monte Carlo Stacking Ensemble...")
     ensemble = EnsembleModel(weights=model_weights)
     ensemble.train_all(records)
 

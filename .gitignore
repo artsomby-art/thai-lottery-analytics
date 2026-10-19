@@ -32,6 +32,7 @@ scripts/models/weights/
 # Data (managed by GitHub Actions, committed selectively)
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/results_raw.json
 # Note: data/*.json and data/*.csv ARE committed (tracked)
 
 # Jupyter

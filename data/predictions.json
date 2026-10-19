@@ -7,283 +7,488 @@
         "frequency": {
           "top10": [
             {
-              "number": "107614",
-              "score": 2.0833
+              "number": "761612",
+              "score": 1.17
             },
             {
-              "number": "107619",
-              "score": 2.0833
+              "number": "761614",
+              "score": 1.17
             },
             {
-              "number": "107714",
-              "score": 2.0833
+              "number": "761682",
+              "score": 1.17
             },
             {
-              "number": "107719",
-              "score": 2.0833
+              "number": "761684",
+              "score": 1.17
             },
             {
-              "number": "137614",
-              "score": 2.0833
+              "number": "762612",
+              "score": 1.1655
             },
             {
-              "number": "137619",
-              "score": 2.0833
+              "number": "762614",
+              "score": 1.1655
             },
             {
-              "number": "137714",
-              "score": 2.0833
+              "number": "762682",
+              "score": 1.1655
             },
             {
-              "number": "137719",
-              "score": 2.0833
+              "number": "762684",
+              "score": 1.1655
             },
             {
-              "number": "807614",
-              "score": 2.0833
+              "number": "561612",
+              "score": 1.1655
             },
             {
-              "number": "807619",
-              "score": 2.0833
+              "number": "561614",
+              "score": 1.1655
             }
           ],
-          "weight": 0.312
+          "weight": 0.083
+        },
+        "markov": {
+          "top10": [
+            {
+              "number": "564114",
+              "score": 1.0
+            },
+            {
+              "number": "564144",
+              "score": 1.0
+            },
+            {
+              "number": "564714",
+              "score": 1.0
+            },
+            {
+              "number": "564744",
+              "score": 1.0
+            },
+            {
+              "number": "564104",
+              "score": 0.9231
+            },
+            {
+              "number": "564704",
+              "score": 0.9231
+            },
+            {
+              "number": "562114",
+              "score": 0.9231
+            },
+            {
+              "number": "562144",
+              "score": 0.9231
+            },
+            {
+              "number": "562714",
+              "score": 0.9231
+            },
+            {
+              "number": "562744",
+              "score": 0.9231
+            }
+          ],
+          "weight": 0.146
         },
         "arima": {
           "top10": [
             {
-              "number": "107614",
-              "score": 7.5e-05
+              "number": "761612",
+              "score": 3e-06
             },
             {
-              "number": "107619",
-              "score": 7.5e-05
+              "number": "761614",
+              "score": 3e-06
             },
             {
-              "number": "107714",
-              "score": 7.5e-05
+              "number": "761682",
+              "score": 3e-06
             },
             {
-              "number": "107719",
-              "score": 7.5e-05
+              "number": "761684",
+              "score": 3e-06
             },
             {
-              "number": "137614",
-              "score": 7.5e-05
+              "number": "762612",
+              "score": 2e-06
             },
             {
-              "number": "137619",
-              "score": 7.5e-05
+              "number": "762614",
+              "score": 2e-06
             },
             {
-              "number": "137714",
-              "score": 7.5e-05
+              "number": "762682",
+              "score": 2e-06
             },
             {
-              "number": "137719",
-              "score": 7.5e-05
+              "number": "762684",
+              "score": 2e-06
             },
             {
-              "number": "807614",
-              "score": 7.5e-05
+              "number": "561612",
+              "score": 2e-06
             },
             {
-              "number": "807619",
-              "score": 7.5e-05
+              "number": "561614",
+              "score": 2e-06
             }
           ],
-          "weight": 0.278
+          "weight": 0.104
         },
         "prophet": {
           "top10": [
             {
-              "number": "107614",
-              "score": 7.5e-05
+              "number": "761612",
+              "score": 3e-06
             },
             {
-              "number": "107619",
-              "score": 7.5e-05
+              "number": "761614",
+              "score": 3e-06
             },
             {
-              "number": "107714",
-              "score": 7.5e-05
+              "number": "761682",
+              "score": 3e-06
             },
             {
-              "number": "107719",
-              "score": 7.5e-05
+              "number": "761684",
+              "score": 3e-06
             },
             {
-              "number": "137614",
-              "score": 7.5e-05
+              "number": "762612",
+              "score": 2e-06
             },
             {
-              "number": "137619",
-              "score": 7.5e-05
+              "number": "762614",
+              "score": 2e-06
             },
             {
-              "number": "137714",
-              "score": 7.5e-05
+              "number": "762682",
+              "score": 2e-06
             },
             {
-              "number": "137719",
-              "score": 7.5e-05
+              "number": "762684",
+              "score": 2e-06
             },
             {
-              "number": "807614",
-              "score": 7.5e-05
+              "number": "561612",
+              "score": 2e-06
             },
             {
-              "number": "807619",
-              "score": 7.5e-05
+              "number": "561614",
+              "score": 2e-06
             }
           ],
-          "weight": 0.334
+          "weight": 0.104
         },
         "lstm": {
           "top10": [
             {
-              "number": "107614",
-              "score": 0.1707
+              "number": "137612",
+              "score": 0.163
             },
             {
-              "number": "107614",
-              "score": 0.1707
+              "number": "137612",
+              "score": 0.163
             },
             {
-              "number": "107614",
-              "score": 0.1707
+              "number": "137612",
+              "score": 0.163
             },
             {
-              "number": "107614",
-              "score": 0.1707
+              "number": "137612",
+              "score": 0.163
             },
             {
-              "number": "830779",
-              "score": 0.1595
+              "number": "760089",
+              "score": 0.1451
             },
             {
-              "number": "830779",
-              "score": 0.1595
+              "number": "760089",
+              "score": 0.1451
             },
             {
-              "number": "830779",
-              "score": 0.1595
+              "number": "760089",
+              "score": 0.1451
             },
             {
-              "number": "012580",
-              "score": 0.1155
+              "number": "802164",
+              "score": 0.1247
             },
             {
-              "number": "012580",
-              "score": 0.1155
+              "number": "802164",
+              "score": 0.1247
             },
             {
-              "number": "012580",
-              "score": 0.1155
+              "number": "802164",
+              "score": 0.1247
             }
           ],
-          "weight": 0.298
+          "weight": 0.104
+        },
+        "monte_carlo": {
+          "top10": [
+            {
+              "number": "445742",
+              "score": 1.0,
+              "sim_hits": 4,
+              "percentage": 0.01
+            },
+            {
+              "number": "527714",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "531819",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "167824",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "845859",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "917929",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "532742",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "709614",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "567672",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "059769",
+              "score": 0.75,
+              "sim_hits": 3,
+              "percentage": 0.01
+            }
+          ],
+          "weight": 0.104
         }
       },
       "ensemble": {
         "top10": [
           {
-            "number": "107614",
+            "number": "445742",
             "score": 1.0,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "lstm"
+              "monte_carlo"
             ]
           },
           {
-            "number": "107619",
-            "score": 0.7616,
+            "number": "527714",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "107714",
-            "score": 0.7616,
+            "number": "531819",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "107719",
-            "score": 0.7616,
+            "number": "167824",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "137614",
-            "score": 0.7616,
+            "number": "845859",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "137619",
-            "score": 0.7616,
+            "number": "917929",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "137714",
-            "score": 0.7616,
+            "number": "532742",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "137719",
-            "score": 0.7616,
+            "number": "709614",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "807614",
-            "score": 0.7616,
+            "number": "567672",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "807619",
-            "score": 0.7616,
+            "number": "059769",
+            "score": 0.75,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           }
         ],
         "weights": {
-          "frequency": 0.312,
-          "arima": 0.278,
-          "prophet": 0.334,
-          "lstm": 0.298
+          "frequency": 0.083,
+          "markov": 0.146,
+          "arima": 0.104,
+          "prophet": 0.104,
+          "lstm": 0.104,
+          "monte_carlo": 0.104
+        },
+        "positional_breakdown": [
+          {
+            "position_index": 0,
+            "position_name": "หลักแสน",
+            "top_digits": [
+              {
+                "digit": "5",
+                "probability": 11.9
+              },
+              {
+                "digit": "7",
+                "probability": 11.2
+              },
+              {
+                "digit": "8",
+                "probability": 11.0
+              }
+            ]
+          },
+          {
+            "position_index": 1,
+            "position_name": "หลักหมื่น",
+            "top_digits": [
+              {
+                "digit": "6",
+                "probability": 13.5
+              },
+              {
+                "digit": "3",
+                "probability": 11.1
+              },
+              {
+                "digit": "8",
+                "probability": 10.6
+              }
+            ]
+          },
+          {
+            "position_index": 2,
+            "position_name": "หลักพัน",
+            "top_digits": [
+              {
+                "digit": "2",
+                "probability": 11.5
+              },
+              {
+                "digit": "4",
+                "probability": 11.3
+              },
+              {
+                "digit": "1",
+                "probability": 10.8
+              }
+            ]
+          },
+          {
+            "position_index": 3,
+            "position_name": "หลักร้อย",
+            "top_digits": [
+              {
+                "digit": "6",
+                "probability": 12.3
+              },
+              {
+                "digit": "7",
+                "probability": 11.8
+              },
+              {
+                "digit": "1",
+                "probability": 11.3
+              }
+            ]
+          },
+          {
+            "position_index": 4,
+            "position_name": "หลักสิบ",
+            "top_digits": [
+              {
+                "digit": "1",
+                "probability": 11.9
+              },
+              {
+                "digit": "0",
+                "probability": 11.7
+              },
+              {
+                "digit": "4",
+                "probability": 11.2
+              }
+            ]
+          },
+          {
+            "position_index": 5,
+            "position_name": "หลักหน่วย",
+            "top_digits": [
+              {
+                "digit": "4",
+                "probability": 13.0
+              },
+              {
+                "digit": "2",
+                "probability": 11.4
+              },
+              {
+                "digit": "9",
+                "probability": 11.2
+              }
+            ]
+          }
+        ],
+        "digit_sum_analysis": {
+          "average_sum": 27.0,
+          "expected_range": "20 - 34"
         }
       }
     },
@@ -292,278 +497,439 @@
         "frequency": {
           "top10": [
             {
-              "number": "411",
-              "score": 1.75
-            },
-            {
-              "number": "401",
-              "score": 1.6667
-            },
-            {
-              "number": "418",
-              "score": 1.6667
+              "number": "991",
+              "score": 1.1365
             },
             {
               "number": "491",
-              "score": 1.6667
+              "score": 1.132
             },
             {
-              "number": "408",
-              "score": 1.5833
+              "number": "921",
+              "score": 1.1298
             },
             {
-              "number": "498",
-              "score": 1.5833
+              "number": "421",
+              "score": 1.1253
             },
             {
-              "number": "611",
-              "score": 1.5833
+              "number": "951",
+              "score": 1.1186
             },
             {
               "number": "911",
-              "score": 1.5833
+              "score": 1.1163
             },
             {
-              "number": "011",
-              "score": 1.5
+              "number": "451",
+              "score": 1.1141
             },
             {
-              "number": "211",
-              "score": 1.5
+              "number": "411",
+              "score": 1.1119
+            },
+            {
+              "number": "961",
+              "score": 1.1074
+            },
+            {
+              "number": "461",
+              "score": 1.1029
             }
           ],
-          "weight": 0.312
+          "weight": 0.083
+        },
+        "markov": {
+          "top10": [
+            {
+              "number": "903",
+              "score": 1.0
+            },
+            {
+              "number": "923",
+              "score": 0.9231
+            },
+            {
+              "number": "906",
+              "score": 0.9167
+            },
+            {
+              "number": "926",
+              "score": 0.8462
+            },
+            {
+              "number": "908",
+              "score": 0.8333
+            },
+            {
+              "number": "913",
+              "score": 0.7692
+            },
+            {
+              "number": "928",
+              "score": 0.7692
+            },
+            {
+              "number": "943",
+              "score": 0.7692
+            },
+            {
+              "number": "953",
+              "score": 0.7692
+            },
+            {
+              "number": "963",
+              "score": 0.7692
+            }
+          ],
+          "weight": 0.146
         },
         "arima": {
           "top10": [
             {
-              "number": "411",
-              "score": 0.005359
-            },
-            {
-              "number": "401",
-              "score": 0.004594
+              "number": "991",
+              "score": 0.001465
             },
             {
               "number": "491",
-              "score": 0.004594
+              "score": 0.001448
             },
             {
-              "number": "418",
-              "score": 0.004594
+              "number": "921",
+              "score": 0.001438
             },
             {
-              "number": "408",
-              "score": 0.003938
+              "number": "421",
+              "score": 0.001421
             },
             {
-              "number": "498",
-              "score": 0.003938
-            },
-            {
-              "number": "611",
-              "score": 0.003828
+              "number": "951",
+              "score": 0.001393
             },
             {
               "number": "911",
-              "score": 0.003828
+              "score": 0.001384
             },
             {
-              "number": "601",
-              "score": 0.003281
+              "number": "451",
+              "score": 0.001377
             },
             {
-              "number": "618",
-              "score": 0.003281
+              "number": "411",
+              "score": 0.001368
+            },
+            {
+              "number": "961",
+              "score": 0.001348
+            },
+            {
+              "number": "791",
+              "score": 0.001336
             }
           ],
-          "weight": 0.278
+          "weight": 0.104
         },
         "prophet": {
           "top10": [
             {
-              "number": "411",
-              "score": 0.005359
-            },
-            {
-              "number": "401",
-              "score": 0.004594
+              "number": "991",
+              "score": 0.001465
             },
             {
               "number": "491",
-              "score": 0.004594
+              "score": 0.001448
             },
             {
-              "number": "418",
-              "score": 0.004594
+              "number": "921",
+              "score": 0.001438
             },
             {
-              "number": "408",
-              "score": 0.003938
+              "number": "421",
+              "score": 0.001421
             },
             {
-              "number": "498",
-              "score": 0.003938
-            },
-            {
-              "number": "611",
-              "score": 0.003828
+              "number": "951",
+              "score": 0.001393
             },
             {
               "number": "911",
-              "score": 0.003828
+              "score": 0.001384
             },
             {
-              "number": "601",
-              "score": 0.003281
+              "number": "451",
+              "score": 0.001377
             },
             {
-              "number": "618",
-              "score": 0.003281
+              "number": "411",
+              "score": 0.001368
+            },
+            {
+              "number": "961",
+              "score": 0.001348
+            },
+            {
+              "number": "791",
+              "score": 0.001336
             }
           ],
-          "weight": 0.334
+          "weight": 0.104
         },
         "lstm": {
           "top10": [
             {
               "number": "417",
-              "score": 0.1667
+              "score": 0.1661
             },
             {
               "number": "417",
-              "score": 0.1667
+              "score": 0.1661
             },
             {
               "number": "417",
-              "score": 0.1667
+              "score": 0.1661
             },
             {
               "number": "417",
-              "score": 0.1667
+              "score": 0.1661
             },
             {
-              "number": "290",
-              "score": 0.1436
+              "number": "101",
+              "score": 0.1494
             },
             {
-              "number": "290",
-              "score": 0.1436
+              "number": "101",
+              "score": 0.1494
             },
             {
-              "number": "290",
-              "score": 0.1436
+              "number": "101",
+              "score": 0.1494
             },
             {
-              "number": "601",
-              "score": 0.1333
+              "number": "723",
+              "score": 0.1275
             },
             {
-              "number": "601",
-              "score": 0.1333
+              "number": "723",
+              "score": 0.1275
             },
             {
-              "number": "601",
-              "score": 0.1333
+              "number": "723",
+              "score": 0.1275
             }
           ],
-          "weight": 0.298
+          "weight": 0.104
+        },
+        "monte_carlo": {
+          "top10": [
+            {
+              "number": "906",
+              "score": 1.0,
+              "sim_hits": 98,
+              "percentage": 0.2
+            },
+            {
+              "number": "923",
+              "score": 0.9592,
+              "sim_hits": 94,
+              "percentage": 0.19
+            },
+            {
+              "number": "972",
+              "score": 0.9082,
+              "sim_hits": 89,
+              "percentage": 0.18
+            },
+            {
+              "number": "903",
+              "score": 0.8776,
+              "sim_hits": 86,
+              "percentage": 0.17
+            },
+            {
+              "number": "926",
+              "score": 0.8673,
+              "sim_hits": 85,
+              "percentage": 0.17
+            },
+            {
+              "number": "958",
+              "score": 0.8571,
+              "sim_hits": 84,
+              "percentage": 0.17
+            },
+            {
+              "number": "956",
+              "score": 0.8367,
+              "sim_hits": 82,
+              "percentage": 0.16
+            },
+            {
+              "number": "998",
+              "score": 0.8367,
+              "sim_hits": 82,
+              "percentage": 0.16
+            },
+            {
+              "number": "974",
+              "score": 0.8163,
+              "sim_hits": 80,
+              "percentage": 0.16
+            },
+            {
+              "number": "723",
+              "score": 0.8163,
+              "sim_hits": 80,
+              "percentage": 0.16
+            }
+          ],
+          "weight": 0.104
         }
       },
       "ensemble": {
         "top10": [
           {
-            "number": "411",
+            "number": "906",
             "score": 1.0,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "markov",
+              "monte_carlo"
             ]
           },
           {
-            "number": "401",
-            "score": 0.9518,
+            "number": "923",
+            "score": 0.9754,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "markov",
+              "monte_carlo"
             ]
           },
           {
-            "number": "418",
-            "score": 0.9518,
+            "number": "903",
+            "score": 0.9501,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "markov",
+              "monte_carlo"
             ]
           },
           {
-            "number": "491",
-            "score": 0.9518,
+            "number": "926",
+            "score": 0.8863,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "markov",
+              "monte_carlo"
             ]
           },
           {
-            "number": "408",
-            "score": 0.9037,
+            "number": "723",
+            "score": 0.6399,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "lstm",
+              "monte_carlo"
             ]
           },
           {
-            "number": "498",
-            "score": 0.9037,
+            "number": "972",
+            "score": 0.5996,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "611",
-            "score": 0.9036,
+            "number": "958",
+            "score": 0.5658,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "911",
-            "score": 0.9036,
+            "number": "956",
+            "score": 0.5524,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "011",
-            "score": 0.852,
+            "number": "998",
+            "score": 0.5524,
             "model_votes": [
-              "frequency"
+              "monte_carlo"
             ]
           },
           {
-            "number": "211",
-            "score": 0.852,
+            "number": "974",
+            "score": 0.5389,
             "model_votes": [
-              "frequency"
+              "monte_carlo"
             ]
           }
         ],
         "weights": {
-          "frequency": 0.312,
-          "arima": 0.278,
-          "prophet": 0.334,
-          "lstm": 0.298
+          "frequency": 0.083,
+          "markov": 0.146,
+          "arima": 0.104,
+          "prophet": 0.104,
+          "lstm": 0.104,
+          "monte_carlo": 0.104
+        },
+        "positional_breakdown": [
+          {
+            "position_index": 0,
+            "position_name": "หลักที่ 1",
+            "top_digits": [
+              {
+                "digit": "9",
+                "probability": 12.8
+              },
+              {
+                "digit": "8",
+                "probability": 10.5
+              },
+              {
+                "digit": "0",
+                "probability": 10.3
+              }
+            ]
+          },
+          {
+            "position_index": 1,
+            "position_name": "หลักที่ 2",
+            "top_digits": [
+              {
+                "digit": "2",
+                "probability": 11.3
+              },
+              {
+                "digit": "0",
+                "probability": 10.9
+              },
+              {
+                "digit": "5",
+                "probability": 10.4
+              }
+            ]
+          },
+          {
+            "position_index": 2,
+            "position_name": "หลักที่ 3",
+            "top_digits": [
+              {
+                "digit": "6",
+                "probability": 11.4
+              },
+              {
+                "digit": "3",
+                "probability": 11.2
+              },
+              {
+                "digit": "8",
+                "probability": 10.9
+              }
+            ]
+          }
+        ],
+        "digit_sum_analysis": {
+          "average_sum": 13.5,
+          "expected_range": "6 - 20"
         }
       }
     },
@@ -572,282 +938,436 @@
         "frequency": {
           "top10": [
             {
-              "number": "038",
-              "score": 2.0
+              "number": "719",
+              "score": 1.1074
             },
             {
-              "number": "058",
-              "score": 2.0
+              "number": "919",
+              "score": 1.1051
             },
             {
-              "number": "438",
-              "score": 1.9167
+              "number": "119",
+              "score": 1.1029
             },
             {
-              "number": "458",
-              "score": 1.9167
+              "number": "219",
+              "score": 1.1007
             },
             {
-              "number": "031",
-              "score": 1.8333
+              "number": "819",
+              "score": 1.1007
             },
             {
-              "number": "036",
-              "score": 1.8333
+              "number": "519",
+              "score": 1.0962
             },
             {
-              "number": "048",
-              "score": 1.8333
+              "number": "714",
+              "score": 1.0962
             },
             {
-              "number": "051",
-              "score": 1.8333
+              "number": "914",
+              "score": 1.094
             },
             {
-              "number": "056",
-              "score": 1.8333
+              "number": "019",
+              "score": 1.094
             },
             {
-              "number": "068",
-              "score": 1.8333
+              "number": "114",
+              "score": 1.0917
             }
           ],
-          "weight": 0.312
+          "weight": 0.083
+        },
+        "markov": {
+          "top10": [
+            {
+              "number": "380",
+              "score": 1.0
+            },
+            {
+              "number": "580",
+              "score": 1.0
+            },
+            {
+              "number": "387",
+              "score": 0.9231
+            },
+            {
+              "number": "587",
+              "score": 0.9231
+            },
+            {
+              "number": "300",
+              "score": 0.9167
+            },
+            {
+              "number": "330",
+              "score": 0.9167
+            },
+            {
+              "number": "360",
+              "score": 0.9167
+            },
+            {
+              "number": "500",
+              "score": 0.9167
+            },
+            {
+              "number": "530",
+              "score": 0.9167
+            },
+            {
+              "number": "560",
+              "score": 0.9167
+            }
+          ],
+          "weight": 0.146
         },
         "arima": {
           "top10": [
             {
-              "number": "038",
-              "score": 0.007875
+              "number": "719",
+              "score": 0.001353
             },
             {
-              "number": "058",
-              "score": 0.007875
+              "number": "919",
+              "score": 0.001345
             },
             {
-              "number": "438",
-              "score": 0.007
+              "number": "119",
+              "score": 0.001336
             },
             {
-              "number": "458",
-              "score": 0.007
+              "number": "219",
+              "score": 0.001327
             },
             {
-              "number": "031",
-              "score": 0.005906
+              "number": "819",
+              "score": 0.001327
             },
             {
-              "number": "036",
-              "score": 0.005906
+              "number": "714",
+              "score": 0.001313
             },
             {
-              "number": "051",
-              "score": 0.005906
+              "number": "519",
+              "score": 0.00131
             },
             {
-              "number": "056",
-              "score": 0.005906
+              "number": "914",
+              "score": 0.001304
             },
             {
-              "number": "048",
-              "score": 0.005625
+              "number": "019",
+              "score": 0.001301
             },
             {
-              "number": "068",
-              "score": 0.005625
+              "number": "114",
+              "score": 0.001296
             }
           ],
-          "weight": 0.278
+          "weight": 0.104
         },
         "prophet": {
           "top10": [
             {
-              "number": "038",
-              "score": 0.007875
+              "number": "719",
+              "score": 0.001353
             },
             {
-              "number": "058",
-              "score": 0.007875
+              "number": "919",
+              "score": 0.001345
             },
             {
-              "number": "438",
-              "score": 0.007
+              "number": "119",
+              "score": 0.001336
             },
             {
-              "number": "458",
-              "score": 0.007
+              "number": "219",
+              "score": 0.001327
             },
             {
-              "number": "031",
-              "score": 0.005906
+              "number": "819",
+              "score": 0.001327
             },
             {
-              "number": "036",
-              "score": 0.005906
+              "number": "714",
+              "score": 0.001313
             },
             {
-              "number": "051",
-              "score": 0.005906
+              "number": "519",
+              "score": 0.00131
             },
             {
-              "number": "056",
-              "score": 0.005906
+              "number": "914",
+              "score": 0.001304
             },
             {
-              "number": "048",
-              "score": 0.005625
+              "number": "019",
+              "score": 0.001301
             },
             {
-              "number": "068",
-              "score": 0.005625
+              "number": "114",
+              "score": 0.001296
             }
           ],
-          "weight": 0.334
+          "weight": 0.104
         },
         "lstm": {
           "top10": [
             {
               "number": "008",
-              "score": 0.1865
+              "score": 0.1776
             },
             {
               "number": "008",
-              "score": 0.1865
+              "score": 0.1776
             },
             {
               "number": "008",
-              "score": 0.1865
+              "score": 0.1776
             },
             {
               "number": "008",
-              "score": 0.1865
+              "score": 0.1776
             },
             {
-              "number": "466",
-              "score": 0.1547
+              "number": "547",
+              "score": 0.1333
             },
             {
-              "number": "466",
-              "score": 0.1547
+              "number": "547",
+              "score": 0.1333
             },
             {
-              "number": "466",
-              "score": 0.1547
+              "number": "547",
+              "score": 0.1333
             },
             {
-              "number": "131",
-              "score": 0.1211
+              "number": "460",
+              "score": 0.122
             },
             {
-              "number": "131",
-              "score": 0.1211
+              "number": "460",
+              "score": 0.122
             },
             {
-              "number": "131",
-              "score": 0.1211
+              "number": "460",
+              "score": 0.122
             }
           ],
-          "weight": 0.298
+          "weight": 0.104
+        },
+        "monte_carlo": {
+          "top10": [
+            {
+              "number": "509",
+              "score": 1.0,
+              "sim_hits": 88,
+              "percentage": 0.18
+            },
+            {
+              "number": "115",
+              "score": 0.9886,
+              "sim_hits": 87,
+              "percentage": 0.17
+            },
+            {
+              "number": "007",
+              "score": 0.9432,
+              "sim_hits": 83,
+              "percentage": 0.17
+            },
+            {
+              "number": "530",
+              "score": 0.9432,
+              "sim_hits": 83,
+              "percentage": 0.17
+            },
+            {
+              "number": "110",
+              "score": 0.9318,
+              "sim_hits": 82,
+              "percentage": 0.16
+            },
+            {
+              "number": "330",
+              "score": 0.9205,
+              "sim_hits": 81,
+              "percentage": 0.16
+            },
+            {
+              "number": "010",
+              "score": 0.8977,
+              "sim_hits": 79,
+              "percentage": 0.16
+            },
+            {
+              "number": "531",
+              "score": 0.8864,
+              "sim_hits": 78,
+              "percentage": 0.16
+            },
+            {
+              "number": "507",
+              "score": 0.8864,
+              "sim_hits": 78,
+              "percentage": 0.16
+            },
+            {
+              "number": "537",
+              "score": 0.8864,
+              "sim_hits": 78,
+              "percentage": 0.16
+            }
+          ],
+          "weight": 0.104
         }
       },
       "ensemble": {
         "top10": [
           {
-            "number": "038",
+            "number": "530",
             "score": 1.0,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "markov",
+              "monte_carlo"
             ]
           },
           {
-            "number": "058",
-            "score": 1.0,
+            "number": "330",
+            "score": 0.9844,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "markov",
+              "monte_carlo"
             ]
           },
           {
-            "number": "438",
-            "score": 0.9578,
+            "number": "509",
+            "score": 0.6859,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "458",
-            "score": 0.9578,
+            "number": "115",
+            "score": 0.6781,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "031",
-            "score": 0.9154,
+            "number": "007",
+            "score": 0.6469,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "036",
-            "score": 0.9154,
+            "number": "110",
+            "score": 0.6391,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "051",
-            "score": 0.9154,
+            "number": "010",
+            "score": 0.6157,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "056",
-            "score": 0.9154,
+            "number": "531",
+            "score": 0.608,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "048",
-            "score": 0.9151,
+            "number": "507",
+            "score": 0.608,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           },
           {
-            "number": "068",
-            "score": 0.9151,
+            "number": "537",
+            "score": 0.608,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet"
+              "monte_carlo"
             ]
           }
         ],
         "weights": {
-          "frequency": 0.312,
-          "arima": 0.278,
-          "prophet": 0.334,
-          "lstm": 0.298
+          "frequency": 0.083,
+          "markov": 0.146,
+          "arima": 0.104,
+          "prophet": 0.104,
+          "lstm": 0.104,
+          "monte_carlo": 0.104
+        },
+        "positional_breakdown": [
+          {
+            "position_index": 0,
+            "position_name": "หลักที่ 1",
+            "top_digits": [
+              {
+                "digit": "5",
+                "probability": 11.2
+              },
+              {
+                "digit": "3",
+                "probability": 10.6
+              },
+              {
+                "digit": "1",
+                "probability": 10.5
+              }
+            ]
+          },
+          {
+            "position_index": 1,
+            "position_name": "หลักที่ 2",
+            "top_digits": [
+              {
+                "digit": "3",
+                "probability": 11.3
+              },
+              {
+                "digit": "1",
+                "probability": 11.1
+              },
+              {
+                "digit": "0",
+                "probability": 11.0
+              }
+            ]
+          },
+          {
+            "position_index": 2,
+            "position_name": "หลักที่ 3",
+            "top_digits": [
+              {
+                "digit": "0",
+                "probability": 11.8
+              },
+              {
+                "digit": "7",
+                "probability": 11.2
+              },
+              {
+                "digit": "9",
+                "probability": 11.1
+              }
+            ]
+          }
+        ],
+        "digit_sum_analysis": {
+          "average_sum": 13.2,
+          "expected_range": "6 - 20"
         }
       }
     },
@@ -856,289 +1376,443 @@
         "frequency": {
           "top10": [
             {
-              "number": "48",
-              "score": 2.25
+              "number": "76",
+              "score": 1.3221
             },
             {
-              "number": "08",
-              "score": 2.0
+              "number": "78",
+              "score": 1.2416
             },
             {
-              "number": "43",
-              "score": 2.0
+              "number": "71",
+              "score": 1.2349
             },
             {
-              "number": "44",
-              "score": 2.0
+              "number": "73",
+              "score": 1.2282
             },
             {
-              "number": "47",
-              "score": 2.0
+              "number": "72",
+              "score": 1.1812
             },
             {
-              "number": "68",
-              "score": 2.0
+              "number": "66",
+              "score": 1.1745
             },
             {
-              "number": "03",
-              "score": 1.75
+              "number": "79",
+              "score": 1.1544
             },
+            {
+              "number": "26",
+              "score": 1.1477
+            },
+            {
+              "number": "46",
+              "score": 1.1477
+            },
+            {
+              "number": "70",
+              "score": 1.1477
+            }
+          ],
+          "weight": 0.083
+        },
+        "markov": {
+          "top10": [
             {
               "number": "04",
-              "score": 1.75
+              "score": 1.0
             },
             {
               "number": "07",
-              "score": 1.75
+              "score": 1.0
             },
             {
-              "number": "49",
-              "score": 1.75
+              "number": "13",
+              "score": 1.0
+            },
+            {
+              "number": "23",
+              "score": 1.0
+            },
+            {
+              "number": "33",
+              "score": 1.0
+            },
+            {
+              "number": "58",
+              "score": 1.0
+            },
+            {
+              "number": "62",
+              "score": 1.0
+            },
+            {
+              "number": "74",
+              "score": 1.0
+            },
+            {
+              "number": "86",
+              "score": 1.0
+            },
+            {
+              "number": "91",
+              "score": 1.0
             }
           ],
-          "weight": 0.312
+          "weight": 0.146
         },
         "arima": {
           "top10": [
             {
-              "number": "48",
-              "score": 0.05
+              "number": "76",
+              "score": 0.017459
             },
             {
-              "number": "08",
-              "score": 0.04
+              "number": "78",
+              "score": 0.015253
             },
             {
-              "number": "68",
-              "score": 0.04
+              "number": "71",
+              "score": 0.01507
             },
             {
-              "number": "43",
-              "score": 0.0375
+              "number": "73",
+              "score": 0.014886
             },
             {
-              "number": "44",
-              "score": 0.0375
+              "number": "66",
+              "score": 0.013693
             },
             {
-              "number": "47",
-              "score": 0.0375
+              "number": "72",
+              "score": 0.013599
             },
             {
-              "number": "03",
-              "score": 0.03
+              "number": "26",
+              "score": 0.013008
             },
             {
-              "number": "04",
-              "score": 0.03
+              "number": "46",
+              "score": 0.013008
             },
             {
-              "number": "07",
-              "score": 0.03
+              "number": "79",
+              "score": 0.012864
             },
             {
-              "number": "63",
-              "score": 0.03
+              "number": "70",
+              "score": 0.012681
             }
           ],
-          "weight": 0.278
+          "weight": 0.104
         },
         "prophet": {
           "top10": [
             {
-              "number": "48",
-              "score": 0.05
+              "number": "76",
+              "score": 0.017459
             },
             {
-              "number": "08",
-              "score": 0.04
+              "number": "78",
+              "score": 0.015253
             },
             {
-              "number": "68",
-              "score": 0.04
+              "number": "71",
+              "score": 0.01507
             },
             {
-              "number": "43",
-              "score": 0.0375
+              "number": "73",
+              "score": 0.014886
             },
             {
-              "number": "44",
-              "score": 0.0375
+              "number": "66",
+              "score": 0.013693
             },
             {
-              "number": "47",
-              "score": 0.0375
+              "number": "72",
+              "score": 0.013599
             },
             {
-              "number": "03",
-              "score": 0.03
+              "number": "26",
+              "score": 0.013008
             },
             {
-              "number": "04",
-              "score": 0.03
+              "number": "46",
+              "score": 0.013008
             },
             {
-              "number": "07",
-              "score": 0.03
+              "number": "79",
+              "score": 0.012864
             },
             {
-              "number": "63",
-              "score": 0.03
+              "number": "70",
+              "score": 0.012681
             }
           ],
-          "weight": 0.334
+          "weight": 0.104
         },
         "lstm": {
           "top10": [
             {
-              "number": "48",
+              "number": "08",
               "score": 1.0
             },
             {
-              "number": "08",
-              "score": 0.8335
-            },
-            {
               "number": "68",
-              "score": 0.8335
-            },
-            {
-              "number": "43",
-              "score": 0.7996
-            },
-            {
-              "number": "44",
-              "score": 0.7996
-            },
-            {
-              "number": "47",
-              "score": 0.7996
-            },
-            {
-              "number": "03",
-              "score": 0.6665
-            },
-            {
-              "number": "04",
-              "score": 0.6665
+              "score": 1.0
             },
             {
               "number": "07",
-              "score": 0.6665
+              "score": 0.8887
             },
             {
-              "number": "63",
-              "score": 0.6665
+              "number": "67",
+              "score": 0.8887
+            },
+            {
+              "number": "28",
+              "score": 0.8755
+            },
+            {
+              "number": "48",
+              "score": 0.8755
+            },
+            {
+              "number": "58",
+              "score": 0.8755
+            },
+            {
+              "number": "78",
+              "score": 0.8755
+            },
+            {
+              "number": "00",
+              "score": 0.778
+            },
+            {
+              "number": "06",
+              "score": 0.778
             }
           ],
-          "weight": 0.298
+          "weight": 0.104
+        },
+        "monte_carlo": {
+          "top10": [
+            {
+              "number": "76",
+              "score": 1.0,
+              "sim_hits": 986,
+              "percentage": 1.97
+            },
+            {
+              "number": "71",
+              "score": 0.856,
+              "sim_hits": 844,
+              "percentage": 1.69
+            },
+            {
+              "number": "78",
+              "score": 0.8215,
+              "sim_hits": 810,
+              "percentage": 1.62
+            },
+            {
+              "number": "73",
+              "score": 0.8205,
+              "sim_hits": 809,
+              "percentage": 1.62
+            },
+            {
+              "number": "46",
+              "score": 0.7728,
+              "sim_hits": 762,
+              "percentage": 1.52
+            },
+            {
+              "number": "66",
+              "score": 0.7586,
+              "sim_hits": 748,
+              "percentage": 1.5
+            },
+            {
+              "number": "26",
+              "score": 0.7343,
+              "sim_hits": 724,
+              "percentage": 1.45
+            },
+            {
+              "number": "68",
+              "score": 0.714,
+              "sim_hits": 704,
+              "percentage": 1.41
+            },
+            {
+              "number": "72",
+              "score": 0.7079,
+              "sim_hits": 698,
+              "percentage": 1.4
+            },
+            {
+              "number": "06",
+              "score": 0.6917,
+              "sim_hits": 682,
+              "percentage": 1.36
+            }
+          ],
+          "weight": 0.104
         }
       },
       "ensemble": {
         "top10": [
           {
-            "number": "48",
+            "number": "78",
             "score": 1.0,
             "model_votes": [
               "frequency",
               "arima",
               "prophet",
-              "lstm"
+              "lstm",
+              "monte_carlo"
             ]
           },
           {
-            "number": "08",
-            "score": 0.8702,
+            "number": "76",
+            "score": 0.9087,
             "model_votes": [
               "frequency",
               "arima",
               "prophet",
-              "lstm"
+              "monte_carlo"
+            ]
+          },
+          {
+            "number": "71",
+            "score": 0.7988,
+            "model_votes": [
+              "frequency",
+              "arima",
+              "prophet",
+              "monte_carlo"
+            ]
+          },
+          {
+            "number": "73",
+            "score": 0.7749,
+            "model_votes": [
+              "frequency",
+              "arima",
+              "prophet",
+              "monte_carlo"
+            ]
+          },
+          {
+            "number": "46",
+            "score": 0.7275,
+            "model_votes": [
+              "frequency",
+              "arima",
+              "prophet",
+              "monte_carlo"
+            ]
+          },
+          {
+            "number": "66",
+            "score": 0.7242,
+            "model_votes": [
+              "frequency",
+              "arima",
+              "prophet",
+              "monte_carlo"
             ]
           },
           {
             "number": "68",
-            "score": 0.8702,
+            "score": 0.7049,
+            "model_votes": [
+              "lstm",
+              "monte_carlo"
+            ]
+          },
+          {
+            "number": "26",
+            "score": 0.7031,
             "model_votes": [
               "frequency",
               "arima",
               "prophet",
-              "lstm"
+              "monte_carlo"
             ]
           },
           {
-            "number": "43",
-            "score": 0.8589,
+            "number": "72",
+            "score": 0.6935,
             "model_votes": [
               "frequency",
               "arima",
               "prophet",
-              "lstm"
+              "monte_carlo"
             ]
           },
           {
-            "number": "44",
-            "score": 0.8589,
+            "number": "06",
+            "score": 0.6346,
             "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "lstm"
-            ]
-          },
-          {
-            "number": "47",
-            "score": 0.8589,
-            "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "lstm"
-            ]
-          },
-          {
-            "number": "03",
-            "score": 0.7403,
-            "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "lstm"
-            ]
-          },
-          {
-            "number": "04",
-            "score": 0.7403,
-            "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "lstm"
-            ]
-          },
-          {
-            "number": "07",
-            "score": 0.7403,
-            "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "lstm"
-            ]
-          },
-          {
-            "number": "49",
-            "score": 0.5298,
-            "model_votes": [
-              "frequency"
+              "lstm",
+              "monte_carlo"
             ]
           }
         ],
         "weights": {
-          "frequency": 0.312,
-          "arima": 0.278,
-          "prophet": 0.334,
-          "lstm": 0.298
+          "frequency": 0.083,
+          "markov": 0.146,
+          "arima": 0.104,
+          "prophet": 0.104,
+          "lstm": 0.104,
+          "monte_carlo": 0.104
+        },
+        "positional_breakdown": [
+          {
+            "position_index": 0,
+            "position_name": "หลักที่ 1",
+            "top_digits": [
+              {
+                "digit": "7",
+                "probability": 14.3
+              },
+              {
+                "digit": "6",
+                "probability": 11.3
+              },
+              {
+                "digit": "4",
+                "probability": 10.7
+              }
+            ]
+          },
+          {
+            "position_index": 1,
+            "position_name": "หลักที่ 2",
+            "top_digits": [
+              {
+                "digit": "6",
+                "probability": 14.0
+              },
+              {
+                "digit": "3",
+                "probability": 11.4
+              },
+              {
+                "digit": "1",
+                "probability": 11.2
+              }
+            ]
+          }
+        ],
+        "digit_sum_analysis": {
+          "average_sum": 9.1,
+          "expected_range": "2 - 16"
         }
       }
     }

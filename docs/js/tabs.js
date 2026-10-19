@@ -76,6 +76,9 @@ function updateStatsView(prizeType) {
   if (typeof initPositionalChart === 'function') {
     initPositionalChart(stats, prizeType);
   }
+  if (typeof initMarkovTransitionHeatmap === 'function') {
+    initMarkovTransitionHeatmap(stats);
+  }
 }
 
 function updatePredictionsView(prizeType) {

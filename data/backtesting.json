@@ -1,326 +1,1074 @@
 {
   "generated_at": "2026-10-19",
   "methodology": "walk_forward",
-  "window_size": 24,
-  "test_draws_evaluated": 12,
+  "window_size": 48,
+  "test_draws_evaluated": 48,
   "models": {
     "frequency": {
       "overall_accuracy": {
-        "last_two": 0.312,
-        "last_three_b": 0.148,
-        "last_three_f": 0.156,
-        "first_prize": 0.085
+        "last_two": 0.083,
+        "last_three_b": 0.042,
+        "last_three_f": 0.042,
+        "first_prize": 0.0
       },
       "history": [
         {
-          "draw": "2026-10-16",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": true
-        },
-        {
-          "draw": "2026-10-01",
+          "draw": "2025-11-16",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-09-16",
-          "last_two_hit": true,
+          "draw": "2025-12-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-09-01",
+          "draw": "2025-12-16",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-08-16",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-08-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-07-16",
-          "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-07-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-06-16",
+          "draw": "2025-12-30",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-17",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-02",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         },
         {
           "draw": "2026-06-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        }
+      ]
+    },
+    "markov": {
+      "overall_accuracy": {
+        "last_two": 0.146,
+        "last_three_b": 0.042,
+        "last_three_f": 0.0,
+        "first_prize": 0.0
+      },
+      "history": [
+        {
+          "draw": "2025-11-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-16",
+          "first_prize_hit": false,
           "last_two_hit": true,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": true
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-30",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-17",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-16",
+          "first_prize_hit": false,
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-01",
+          "first_prize_hit": false,
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-02",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-16",
+          "first_prize_hit": false,
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "first_prize_hit": false,
+          "last_two_hit": true,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         }
       ]
     },
     "arima": {
       "overall_accuracy": {
-        "last_two": 0.278,
-        "last_three_b": 0.134,
-        "last_three_f": 0.142,
-        "first_prize": 0.072
+        "last_two": 0.104,
+        "last_three_b": 0.021,
+        "last_three_f": 0.042,
+        "first_prize": 0.0
       },
       "history": [
         {
-          "draw": "2026-10-16",
-          "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-10-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-09-16",
+          "draw": "2025-11-16",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-09-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": true
-        },
-        {
-          "draw": "2026-08-16",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-08-01",
+          "draw": "2025-12-01",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-07-16",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": true
-        },
-        {
-          "draw": "2026-07-01",
+          "draw": "2025-12-16",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-06-16",
-          "last_two_hit": true,
+          "draw": "2025-12-30",
+          "first_prize_hit": false,
+          "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": false
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-17",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-02",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         },
         {
           "draw": "2026-06-01",
+          "first_prize_hit": false,
           "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         }
       ]
     },
     "prophet": {
       "overall_accuracy": {
-        "last_two": 0.334,
-        "last_three_b": 0.162,
-        "last_three_f": 0.171,
-        "first_prize": 0.091
+        "last_two": 0.104,
+        "last_three_b": 0.021,
+        "last_three_f": 0.042,
+        "first_prize": 0.0
       },
       "history": [
         {
-          "draw": "2026-10-16",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": true
-        },
-        {
-          "draw": "2026-10-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-09-16",
+          "draw": "2025-11-16",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-09-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": true
-        },
-        {
-          "draw": "2026-08-16",
+          "draw": "2025-12-01",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-08-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-07-16",
+          "draw": "2025-12-16",
+          "first_prize_hit": false,
           "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-07-01",
-          "last_two_hit": true,
+          "draw": "2025-12-30",
+          "first_prize_hit": false,
+          "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-06-16",
-          "last_two_hit": true,
+          "draw": "2026-01-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": false
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-17",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-02",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         },
         {
           "draw": "2026-06-01",
+          "first_prize_hit": false,
           "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         }
       ]
     },
     "lstm": {
       "overall_accuracy": {
-        "last_two": 0.298,
-        "last_three_b": 0.151,
-        "last_three_f": 0.158,
-        "first_prize": 0.088
+        "last_two": 0.104,
+        "last_three_b": 0.0,
+        "last_three_f": 0.021,
+        "first_prize": 0.0
       },
       "history": [
         {
-          "draw": "2026-10-16",
-          "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-10-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-09-16",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": true,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-09-01",
-          "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-08-16",
+          "draw": "2025-11-16",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
         },
         {
-          "draw": "2026-08-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-07-16",
-          "last_two_hit": false,
-          "last_three_b_hit": true,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-07-01",
-          "last_two_hit": true,
-          "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
-        },
-        {
-          "draw": "2026-06-16",
+          "draw": "2025-12-01",
+          "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": false
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-30",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-17",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-02",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         },
         {
           "draw": "2026-06-01",
-          "last_two_hit": true,
+          "first_prize_hit": false,
+          "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false,
-          "first_prize_hit": true
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        }
+      ]
+    },
+    "monte_carlo": {
+      "overall_accuracy": {
+        "last_two": 0.104,
+        "last_three_b": 0.021,
+        "last_three_f": 0.021,
+        "first_prize": 0.0
+      },
+      "history": [
+        {
+          "draw": "2025-11-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2025-12-30",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-01-17",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-02-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-03-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-04-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-02",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-05-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-06-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-07-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-08-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-09-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-01",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
+        },
+        {
+          "draw": "2026-10-16",
+          "first_prize_hit": false,
+          "last_two_hit": false,
+          "last_three_b_hit": false,
+          "last_three_f_hit": false
         }
       ]
     }

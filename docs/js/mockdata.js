@@ -232,6 +232,21 @@ const MOCK_STATISTICS = {
       "tens": {"0":3,"1":3,"2":3,"3":3,"4":3,"5":3,"6":3,"7":3,"8":4,"9":3},
       "units": {"0":3,"1":3,"2":4,"3":3,"4":3,"5":3,"6":3,"7":3,"8":3,"9":3}
     }
+  },
+  markov_transitions: {
+    matrix_10x10: [
+      [0.08, 0.12, 0.11, 0.09, 0.10, 0.14, 0.08, 0.09, 0.10, 0.09],
+      [0.10, 0.09, 0.12, 0.10, 0.08, 0.11, 0.10, 0.12, 0.09, 0.09],
+      [0.09, 0.11, 0.08, 0.12, 0.11, 0.09, 0.10, 0.08, 0.12, 0.10],
+      [0.11, 0.10, 0.09, 0.07, 0.13, 0.10, 0.12, 0.09, 0.10, 0.09],
+      [0.08, 0.10, 0.13, 0.11, 0.09, 0.08, 0.11, 0.10, 0.11, 0.09],
+      [0.12, 0.08, 0.10, 0.10, 0.11, 0.09, 0.09, 0.13, 0.08, 0.10],
+      [0.09, 0.11, 0.09, 0.12, 0.08, 0.12, 0.09, 0.11, 0.09, 0.10],
+      [0.10, 0.09, 0.11, 0.09, 0.12, 0.10, 0.08, 0.09, 0.12, 0.10],
+      [0.09, 0.12, 0.10, 0.11, 0.09, 0.08, 0.12, 0.10, 0.09, 0.10],
+      [0.11, 0.08, 0.12, 0.09, 0.10, 0.11, 0.09, 0.10, 0.10, 0.10]
+    ],
+    labels: ["หมวด 00", "หมวด 10", "หมวด 20", "หมวด 30", "หมวด 40", "หมวด 50", "หมวด 60", "หมวด 70", "หมวด 80", "หมวด 90"]
   }
 };
 
@@ -278,6 +293,48 @@ const MOCK_PREDICTIONS = {
           {"number": "807614", "score": 0.74, "rank": 5},
           {"number": "807714", "score": 0.71, "rank": 6},
           {"number": "137719", "score": 0.67, "rank": 7}
+        ]
+      }
+    },
+    markov: {
+      name: "Markov Chain",
+      name_th: "ลูกโซ่มาร์คอฟ (Transition Matrix)",
+      weight: 0.25,
+      predictions: {
+        last_two: [
+          {"number": "48", "score": 0.92, "rank": 1},
+          {"number": "34", "score": 0.88, "rank": 2},
+          {"number": "70", "score": 0.84, "rank": 3},
+          {"number": "19", "score": 0.80, "rank": 4},
+          {"number": "64", "score": 0.76, "rank": 5},
+          {"number": "53", "score": 0.72, "rank": 6},
+          {"number": "89", "score": 0.68, "rank": 7},
+          {"number": "26", "score": 0.64, "rank": 8},
+          {"number": "72", "score": 0.60, "rank": 9},
+          {"number": "04", "score": 0.56, "rank": 10}
+        ],
+        last_three_b: [
+          {"number": "171", "score": 0.86, "rank": 1},
+          {"number": "255", "score": 0.82, "rank": 2},
+          {"number": "058", "score": 0.77, "rank": 3},
+          {"number": "396", "score": 0.73, "rank": 4},
+          {"number": "266", "score": 0.69, "rank": 5}
+        ],
+        last_three_f: [
+          {"number": "392", "score": 0.85, "rank": 1},
+          {"number": "402", "score": 0.81, "rank": 2},
+          {"number": "791", "score": 0.76, "rank": 3},
+          {"number": "912", "score": 0.72, "rank": 4},
+          {"number": "060", "score": 0.68, "rank": 5}
+        ],
+        first_prize: [
+          {"number": "011781", "score": 0.90, "rank": 1},
+          {"number": "107614", "score": 0.86, "rank": 2},
+          {"number": "402701", "score": 0.82, "rank": 3},
+          {"number": "107619", "score": 0.78, "rank": 4},
+          {"number": "730640", "score": 0.74, "rank": 5},
+          {"number": "137614", "score": 0.70, "rank": 6},
+          {"number": "807614", "score": 0.66, "rank": 7}
         ]
       }
     },
@@ -406,54 +463,108 @@ const MOCK_PREDICTIONS = {
           {"number": "807719", "score": 0.62, "rank": 7}
         ]
       }
+    },
+    monte_carlo: {
+      name: "Monte Carlo",
+      name_th: "การจำลองมอนเตการ์โล (50,000 รอบ)",
+      weight: 0.15,
+      predictions: {
+        last_two: [
+          {"number": "48", "score": 1.00, "rank": 1},
+          {"number": "34", "score": 0.94, "rank": 2},
+          {"number": "19", "score": 0.89, "rank": 3},
+          {"number": "70", "score": 0.83, "rank": 4},
+          {"number": "64", "score": 0.78, "rank": 5},
+          {"number": "54", "score": 0.73, "rank": 6},
+          {"number": "04", "score": 0.68, "rank": 7},
+          {"number": "67", "score": 0.64, "rank": 8},
+          {"number": "53", "score": 0.59, "rank": 9},
+          {"number": "89", "score": 0.55, "rank": 10}
+        ],
+        last_three_b: [
+          {"number": "171", "score": 1.00, "rank": 1},
+          {"number": "255", "score": 0.91, "rank": 2},
+          {"number": "058", "score": 0.84, "rank": 3},
+          {"number": "396", "score": 0.78, "rank": 4},
+          {"number": "266", "score": 0.71, "rank": 5}
+        ],
+        last_three_f: [
+          {"number": "392", "score": 1.00, "rank": 1},
+          {"number": "402", "score": 0.92, "rank": 2},
+          {"number": "791", "score": 0.85, "rank": 3},
+          {"number": "912", "score": 0.79, "rank": 4},
+          {"number": "060", "score": 0.72, "rank": 5}
+        ],
+        first_prize: [
+          {"number": "107614", "score": 1.00, "rank": 1},
+          {"number": "107619", "score": 0.88, "rank": 2},
+          {"number": "107714", "score": 0.82, "rank": 3},
+          {"number": "011781", "score": 0.79, "rank": 4},
+          {"number": "137614", "score": 0.75, "rank": 5},
+          {"number": "807614", "score": 0.71, "rank": 6},
+          {"number": "402701", "score": 0.67, "rank": 7}
+        ]
+      }
     }
   },
   ensemble: {
     last_two: [
-      {"number": "34", "score": 0.917, "rank": 1, "model_votes": ["frequency","arima","prophet","lstm"]},
-      {"number": "19", "score": 0.876, "rank": 2, "model_votes": ["frequency","prophet","lstm"]},
-      {"number": "67", "score": 0.852, "rank": 3, "model_votes": ["frequency","lstm"]},
-      {"number": "89", "score": 0.798, "rank": 4, "model_votes": ["arima","lstm"]},
-      {"number": "54", "score": 0.764, "rank": 5, "model_votes": ["frequency","lstm"]},
-      {"number": "43", "score": 0.731, "rank": 6, "model_votes": ["frequency","prophet"]},
-      {"number": "48", "score": 0.712, "rank": 7, "model_votes": ["arima","lstm"]},
-      {"number": "72", "score": 0.695, "rank": 8, "model_votes": ["frequency","prophet"]},
-      {"number": "26", "score": 0.678, "rank": 9, "model_votes": ["frequency","prophet"]},
-      {"number": "60", "score": 0.654, "rank": 10, "model_votes": ["frequency","prophet"]}
+      {"number": "48", "score": 1.000, "rank": 1, "model_votes": ["frequency","markov","monte_carlo"]},
+      {"number": "34", "score": 0.917, "rank": 2, "model_votes": ["frequency","markov","arima","prophet","lstm","monte_carlo"]},
+      {"number": "19", "score": 0.876, "rank": 3, "model_votes": ["frequency","markov","prophet","lstm","monte_carlo"]},
+      {"number": "70", "score": 0.854, "rank": 4, "model_votes": ["markov","monte_carlo"]},
+      {"number": "67", "score": 0.852, "rank": 5, "model_votes": ["frequency","lstm","monte_carlo"]},
+      {"number": "64", "score": 0.812, "rank": 6, "model_votes": ["markov","monte_carlo"]},
+      {"number": "89", "score": 0.798, "rank": 7, "model_votes": ["arima","lstm","monte_carlo"]},
+      {"number": "54", "score": 0.764, "rank": 8, "model_votes": ["frequency","lstm","monte_carlo"]},
+      {"number": "43", "score": 0.731, "rank": 9, "model_votes": ["frequency","prophet"]},
+      {"number": "72", "score": 0.695, "rank": 10, "model_votes": ["frequency","prophet"]}
     ],
     last_three_b: [
-      {"number": "234", "score": 0.889, "rank": 1, "model_votes": ["frequency","prophet","lstm"]},
-      {"number": "789", "score": 0.851, "rank": 2, "model_votes": ["arima","prophet"]},
-      {"number": "567", "score": 0.823, "rank": 3, "model_votes": ["frequency","arima","lstm"]},
-      {"number": "456", "score": 0.794, "rank": 4, "model_votes": ["frequency","prophet"]},
-      {"number": "123", "score": 0.762, "rank": 5, "model_votes": ["frequency","prophet","lstm"]}
+      {"number": "171", "score": 1.000, "rank": 1, "model_votes": ["markov","monte_carlo"]},
+      {"number": "255", "score": 0.924, "rank": 2, "model_votes": ["markov","monte_carlo"]},
+      {"number": "234", "score": 0.889, "rank": 3, "model_votes": ["frequency","prophet","lstm"]},
+      {"number": "789", "score": 0.851, "rank": 4, "model_votes": ["arima","prophet"]},
+      {"number": "567", "score": 0.823, "rank": 5, "model_votes": ["frequency","arima","lstm"]}
     ],
     last_three_f: [
-      {"number": "678", "score": 0.882, "rank": 1, "model_votes": ["frequency","prophet","lstm"]},
-      {"number": "345", "score": 0.847, "rank": 2, "model_votes": ["frequency","arima","prophet","lstm"]},
-      {"number": "789", "score": 0.815, "rank": 3, "model_votes": ["frequency","lstm"]},
-      {"number": "901", "score": 0.783, "rank": 4, "model_votes": ["arima","prophet"]},
-      {"number": "012", "score": 0.751, "rank": 5, "model_votes": ["arima"]}
+      {"number": "392", "score": 1.000, "rank": 1, "model_votes": ["markov","monte_carlo"]},
+      {"number": "402", "score": 0.915, "rank": 2, "model_votes": ["markov","monte_carlo"]},
+      {"number": "678", "score": 0.882, "rank": 3, "model_votes": ["frequency","prophet","lstm"]},
+      {"number": "345", "score": 0.847, "rank": 4, "model_votes": ["frequency","arima","prophet","lstm"]},
+      {"number": "791", "score": 0.832, "rank": 5, "model_votes": ["markov","monte_carlo"]}
     ],
     first_prize: [
-      {"number": "107614", "score": 1.000, "rank": 1, "model_votes": ["frequency","arima","prophet","lstm"]},
-      {"number": "107619", "score": 0.762, "rank": 2, "model_votes": ["frequency","arima","prophet","lstm"]},
-      {"number": "107714", "score": 0.762, "rank": 3, "model_votes": ["frequency","prophet"]},
-      {"number": "137614", "score": 0.762, "rank": 4, "model_votes": ["frequency","arima"]},
-      {"number": "807614", "score": 0.762, "rank": 5, "model_votes": ["frequency","prophet","lstm"]},
-      {"number": "107719", "score": 0.762, "rank": 6, "model_votes": ["arima","lstm"]},
-      {"number": "137619", "score": 0.762, "rank": 7, "model_votes": ["prophet","lstm"]},
-      {"number": "137714", "score": 0.762, "rank": 8, "model_votes": ["arima","prophet"]},
-      {"number": "807619", "score": 0.762, "rank": 9, "model_votes": ["arima"]},
+      {"number": "107614", "score": 1.000, "rank": 1, "model_votes": ["frequency","markov","arima","prophet","lstm","monte_carlo"]},
+      {"number": "107619", "score": 0.762, "rank": 2, "model_votes": ["frequency","markov","arima","prophet","lstm","monte_carlo"]},
+      {"number": "107714", "score": 0.762, "rank": 3, "model_votes": ["frequency","prophet","monte_carlo"]},
+      {"number": "011781", "score": 0.755, "rank": 4, "model_votes": ["markov","monte_carlo"]},
+      {"number": "137614", "score": 0.762, "rank": 5, "model_votes": ["frequency","markov","arima","monte_carlo"]},
+      {"number": "807614", "score": 0.762, "rank": 6, "model_votes": ["frequency","markov","prophet","lstm","monte_carlo"]},
+      {"number": "107719", "score": 0.762, "rank": 7, "model_votes": ["arima","lstm"]},
+      {"number": "137619", "score": 0.762, "rank": 8, "model_votes": ["prophet","lstm"]},
+      {"number": "402701", "score": 0.720, "rank": 9, "model_votes": ["markov","monte_carlo"]},
       {"number": "807714", "score": 0.762, "rank": 10, "model_votes": ["frequency","prophet"]}
-    ]
+    ],
+    positional_breakdown: [
+      {"position_index": 0, "position_name": "หลักแสน", "top_digits": [{"digit": "1", "probability": 28.5}, {"digit": "0", "probability": 22.1}, {"digit": "8", "probability": 18.4}]},
+      {"position_index": 1, "position_name": "หลักหมื่น", "top_digits": [{"digit": "0", "probability": 29.4}, {"digit": "1", "probability": 21.0}, {"digit": "3", "probability": 17.5}]},
+      {"position_index": 2, "position_name": "หลักพัน", "top_digits": [{"digit": "7", "probability": 31.2}, {"digit": "1", "probability": 23.4}, {"digit": "6", "probability": 16.8}]},
+      {"position_index": 3, "position_name": "หลักร้อย", "top_digits": [{"digit": "6", "probability": 27.6}, {"digit": "7", "probability": 24.3}, {"digit": "2", "probability": 17.1}]},
+      {"position_index": 4, "position_name": "หลักสิบ", "top_digits": [{"digit": "1", "probability": 32.0}, {"digit": "8", "probability": 22.8}, {"digit": "0", "probability": 15.6}]},
+      {"position_index": 5, "position_name": "หลักหน่วย", "top_digits": [{"digit": "4", "probability": 30.5}, {"digit": "1", "probability": 24.7}, {"digit": "9", "probability": 19.2}]}
+    ],
+    digit_sum_analysis: {
+      "average_sum": 26.8,
+      "expected_range": "20 - 34"
+    }
   }
 };
 
 const MOCK_BACKTESTING = {
   generated_at: "2026-10-16",
   methodology: "walk_forward",
-  window_size: 24,
+  window_size: 48,
   models: {
     frequency: {
       overall_accuracy: {
@@ -473,6 +584,26 @@ const MOCK_BACKTESTING = {
         {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": true},
         {"draw": "2026-10-01", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
         {"draw": "2026-10-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false}
+      ]
+    },
+    markov: {
+      overall_accuracy: {
+        last_two: 0.345,
+        last_three_b: 0.175,
+        last_three_f: 0.180,
+        first_prize: 0.098
+      },
+      history: [
+        {"draw": "2026-06-01", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-07-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-07-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-08-01", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-08-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-09-01", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-10-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-10-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true}
       ]
     },
     arima: {
@@ -533,6 +664,26 @@ const MOCK_BACKTESTING = {
         {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
         {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": false, "first_prize_hit": true},
         {"draw": "2026-10-16", "last_two_hit": false, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false}
+      ]
+    },
+    monte_carlo: {
+      overall_accuracy: {
+        last_two: 0.358,
+        last_three_b: 0.182,
+        last_three_f: 0.188,
+        first_prize: 0.104
+      },
+      history: [
+        {"draw": "2026-06-01", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-06-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-07-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": true},
+        {"draw": "2026-07-16", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-08-01", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-08-16", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-09-01", "last_two_hit": false, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": false},
+        {"draw": "2026-09-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true},
+        {"draw": "2026-10-01", "last_two_hit": true, "last_three_b_hit": false, "last_three_f_hit": true, "first_prize_hit": false},
+        {"draw": "2026-10-16", "last_two_hit": true, "last_three_b_hit": true, "last_three_f_hit": false, "first_prize_hit": true}
       ]
     }
   }

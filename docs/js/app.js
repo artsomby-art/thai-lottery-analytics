@@ -226,6 +226,9 @@ function renderPredictionsTables(prizeType) {
                : prizeType === 'last_three_f' ? 'front_three'
                : (prizeType === 'first_prize' ? 'first' : (prizeType === 'first' ? 'first_prize' : prizeType));
 
+  // Render Positional Breakdown for First Prize
+  renderPositionalBreakdown(preds, prizeType);
+
   // 1. Combined Ensemble Table
   const ensembleList = preds?.prize_types?.[prizeType]?.ensemble?.top10 ||
                        preds?.prize_types?.[altKey]?.ensemble?.top10 ||
@@ -261,8 +264,8 @@ function renderPredictionsTables(prizeType) {
     }
   }
 
-  // 2. Per-Model Predictions Comparison
-  const models = ['frequency', 'arima', 'prophet', 'lstm'];
+  // 2. Per-Model Predictions Comparison (6 Models)
+  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
   models.forEach(m => {
     const listEl = document.getElementById(`pred-list-${m}`);
     if (!listEl) return;
@@ -284,6 +287,54 @@ function renderPredictionsTables(prizeType) {
       `).join('');
     }
   });
+}
+
+function renderPositionalBreakdown(preds, prizeType) {
+  const container = document.getElementById('pred-positional-breakdown');
+  const target = document.getElementById('positional-breakdown-container');
+  const digitSumBadge = document.getElementById('digit-sum-badge');
+  if (!container || !target) return;
+
+  if (prizeType !== 'first_prize') {
+    container.classList.add('d-none');
+    return;
+  }
+
+  const breakdown = preds?.prize_types?.first_prize?.ensemble?.positional_breakdown ||
+                    preds?.ensemble?.positional_breakdown || [];
+  const digitSum = preds?.prize_types?.first_prize?.ensemble?.digit_sum_analysis ||
+                   preds?.ensemble?.digit_sum_analysis || {};
+
+  if (!breakdown.length) {
+    container.classList.add('d-none');
+    return;
+  }
+
+  container.classList.remove('d-none');
+  if (digitSumBadge && digitSum.average_sum) {
+    digitSumBadge.textContent = `แต้มรวมเฉลี่ย: ${digitSum.average_sum} (ช่วงปกติ: ${digitSum.expected_range || '20-34'})`;
+  }
+
+  target.innerHTML = breakdown.map(pos => {
+    return `
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="p-3 rounded h-100" style="background: var(--bg-tertiary); border: 1px solid var(--border-color);">
+          <div class="text-warning fw-bold small mb-2 text-center border-bottom border-dark pb-1">${pos.position_name}</div>
+          <div class="d-flex flex-column gap-2">
+            ${pos.top_digits.map((td, i) => `
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="badge ${i === 0 ? 'bg-warning text-dark' : 'bg-dark border border-secondary'} rounded-circle" style="width: 24px; height: 24px; line-height: 16px;">${td.digit}</span>
+                <div class="progress flex-grow-1 mx-2" style="height: 6px; background: rgba(255,255,255,0.08);">
+                  <div class="progress-bar ${i === 0 ? 'bg-warning' : 'bg-info'}" style="width: ${td.probability}%;"></div>
+                </div>
+                <span class="small font-monospace text-muted">${td.probability}%</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 /**

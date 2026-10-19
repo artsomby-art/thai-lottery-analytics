@@ -497,47 +497,51 @@ SAMPLE_RECORDS: list[DrawRecord] = [
 
 def scrape_all() -> list[DrawRecord]:
     """
-    Scrape lottery results from all sources with fallback.
-    Returns deduplicated sorted list of draw records.
+    Scrape lottery results from all sources with incremental fallback.
+    Returns deduplicated sorted list of draw records (latest draw first).
 
-    เรียงลำดับความสำคัญ: myhora.com → sanook.com → glo.or.th → sample data
+    เรียงลำดับความสำคัญ: myhora.com → sanook.com → glo.or.th → raw DB → sample data
     """
+    existing_records = load_raw()
     session = _session()
-    if session is None:
-        logger.warning("Scraper dependencies missing — using built-in sample data")
-        return SAMPLE_RECORDS.copy()
-    all_records: list[DrawRecord] = []
+    all_records: list[DrawRecord] = list(existing_records)
 
-    # Source 1
-    try:
-        myhora_records = scrape_myhora(session)
-        all_records.extend(myhora_records)
-    except Exception as exc:
-        logger.error("myhora scrape failed: %s", exc)
-
-    # Source 2 (fallback)
-    if len(all_records) < 10:
+    if session is not None:
+        newly_scraped: list[DrawRecord] = []
+        # Source 1
         try:
-            sanook_records = scrape_sanook(session)
-            all_records.extend(sanook_records)
+            myhora_records = scrape_myhora(session)
+            newly_scraped.extend(myhora_records)
         except Exception as exc:
-            logger.error("sanook scrape failed: %s", exc)
+            logger.error("myhora scrape failed: %s", exc)
 
-    # Source 3 (fallback)
-    if len(all_records) < 10:
-        try:
-            glo_records = scrape_glo(session)
-            all_records.extend(glo_records)
-        except Exception as exc:
-            logger.error("glo scrape failed: %s", exc)
+        # Source 2 (fallback)
+        if len(newly_scraped) < 10:
+            try:
+                sanook_records = scrape_sanook(session)
+                newly_scraped.extend(sanook_records)
+            except Exception as exc:
+                logger.error("sanook scrape failed: %s", exc)
 
-    # Final fallback: sample data (for dev/CI)
+        # Source 3 (fallback)
+        if len(newly_scraped) < 10:
+            try:
+                glo_records = scrape_glo(session)
+                newly_scraped.extend(glo_records)
+            except Exception as exc:
+                logger.error("glo scrape failed: %s", exc)
+
+        if newly_scraped:
+            all_records.extend(newly_scraped)
+
     if not all_records:
-        logger.warning("All scrapers failed — using built-in sample data (5 draws)")
+        logger.warning("All scrapers and cache empty — using built-in sample data")
         all_records = SAMPLE_RECORDS.copy()
 
     deduped = _deduplicate(all_records)
-    logger.info("Total unique draw records: %d", len(deduped))
+    # Sort descending: newest draw first
+    deduped.sort(key=lambda x: x["date"], reverse=True)
+    logger.info("Total unique draw records in database: %d", len(deduped))
     return deduped
 
 

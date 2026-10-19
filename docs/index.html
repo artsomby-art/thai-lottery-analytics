@@ -237,7 +237,7 @@
         <div class="dash-card p-4">
           <div class="dash-card-header mb-3">
             <span><i class="bi bi-cpu-fill text-warning me-2"></i>สรุปตัวเลขคาดการณ์ยอดนิยม (Ensemble Combined Model Top 5)</span>
-            <small class="text-muted">ประมวลผลจากการรวม 4 โมเดล</small>
+            <small class="text-muted">ประมวลผลจากการรวม 6 โมเดล (Two-Stage Monte Carlo Stacking)</small>
           </div>
           <div id="overview-top-predictions"></div>
         </div>
@@ -309,6 +309,19 @@
           </div>
         </div>
 
+        <!-- Row 3: Markov State Transition Matrix Heatmap -->
+        <div class="row g-4 mb-4">
+          <div class="col-12">
+            <div class="dash-card p-3">
+              <div class="dash-card-header mb-2">
+                <span><i class="bi bi-diagram-3-fill text-info me-2"></i>เมทริกซ์ความน่าจะเป็นของการเปลี่ยนสถานะตัวเลข (Markov State Transition Matrix 10x10)</span>
+                <span class="badge bg-dark border border-secondary text-info">คำนวณจากประวัติย้อนหลัง 30 ปี</span>
+              </div>
+              <div id="chart-markov-transition" class="chart-box"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- ========================================== -->
@@ -327,34 +340,59 @@
           <span class="text-muted small"><i class="bi bi-sliders me-1"></i>แสดงผลลัพธ์แยกรายโมเดลและการรวม Ensemble</span>
         </div>
 
-        <!-- 4 Model Gauges Row -->
+        <!-- First Prize Positional Breakdown Card (Active when first_prize is selected) -->
+        <div id="pred-positional-breakdown" class="dash-card p-4 mb-4 d-none">
+          <div class="dash-card-header mb-3">
+            <span><i class="bi bi-bullseye text-warning me-2"></i>วิเคราะห์เลขเด่นรายหลัก รางวัลที่ 1 (Positional Probability Breakdown)</span>
+            <span id="digit-sum-badge" class="badge bg-dark border border-secondary text-warning">ผลรวมแต้มเฉลี่ย: --</span>
+          </div>
+          <div id="positional-breakdown-container" class="row g-3">
+            <!-- Dynamically populated 6 columns (หลักแสน ถึง หลักหน่วย) -->
+          </div>
+        </div>
+
+        <!-- 6 Model Gauges Row -->
         <div class="row g-3 mb-4">
-          <div class="col-6 col-md-3">
-            <div class="dash-card p-3 text-center">
-              <div class="text-muted small mb-1 fw-bold">Frequency Model</div>
-              <div id="chart-gauge-frequency" style="height: 140px;"></div>
-              <small class="text-warning">Backtesting Hit Rate</small>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-2 text-center h-100">
+              <div class="text-muted small mb-1 fw-bold">Frequency</div>
+              <div id="chart-gauge-frequency" style="height: 120px;"></div>
+              <small class="text-warning small">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="dash-card p-3 text-center">
-              <div class="text-muted small mb-1 fw-bold">ARIMA Model</div>
-              <div id="chart-gauge-arima" style="height: 140px;"></div>
-              <small class="text-info">Backtesting Hit Rate</small>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-2 text-center h-100">
+              <div class="text-muted small mb-1 fw-bold">Markov Chain</div>
+              <div id="chart-gauge-markov" style="height: 120px;"></div>
+              <small class="text-info small">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="dash-card p-3 text-center">
-              <div class="text-muted small mb-1 fw-bold">Prophet Model</div>
-              <div id="chart-gauge-prophet" style="height: 140px;"></div>
-              <small class="text-success">Backtesting Hit Rate</small>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-2 text-center h-100">
+              <div class="text-muted small mb-1 fw-bold">ARIMA (2,1,2)</div>
+              <div id="chart-gauge-arima" style="height: 120px;"></div>
+              <small class="text-primary small">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="dash-card p-3 text-center">
-              <div class="text-muted small mb-1 fw-bold">LSTM Neural Net</div>
-              <div id="chart-gauge-lstm" style="height: 140px;"></div>
-              <small class="text-purple" style="color: var(--accent-purple);">Backtesting Hit Rate</small>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-2 text-center h-100">
+              <div class="text-muted small mb-1 fw-bold">Prophet</div>
+              <div id="chart-gauge-prophet" style="height: 120px;"></div>
+              <small class="text-success small">Backtest Hit</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-2 text-center h-100">
+              <div class="text-muted small mb-1 fw-bold">LSTM Net</div>
+              <div id="chart-gauge-lstm" style="height: 120px;"></div>
+              <small class="text-purple small" style="color: var(--accent-purple);">Backtest Hit</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-2 text-center h-100">
+              <div class="text-muted small mb-1 fw-bold">Monte Carlo</div>
+              <div id="chart-gauge-monte_carlo" style="height: 120px;"></div>
+              <small class="text-danger small" style="color: #ec4899;">Backtest Hit</small>
             </div>
           </div>
         </div>
@@ -362,8 +400,8 @@
         <!-- Ensemble Top 10 Ranked Table -->
         <div class="dash-card p-4 mb-4">
           <div class="dash-card-header mb-3">
-            <span><i class="bi bi-award-fill text-warning me-2"></i>อันดับความน่าจะเป็นสูงสุด (Ensemble Combined Score Top 10)</span>
-            <span class="badge bg-warning text-dark">น้ำหนักคำนวณจาก Walk-Forward Validation</span>
+            <span><i class="bi bi-award-fill text-warning me-2"></i>อันดับความน่าจะเป็นสูงสุด (Two-Stage Monte Carlo Stacking Top 10)</span>
+            <span class="badge bg-warning text-dark">จำลอง 50,000 ครั้ง + ถ่วงน้ำหนัก Walk-Forward</span>
           </div>
           <div class="table-responsive">
             <table class="table table-custom table-hover align-middle mb-0">
@@ -382,38 +420,54 @@
           </div>
         </div>
 
-        <!-- Per-Model Breakdown Columns -->
+        <!-- Per-Model Breakdown Columns (6 Models) -->
         <div class="row g-3 mb-4">
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-2">
             <div class="dash-card p-3 h-100">
-              <div class="fw-bold small text-warning mb-2 border-bottom border-dark pb-1">
-                <i class="bi bi-bar-chart"></i> 1. Frequency Model
+              <div class="fw-bold small text-warning mb-2 border-bottom border-dark pb-1 text-truncate">
+                <i class="bi bi-bar-chart"></i> 1. Frequency
               </div>
               <div id="pred-list-frequency"></div>
             </div>
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-2">
             <div class="dash-card p-3 h-100">
-              <div class="fw-bold small text-info mb-2 border-bottom border-dark pb-1">
-                <i class="bi bi-graph-up"></i> 2. ARIMA (2,1,2)
+              <div class="fw-bold small text-info mb-2 border-bottom border-dark pb-1 text-truncate">
+                <i class="bi bi-diagram-3"></i> 2. Markov
+              </div>
+              <div id="pred-list-markov"></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-3 h-100">
+              <div class="fw-bold small text-primary mb-2 border-bottom border-dark pb-1 text-truncate">
+                <i class="bi bi-graph-up"></i> 3. ARIMA
               </div>
               <div id="pred-list-arima"></div>
             </div>
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-2">
             <div class="dash-card p-3 h-100">
-              <div class="fw-bold small text-success mb-2 border-bottom border-dark pb-1">
-                <i class="bi bi-calendar2-range"></i> 3. Prophet
+              <div class="fw-bold small text-success mb-2 border-bottom border-dark pb-1 text-truncate">
+                <i class="bi bi-calendar2-range"></i> 4. Prophet
               </div>
               <div id="pred-list-prophet"></div>
             </div>
           </div>
-          <div class="col-6 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-2">
             <div class="dash-card p-3 h-100">
-              <div class="fw-bold small text-purple mb-2 border-bottom border-dark pb-1" style="color: var(--accent-purple);">
-                <i class="bi bi-layers"></i> 4. LSTM Net
+              <div class="fw-bold small text-purple mb-2 border-bottom border-dark pb-1 text-truncate" style="color: var(--accent-purple);">
+                <i class="bi bi-layers"></i> 5. LSTM
               </div>
               <div id="pred-list-lstm"></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="dash-card p-3 h-100">
+              <div class="fw-bold small mb-2 border-bottom border-dark pb-1 text-truncate" style="color: #ec4899;">
+                <i class="bi bi-cpu"></i> 6. Monte Carlo
+              </div>
+              <div id="pred-list-monte_carlo"></div>
             </div>
           </div>
         </div>
@@ -523,12 +577,14 @@
               <ol class="text-light small d-flex flex-column gap-2 mb-0">
                 <li><strong>Data Ingestion:</strong> รวบรวมข้อมูลด้วยสถาปัตยกรรม Fallback 3 แหล่ง (myhora.com → sanook.com → glo.or.th) เพื่อความต่อเนื่องของข้อมูล</li>
                 <li><strong>Feature Engineering:</strong> คำนวณความถี่, Gap Analysis (ระยะห่างการไม่ออก), คู่/คี่, สูง/ต่ำ, ข้างขึ้นข้างแรม และ Pattern รายเดือน</li>
-                <li><strong>Machine Learning Ensemble:</strong>
+                <li><strong>Machine Learning Ensemble (6 โมเดล + Two-Stage Stacking):</strong>
                   <ul>
-                    <li><strong>Frequency Model:</strong> คำนวณการแจกแจงความถี่ถ่วงน้ำหนักตามประวัติศาสตร์</li>
+                    <li><strong>Frequency Model:</strong> คำนวณการแจกแจงความถี่ถ่วงน้ำหนักตามประวัติศาสตร์ 30 ปี (745+ งวด)</li>
+                    <li><strong>Markov Chain Model:</strong> วิเคราะห์ความน่าจะเป็นแบบมีเงื่อนไข (100-State Transition Matrix และ Positional Matrix)</li>
                     <li><strong>ARIMA (2,1,2):</strong> ตรวจจับแนวโน้มความถี่และ Autocorrelation ตามลำดับเวลา</li>
                     <li><strong>Prophet:</strong> วิเคราะห์ปัจจัยฤดูกาลและผลกระทบของช่วงวัน/เดือน</li>
-                    <li><strong>LSTM Deep Learning:</strong> โครงข่ายประสาทเทียมตรวจจับรูปแบบลำดับตัวเลข 24 งวดย้อนหลัง</li>
+                    <li><strong>LSTM Deep Learning:</strong> โครงข่ายประสาทเทียมตรวจจับรูปแบบลำดับตัวเลข 48 งวดย้อนหลัง</li>
+                    <li><strong>Monte Carlo Simulation:</strong> จำลองการสุ่ม 50,000 รอบจาก Probability Density Function (PDF) รวม และวิเคราะห์แยกรายหลัก 6 หลัก</li>
                   </ul>
                 </li>
                 <li><strong>Walk-Forward Backtesting:</strong> ประเมินความแม่นยำย้อนหลังแบบจำลองจริงทีละงวด เพื่อนำค่า Hit-Rate มากำหนดน้ำหนัก Dynamic Weight ให้กับ Ensemble</li>

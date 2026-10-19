@@ -15,10 +15,12 @@ const GREEN = '#22c55e';
 const PURPLE = '#a855f7';
 
 const MODEL_COLORS = {
-  frequency: '#f0b429',
-  arima:     '#3b82f6',
-  prophet:   '#22c55e',
-  lstm:      '#a855f7'
+  frequency:   '#f0b429',
+  markov:      '#06b6d4',
+  arima:       '#3b82f6',
+  prophet:     '#22c55e',
+  lstm:        '#a855f7',
+  monte_carlo: '#ec4899'
 };
 
 const CHART_BG = '#161b22';
@@ -360,7 +362,7 @@ function initEvenOddChart(data, prizeType) {
 
 // ─── Accuracy Gauges ─────────────────────────────────────────────────────────
 function initAccuracyGauges(backtestData, prizeType) {
-  const models = ['frequency', 'arima', 'prophet', 'lstm'];
+  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
   const { standard, alt } = normalizePrizeKey(prizeType);
 
   models.forEach(model => {
@@ -368,7 +370,7 @@ function initAccuracyGauges(backtestData, prizeType) {
     if (!chart) return;
 
     const accDict = backtestData?.models?.[model]?.overall_accuracy || {};
-    const accuracy = accDict[standard] ?? accDict[alt] ?? accDict['last_two'] ?? 0.25;
+    const accuracy = accDict[standard] ?? accDict[alt] ?? accDict['last_two'] ?? 0.20;
     const pct = Math.round(accuracy * 100);
     const color = MODEL_COLORS[model] || GOLD;
 
@@ -384,14 +386,14 @@ function initAccuracyGauges(backtestData, prizeType) {
           itemStyle: { color }
         },
         axisLine: {
-          lineStyle: { width: 14, color: [[1, '#30363d']] }
+          lineStyle: { width: 10, color: [[1, '#30363d']] }
         },
         splitLine: { show: false },
         axisTick: { show: false },
         axisLabel: { show: false },
         detail: {
-          valueAnimation: true, fontSize: 22, fontWeight: 'bold',
-          color, formatter: '{value}%', offsetCenter: [0, '10%']
+          valueAnimation: true, fontSize: 16, fontWeight: 'bold',
+          color, formatter: '{value}%', offsetCenter: [0, '15%']
         },
         title: { show: false },
         data: [{ value: pct }]
@@ -406,8 +408,15 @@ function initModelComparisonChart(predData, prizeType) {
   const chart = getOrInitChart('chart-model-compare');
   if (!chart) return;
 
-  const models = ['frequency', 'arima', 'prophet', 'lstm'];
-  const modelNames = { frequency: 'Frequency', arima: 'ARIMA', prophet: 'Prophet', lstm: 'LSTM' };
+  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  const modelNames = {
+    frequency: 'Frequency',
+    markov: 'Markov Chain',
+    arima: 'ARIMA',
+    prophet: 'Prophet',
+    lstm: 'LSTM',
+    monte_carlo: 'Monte Carlo'
+  };
   const { standard, alt } = normalizePrizeKey(prizeType);
 
   const allNums = new Set();
@@ -467,8 +476,15 @@ function initHistoricalAccuracyChart(backtestData, prizeType) {
   const chart = getOrInitChart('chart-hist-accuracy');
   if (!chart) return;
 
-  const models = ['frequency', 'arima', 'prophet', 'lstm'];
-  const modelNames = { frequency: 'Frequency', arima: 'ARIMA', prophet: 'Prophet', lstm: 'LSTM' };
+  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  const modelNames = {
+    frequency: 'Frequency',
+    markov: 'Markov Chain',
+    arima: 'ARIMA',
+    prophet: 'Prophet',
+    lstm: 'LSTM',
+    monte_carlo: 'Monte Carlo'
+  };
   const { standard } = normalizePrizeKey(prizeType);
 
   const hitKey = standard === 'first_prize' ? 'first_prize_hit'
@@ -528,8 +544,15 @@ function initEnsembleWeightsChart(predData, prizeType) {
   const chart = getOrInitChart('chart-weights');
   if (!chart) return;
 
-  const models = ['frequency', 'arima', 'prophet', 'lstm'];
-  const modelNames = { frequency: 'Frequency', arima: 'ARIMA', prophet: 'Prophet', lstm: 'LSTM' };
+  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  const modelNames = {
+    frequency: 'Frequency',
+    markov: 'Markov Chain',
+    arima: 'ARIMA',
+    prophet: 'Prophet',
+    lstm: 'LSTM',
+    monte_carlo: 'Monte Carlo'
+  };
   const { standard, alt } = normalizePrizeKey(prizeType || 'last_two');
 
   const weights = predData?.prize_types?.[standard]?.ensemble?.weights ||
@@ -537,7 +560,7 @@ function initEnsembleWeightsChart(predData, prizeType) {
                   predData?.ensemble?.weights || {};
 
   const pieData = models.map(m => {
-    const w = weights[m] ?? predData?.models?.[m]?.weight ?? 0.25;
+    const w = weights[m] ?? predData?.models?.[m]?.weight ?? 0.16;
     return {
       name: modelNames[m],
       value: Math.round(w * 100),
@@ -554,6 +577,65 @@ function initEnsembleWeightsChart(predData, prizeType) {
       label: { color: '#e6edf3', formatter: '{b}\n{d}%' },
       labelLine: { lineStyle: { color: '#8b949e' } },
       data: pieData
+    }]
+  };
+  chart.setOption(option);
+}
+
+// ─── Markov State Transition Heatmap (Tab 2) ───────────────────────────────────
+function initMarkovTransitionHeatmap(stats) {
+  const chart = getOrInitChart('chart-markov-transition');
+  if (!chart) return;
+
+  const trans = stats?.markov_transitions || {};
+  const matrix = trans.matrix_10x10 || [];
+  const labels = trans.labels || ['หมวด 00', 'หมวด 10', 'หมวด 20', 'หมวด 30', 'หมวด 40', 'หมวด 50', 'หมวด 60', 'หมวด 70', 'หมวด 80', 'หมวด 90'];
+
+  if (!matrix.length) {
+    chart.clear();
+    return;
+  }
+
+  const heatData = [];
+  let maxVal = 0;
+  for (let r = 0; r < matrix.length; r++) {
+    for (let c = 0; c < matrix[r].length; c++) {
+      const val = matrix[r][c];
+      if (val > maxVal) maxVal = val;
+      heatData.push([c, r, val]);
+    }
+  }
+
+  const option = {
+    backgroundColor: 'transparent',
+    tooltip: {
+      formatter: p => `จาก: ${labels[p.data[1]]}<br>ไปสู่: ${labels[p.data[0]]}<br>ความน่าจะเป็น: ${(p.data[2] * 100).toFixed(1)}%`
+    },
+    grid: { left: 80, right: 30, top: 30, bottom: 60 },
+    xAxis: {
+      type: 'category', data: labels,
+      name: 'สถานะงวดถัดไป', nameLocation: 'center', nameGap: 35,
+      axisLabel: { color: '#e6edf3', fontSize: 10, rotate: 30 }
+    },
+    yAxis: {
+      type: 'category', data: labels,
+      name: 'สถานะงวดก่อนหน้า',
+      axisLabel: { color: '#e6edf3', fontSize: 10 }
+    },
+    visualMap: {
+      min: 0, max: maxVal || 0.25,
+      calculable: true, orient: 'horizontal', left: 'center', bottom: 0,
+      inRange: { color: ['#0d1117', '#0891b2', '#f0b429'] },
+      textStyle: { color: '#e6edf3' },
+      formatter: v => `${(v * 100).toFixed(0)}%`
+    },
+    series: [{
+      type: 'heatmap', data: heatData,
+      label: {
+        show: true,
+        formatter: p => `${(p.data[2] * 100).toFixed(0)}%`,
+        color: '#fff', fontSize: 10
+      }
     }]
   };
   chart.setOption(option);

@@ -382,6 +382,16 @@ class LotteryProcessor:
         stats["consecutive_patterns"] = self.consecutive_patterns()
         stats["lunar_correlation"] = self.lunar_correlation()
 
+        # Markov State Transition Matrix
+        try:
+            from models.markov_model import MarkovChainModel
+            markov = MarkovChainModel()
+            markov.train(self.records)
+            stats["markov_transitions"] = markov.get_last_two_transition_matrix_heatmap()
+        except Exception as e:
+            logger.warning("Could not compute markov transitions: %s", e)
+            stats["markov_transitions"] = {}
+
         return stats
 
 

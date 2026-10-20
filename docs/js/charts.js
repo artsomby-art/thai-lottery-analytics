@@ -1,5 +1,5 @@
 /**
- * charts.js — All ECharts chart configurations and initialization
+ * charts.js — All ECharts chart configurations and responsive initialization
  * Thai Lottery Analytics Dashboard
  */
 
@@ -37,10 +37,14 @@ function getOrInitChart(id) {
   return chart;
 }
 
-// Resize all charts on window resize
+// Debounced resize for all charts on window resize
+let resizeTimer = null;
 window.addEventListener('resize', () => {
-  Object.values(ChartRegistry).forEach(c => {
-    try { c.resize(); } catch (e) {}
+  if (resizeTimer) cancelAnimationFrame(resizeTimer);
+  resizeTimer = requestAnimationFrame(() => {
+    Object.values(ChartRegistry).forEach(c => {
+      try { c.resize(); } catch (e) {}
+    });
   });
 });
 
@@ -65,27 +69,29 @@ function initHotColdChart(data) {
   const coldLabels = coldNums.map(n => n.number);
   const coldValues = coldNums.map(n => n.count);
 
+  const isMobile = window.innerWidth < 768;
+
   const option = {
     backgroundColor: 'transparent',
     tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
     legend: {
       data: ['เลขร้อน (Hot)', 'เลขเย็น (Cold)'],
-      textStyle: { color: '#e6edf3' },
-      top: 8
+      textStyle: { color: '#e6edf3', fontSize: 11 },
+      top: 4
     },
     grid: [
-      { left: 60, right: '52%', top: 40, bottom: 30 },
-      { left: '52%', right: 20, top: 40, bottom: 30 }
+      { left: 10, right: '53%', top: 38, bottom: 20, containLabel: true },
+      { left: '53%', right: 10, top: 38, bottom: 20, containLabel: true }
     ],
     xAxis: [
       {
         gridIndex: 0, type: 'value', inverse: true,
-        axisLabel: { color: '#8b949e' },
+        axisLabel: { color: '#94a3b8', fontSize: 9 },
         splitLine: { lineStyle: { color: '#30363d' } }
       },
       {
         gridIndex: 1, type: 'value',
-        axisLabel: { color: '#8b949e' },
+        axisLabel: { color: '#94a3b8', fontSize: 9 },
         splitLine: { lineStyle: { color: '#30363d' } }
       }
     ],
@@ -93,11 +99,11 @@ function initHotColdChart(data) {
       {
         gridIndex: 0, type: 'category', data: hotLabels,
         inverse: false,
-        axisLabel: { color: '#e6edf3', fontFamily: 'monospace', fontWeight: 'bold' }
+        axisLabel: { color: '#e6edf3', fontFamily: 'monospace', fontWeight: 'bold', fontSize: isMobile ? 11 : 12 }
       },
       {
         gridIndex: 1, type: 'category', data: coldLabels,
-        axisLabel: { color: '#e6edf3', fontFamily: 'monospace', fontWeight: 'bold' },
+        axisLabel: { color: '#e6edf3', fontFamily: 'monospace', fontWeight: 'bold', fontSize: isMobile ? 11 : 12 },
         position: 'right'
       }
     ],
@@ -107,8 +113,8 @@ function initHotColdChart(data) {
         type: 'bar',
         xAxisIndex: 0, yAxisIndex: 0,
         data: hotValues,
-        itemStyle: { color: RED, borderRadius: [0, 4, 4, 0] },
-        label: { show: true, position: 'insideRight', color: '#fff', fontWeight: 'bold' }
+        itemStyle: { color: RED, borderRadius: [4, 0, 0, 4] },
+        label: { show: true, position: 'insideRight', color: '#fff', fontWeight: 'bold', fontSize: 10 }
       },
       {
         name: 'เลขเย็น (Cold)',
@@ -116,7 +122,7 @@ function initHotColdChart(data) {
         xAxisIndex: 1, yAxisIndex: 1,
         data: coldValues,
         itemStyle: { color: BLUE, borderRadius: [0, 4, 4, 0] },
-        label: { show: true, position: 'insideLeft', color: '#fff', fontWeight: 'bold' }
+        label: { show: true, position: 'insideLeft', color: '#fff', fontWeight: 'bold', fontSize: 10 }
       }
     ]
   };
@@ -150,6 +156,8 @@ function initFrequencyHeatmap(data, prizeType) {
     });
   });
 
+  const isMobile = window.innerWidth < 768;
+
   const getPositionLabel = (pos, totalLen) => {
     const numPos = Number(pos);
     if (isNaN(numPos)) {
@@ -160,12 +168,12 @@ function initFrequencyHeatmap(data, prizeType) {
       return dict[pos] || pos;
     }
     if (totalLen === 6) {
-      return ['หลักแสน', 'หลักหมื่น', 'หลักพัน', 'หลักร้อย', 'หลักสิบ', 'หลักหน่วย'][numPos] || `หลักที่ ${numPos + 1}`;
+      return ['หลักแสน', 'หลักหมื่น', 'หลักพัน', 'หลักร้อย', 'หลักสิบ', 'หลักหน่วย'][numPos] || `หลัก ${numPos + 1}`;
     }
     if (totalLen === 3) {
-      return ['หลักร้อย', 'หลักสิบ', 'หลักหน่วย'][numPos] || `หลักที่ ${numPos + 1}`;
+      return ['หลักร้อย', 'หลักสิบ', 'หลักหน่วย'][numPos] || `หลัก ${numPos + 1}`;
     }
-    return ['หลักสิบ', 'หลักหน่วย'][numPos] || `หลักที่ ${numPos + 1}`;
+    return ['หลักสิบ', 'หลักหน่วย'][numPos] || `หลัก ${numPos + 1}`;
   };
 
   const labels = positions.map(p => getPositionLabel(p, positions.length));
@@ -175,28 +183,41 @@ function initFrequencyHeatmap(data, prizeType) {
     tooltip: {
       formatter: p => `ตำแหน่ง: ${labels[p.data[1]]}<br>ตัวเลข: ${digits[p.data[0]]}<br>ความถี่: ${p.data[2]} ครั้ง`
     },
-    grid: { left: 90, right: 20, top: 20, bottom: 60 },
+    grid: {
+      left: 10,
+      right: 15,
+      top: 15,
+      bottom: isMobile ? 65 : 55,
+      containLabel: true
+    },
     xAxis: {
-      type: 'category', data: digits,
-      name: 'ตัวเลข (0-9)', nameLocation: 'center', nameGap: 30,
-      axisLabel: { color: '#e6edf3', fontWeight: 'bold' },
+      type: 'category',
+      data: digits,
+      axisLabel: { color: '#e6edf3', fontWeight: 'bold', fontSize: isMobile ? 11 : 12 },
       splitArea: { show: true }
     },
     yAxis: {
       type: 'category',
       data: labels,
-      axisLabel: { color: '#e6edf3' },
+      axisLabel: { color: '#e6edf3', fontSize: isMobile ? 10 : 12 },
       splitArea: { show: true }
     },
     visualMap: {
-      min: 0, max: maxVal || 10,
-      calculable: true, orient: 'horizontal', left: 'center', bottom: 0,
+      min: 0,
+      max: maxVal || 10,
+      calculable: true,
+      orient: 'horizontal',
+      left: 'center',
+      bottom: 2,
+      itemWidth: 10,
+      itemHeight: isMobile ? 90 : 130,
       inRange: { color: ['#0d1117', '#1d4e89', GOLD] },
-      textStyle: { color: '#e6edf3' }
+      textStyle: { color: '#94a3b8', fontSize: 10 }
     },
     series: [{
-      type: 'heatmap', data: heatData,
-      label: { show: true, color: '#fff', fontSize: 10 },
+      type: 'heatmap',
+      data: heatData,
+      label: { show: true, color: '#fff', fontSize: isMobile ? 9 : 11 },
       emphasis: { itemStyle: { shadowBlur: 10 } }
     }]
   };
@@ -217,7 +238,9 @@ function initGapAnalysis(data, prizeType) {
 
   if (!gapData) { chart.clear(); return; }
 
-  const entries = Object.entries(gapData).sort((a, b) => Number(b[1]) - Number(a[1])).slice(0, 30);
+  const isMobile = window.innerWidth < 768;
+  const maxBars = isMobile ? 15 : 28;
+  const entries = Object.entries(gapData).sort((a, b) => Number(b[1]) - Number(a[1])).slice(0, maxBars);
   const labels = entries.map(e => e[0]);
   const values = entries.map(e => e[1]);
 
@@ -236,18 +259,29 @@ function initGapAnalysis(data, prizeType) {
       trigger: 'axis',
       formatter: p => `เลข ${p[0].name}<br>ไม่ออกมาแล้ว: ${p[0].value} งวด`
     },
-    grid: { left: 50, right: 20, top: 20, bottom: 80 },
+    grid: {
+      left: 10,
+      right: 15,
+      top: 38,
+      bottom: 45,
+      containLabel: true
+    },
     xAxis: {
-      type: 'category', data: labels,
+      type: 'category',
+      data: labels,
       axisLabel: {
-        color: '#e6edf3', fontFamily: 'monospace', fontWeight: 'bold',
-        rotate: 45, fontSize: 10
+        color: '#e6edf3',
+        fontFamily: 'monospace',
+        fontWeight: 'bold',
+        rotate: isMobile ? 35 : 45,
+        fontSize: isMobile ? 9 : 10
       }
     },
     yAxis: {
-      type: 'value', name: 'จำนวนงวดที่ไม่ออก',
-      nameTextStyle: { color: '#8b949e' },
-      axisLabel: { color: '#8b949e' },
+      type: 'value',
+      name: 'จำนวนงวดที่ไม่ออก',
+      nameTextStyle: { color: '#94a3b8', fontSize: 10, padding: [0, 0, 0, 10] },
+      axisLabel: { color: '#94a3b8', fontSize: 10 },
       splitLine: { lineStyle: { color: '#30363d' } }
     },
     series: [{
@@ -282,16 +316,18 @@ function initPatternByMonth(data, prizeType) {
       trigger: 'axis',
       formatter: p => `${p[0].name}<br>ความถี่เฉลี่ย: ${Number(p[0].value).toFixed(2)}`
     },
-    grid: { left: 50, right: 20, top: 20, bottom: 40 },
+    grid: { left: 10, right: 15, top: 35, bottom: 25, containLabel: true },
     xAxis: {
-      type: 'category', data: months,
-      axisLabel: { color: '#e6edf3' },
+      type: 'category',
+      data: months,
+      axisLabel: { color: '#e6edf3', fontSize: 10 },
       splitLine: { lineStyle: { color: '#30363d' } }
     },
     yAxis: {
-      type: 'value', name: 'ความถี่เฉลี่ย',
-      nameTextStyle: { color: '#8b949e' },
-      axisLabel: { color: '#8b949e' },
+      type: 'value',
+      name: 'ความถี่เฉลี่ย',
+      nameTextStyle: { color: '#94a3b8', fontSize: 10 },
+      axisLabel: { color: '#94a3b8', fontSize: 10 },
       splitLine: { lineStyle: { color: '#30363d' } }
     },
     series: [{
@@ -325,14 +361,24 @@ function initEvenOddChart(data, prizeType) {
              data?.high_low?.[standard] ||
              data?.high_low?.[alt];
 
+  const isMobile = window.innerWidth < 768;
+
   if (chartEO) {
     const eoOption = {
       backgroundColor: 'transparent',
       tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
-      legend: { orient: 'vertical', right: 10, textStyle: { color: '#e6edf3' } },
+      legend: {
+        orient: isMobile ? 'horizontal' : 'vertical',
+        right: isMobile ? 'auto' : 6,
+        left: isMobile ? 'center' : 'auto',
+        bottom: isMobile ? 0 : 'center',
+        textStyle: { color: '#e6edf3', fontSize: 10 }
+      },
       series: [{
-        type: 'pie', radius: ['40%', '70%'], center: ['40%', '50%'],
-        label: { color: '#e6edf3' },
+        type: 'pie',
+        radius: isMobile ? ['30%', '55%'] : ['40%', '68%'],
+        center: isMobile ? ['50%', '42%'] : ['38%', '50%'],
+        label: { show: false },
         data: [
           { value: eo?.even || 50, name: 'คู่ (Even)', itemStyle: { color: GOLD } },
           { value: eo?.odd  || 50, name: 'คี่ (Odd)',  itemStyle: { color: BLUE } }
@@ -346,10 +392,18 @@ function initEvenOddChart(data, prizeType) {
     const hlOption = {
       backgroundColor: 'transparent',
       tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
-      legend: { orient: 'vertical', right: 10, textStyle: { color: '#e6edf3' } },
+      legend: {
+        orient: isMobile ? 'horizontal' : 'vertical',
+        right: isMobile ? 'auto' : 6,
+        left: isMobile ? 'center' : 'auto',
+        bottom: isMobile ? 0 : 'center',
+        textStyle: { color: '#e6edf3', fontSize: 10 }
+      },
       series: [{
-        type: 'pie', radius: ['40%', '70%'], center: ['40%', '50%'],
-        label: { color: '#e6edf3' },
+        type: 'pie',
+        radius: isMobile ? ['30%', '55%'] : ['40%', '68%'],
+        center: isMobile ? ['50%', '42%'] : ['38%', '50%'],
+        label: { show: false },
         data: [
           { value: hl?.high || 50, name: 'สูง (High)', itemStyle: { color: RED } },
           { value: hl?.low  || 50, name: 'ต่ำ (Low)',  itemStyle: { color: GREEN } }
@@ -386,13 +440,13 @@ function initAccuracyGauges(backtestData, prizeType) {
           itemStyle: { color }
         },
         axisLine: {
-          lineStyle: { width: 10, color: [[1, '#30363d']] }
+          lineStyle: { width: 8, color: [[1, '#30363d']] }
         },
         splitLine: { show: false },
         axisTick: { show: false },
         axisLabel: { show: false },
         detail: {
-          valueAnimation: true, fontSize: 16, fontWeight: 'bold',
+          valueAnimation: true, fontSize: 15, fontWeight: 'bold',
           color, formatter: '{value}%', offsetCenter: [0, '15%']
         },
         title: { show: false },
@@ -419,6 +473,8 @@ function initModelComparisonChart(predData, prizeType) {
   };
   const { standard, alt } = normalizePrizeKey(prizeType);
 
+  const isMobile = window.innerWidth < 768;
+
   const allNums = new Set();
   models.forEach(m => {
     const list = predData?.prize_types?.[standard]?.models?.[m]?.top10 ||
@@ -428,13 +484,13 @@ function initModelComparisonChart(predData, prizeType) {
     list.slice(0, 5).forEach(p => allNums.add(p.number));
   });
 
-  const nums = [...allNums].slice(0, 10);
+  const nums = [...allNums].slice(0, isMobile ? 6 : 10);
 
   const series = models.map(m => {
     const preds = predData?.prize_types?.[standard]?.models?.[m]?.top10 ||
-                  predData?.prize_types?.[alt]?.models?.[m]?.top10 ||
-                  predData?.models?.[m]?.predictions?.[standard] ||
-                  predData?.models?.[m]?.predictions?.[alt] || [];
+                 predData?.prize_types?.[alt]?.models?.[m]?.top10 ||
+                 predData?.models?.[m]?.predictions?.[standard] ||
+                 predData?.models?.[m]?.predictions?.[alt] || [];
 
     return {
       name: modelNames[m],
@@ -453,17 +509,28 @@ function initModelComparisonChart(predData, prizeType) {
     tooltip: { trigger: 'axis', formatter: p => p.map(s => `${s.seriesName}: ${s.value}%`).join('<br>') },
     legend: {
       data: Object.values(modelNames),
-      textStyle: { color: '#e6edf3' }, top: 8
+      textStyle: { color: '#e6edf3', fontSize: 10 },
+      top: 0,
+      itemGap: 6
     },
-    grid: { left: 50, right: 20, top: 50, bottom: 50 },
+    grid: {
+      left: 10,
+      right: 15,
+      top: isMobile ? 70 : 45,
+      bottom: 35,
+      containLabel: true
+    },
     xAxis: {
-      type: 'category', data: nums,
-      axisLabel: { color: '#e6edf3', fontFamily: 'monospace', fontWeight: 'bold' }
+      type: 'category',
+      data: nums,
+      axisLabel: { color: '#e6edf3', fontFamily: 'monospace', fontWeight: 'bold', fontSize: 11 }
     },
     yAxis: {
-      type: 'value', name: 'คะแนน (%)', max: 100,
-      nameTextStyle: { color: '#8b949e' },
-      axisLabel: { color: '#8b949e', formatter: '{value}%' },
+      type: 'value',
+      name: 'คะแนน (%)',
+      max: 100,
+      nameTextStyle: { color: '#94a3b8', fontSize: 10 },
+      axisLabel: { color: '#94a3b8', formatter: '{value}%', fontSize: 10 },
       splitLine: { lineStyle: { color: '#30363d' } }
     },
     series
@@ -498,6 +565,8 @@ function initHistoricalAccuracyChart(backtestData, prizeType) {
   });
   const dates = [...allDates].sort();
 
+  const isMobile = window.innerWidth < 768;
+
   const series = models.map(m => {
     const history = backtestData?.models?.[m]?.history || [];
     // Rolling 3-draw accuracy
@@ -514,24 +583,42 @@ function initHistoricalAccuracyChart(backtestData, prizeType) {
       type: 'line', smooth: true,
       lineStyle: { color: MODEL_COLORS[m], width: 2 },
       itemStyle: { color: MODEL_COLORS[m] },
-      data: values, symbol: 'circle', symbolSize: 5
+      data: values, symbol: 'circle', symbolSize: 4
     };
   });
 
   const option = {
     backgroundColor: 'transparent',
     tooltip: { trigger: 'axis' },
-    legend: { data: Object.values(modelNames), textStyle: { color: '#e6edf3' }, top: 8 },
-    grid: { left: 50, right: 20, top: 50, bottom: 60 },
+    legend: {
+      data: Object.values(modelNames),
+      textStyle: { color: '#e6edf3', fontSize: 10 },
+      top: 0,
+      itemGap: 6
+    },
+    grid: {
+      left: 10,
+      right: 15,
+      top: isMobile ? 65 : 45,
+      bottom: isMobile ? 38 : 45,
+      containLabel: true
+    },
     xAxis: {
       type: 'category',
       data: dates.map(d => formatThaiDateShort(d)),
-      axisLabel: { color: '#8b949e', rotate: 30, fontSize: 10 }
+      axisLabel: {
+        color: '#94a3b8',
+        rotate: isMobile ? 35 : 30,
+        fontSize: 9,
+        interval: (idx) => (isMobile ? idx % 4 === 0 : idx % 2 === 0)
+      }
     },
     yAxis: {
-      type: 'value', name: 'ความแม่นยำ (%)', min: 0, max: 100,
-      nameTextStyle: { color: '#8b949e' },
-      axisLabel: { color: '#8b949e', formatter: '{value}%' },
+      type: 'value',
+      name: 'ความแม่นยำ (%)',
+      min: 0, max: 100,
+      nameTextStyle: { color: '#94a3b8', fontSize: 10 },
+      axisLabel: { color: '#94a3b8', formatter: '{value}%', fontSize: 10 },
       splitLine: { lineStyle: { color: '#30363d' } }
     },
     series
@@ -568,14 +655,30 @@ function initEnsembleWeightsChart(predData, prizeType) {
     };
   });
 
+  const isMobile = window.innerWidth < 768;
+
   const option = {
     backgroundColor: 'transparent',
     tooltip: { trigger: 'item', formatter: '{b}: {d}%' },
-    legend: { orient: 'vertical', right: 10, textStyle: { color: '#e6edf3' } },
+    legend: {
+      orient: isMobile ? 'horizontal' : 'vertical',
+      right: isMobile ? 'auto' : 10,
+      left: isMobile ? 'center' : 'auto',
+      bottom: isMobile ? 0 : 'center',
+      textStyle: { color: '#e6edf3', fontSize: 10 },
+      itemGap: 8
+    },
     series: [{
-      type: 'pie', radius: ['35%', '65%'], center: ['40%', '50%'],
-      label: { color: '#e6edf3', formatter: '{b}\n{d}%' },
-      labelLine: { lineStyle: { color: '#8b949e' } },
+      type: 'pie',
+      radius: isMobile ? ['30%', '55%'] : ['35%', '65%'],
+      center: isMobile ? ['50%', '40%'] : ['40%', '50%'],
+      label: {
+        show: !isMobile,
+        color: '#e6edf3',
+        formatter: '{b}\n{d}%',
+        fontSize: 10
+      },
+      labelLine: { show: !isMobile, lineStyle: { color: '#94a3b8' } },
       data: pieData
     }]
   };
@@ -589,12 +692,15 @@ function initMarkovTransitionHeatmap(stats) {
 
   const trans = stats?.markov_transitions || {};
   const matrix = trans.matrix_10x10 || [];
-  const labels = trans.labels || ['หมวด 00', 'หมวด 10', 'หมวด 20', 'หมวด 30', 'หมวด 40', 'หมวด 50', 'หมวด 60', 'หมวด 70', 'หมวด 80', 'หมวด 90'];
+  const rawLabels = trans.labels || ['หมวด 00', 'หมวด 10', 'หมวด 20', 'หมวด 30', 'หมวด 40', 'หมวด 50', 'หมวด 60', 'หมวด 70', 'หมวด 80', 'หมวด 90'];
 
   if (!matrix.length) {
     chart.clear();
     return;
   }
+
+  const isMobile = window.innerWidth < 768;
+  const labels = isMobile ? rawLabels.map(l => l.replace('หมวด ', '')) : rawLabels;
 
   const heatData = [];
   let maxVal = 0;
@@ -609,32 +715,46 @@ function initMarkovTransitionHeatmap(stats) {
   const option = {
     backgroundColor: 'transparent',
     tooltip: {
-      formatter: p => `จาก: ${labels[p.data[1]]}<br>ไปสู่: ${labels[p.data[0]]}<br>ความน่าจะเป็น: ${(p.data[2] * 100).toFixed(1)}%`
+      formatter: p => `จาก: ${rawLabels[p.data[1]]}<br>ไปสู่: ${rawLabels[p.data[0]]}<br>ความน่าจะเป็น: ${(p.data[2] * 100).toFixed(1)}%`
     },
-    grid: { left: 80, right: 30, top: 30, bottom: 60 },
+    grid: {
+      left: 10,
+      right: 15,
+      top: 25,
+      bottom: isMobile ? 65 : 55,
+      containLabel: true
+    },
     xAxis: {
-      type: 'category', data: labels,
-      name: 'สถานะงวดถัดไป', nameLocation: 'center', nameGap: 35,
-      axisLabel: { color: '#e6edf3', fontSize: 10, rotate: 30 }
+      type: 'category',
+      data: labels,
+      axisLabel: { color: '#e6edf3', fontSize: isMobile ? 9 : 10 }
     },
     yAxis: {
-      type: 'category', data: labels,
-      name: 'สถานะงวดก่อนหน้า',
-      axisLabel: { color: '#e6edf3', fontSize: 10 }
+      type: 'category',
+      data: labels,
+      axisLabel: { color: '#e6edf3', fontSize: isMobile ? 9 : 10 }
     },
     visualMap: {
-      min: 0, max: maxVal || 0.25,
-      calculable: true, orient: 'horizontal', left: 'center', bottom: 0,
+      min: 0,
+      max: maxVal || 0.25,
+      calculable: true,
+      orient: 'horizontal',
+      left: 'center',
+      bottom: 2,
+      itemWidth: 10,
+      itemHeight: isMobile ? 90 : 130,
       inRange: { color: ['#0d1117', '#0891b2', '#f0b429'] },
-      textStyle: { color: '#e6edf3' },
+      textStyle: { color: '#94a3b8', fontSize: 10 },
       formatter: v => `${(v * 100).toFixed(0)}%`
     },
     series: [{
-      type: 'heatmap', data: heatData,
+      type: 'heatmap',
+      data: heatData,
       label: {
         show: true,
-        formatter: p => `${(p.data[2] * 100).toFixed(0)}%`,
-        color: '#fff', fontSize: 10
+        formatter: p => (p.data[2] >= 0.05 ? `${(p.data[2] * 100).toFixed(0)}%` : ''),
+        color: '#fff',
+        fontSize: isMobile ? 8 : 10
       }
     }]
   };

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19",
+  "generated_at": "2026-11-01",
   "methodology": "walk_forward",
   "window_size": 48,
   "test_draws_evaluated": 48,
@@ -362,9 +362,9 @@
     },
     "arima": {
       "overall_accuracy": {
-        "last_two": 0.104,
+        "last_two": 0.125,
         "last_three_b": 0.021,
-        "last_three_f": 0.042,
+        "last_three_f": 0.062,
         "first_prize": 0.0
       },
       "history": [
@@ -385,7 +385,7 @@
         {
           "draw": "2025-12-16",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },
@@ -393,13 +393,13 @@
           "draw": "2025-12-30",
           "first_prize_hit": false,
           "last_two_hit": false,
-          "last_three_b_hit": false,
+          "last_three_b_hit": true,
           "last_three_f_hit": false
         },
         {
           "draw": "2026-01-01",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },
@@ -478,7 +478,7 @@
           "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false
+          "last_three_f_hit": true
         },
         {
           "draw": "2026-07-01",
@@ -490,7 +490,7 @@
         {
           "draw": "2026-07-16",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },
@@ -527,7 +527,7 @@
           "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false
+          "last_three_f_hit": true
         },
         {
           "draw": "2026-10-16",
@@ -540,8 +540,8 @@
     },
     "prophet": {
       "overall_accuracy": {
-        "last_two": 0.104,
-        "last_three_b": 0.021,
+        "last_two": 0.083,
+        "last_three_b": 0.062,
         "last_three_f": 0.042,
         "first_prize": 0.0
       },
@@ -570,7 +570,7 @@
         {
           "draw": "2025-12-30",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },
@@ -592,7 +592,7 @@
           "draw": "2026-02-01",
           "first_prize_hit": false,
           "last_two_hit": false,
-          "last_three_b_hit": false,
+          "last_three_b_hit": true,
           "last_three_f_hit": false
         },
         {
@@ -621,7 +621,7 @@
           "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false
+          "last_three_f_hit": true
         },
         {
           "draw": "2026-04-16",
@@ -640,7 +640,7 @@
         {
           "draw": "2026-05-16",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },
@@ -662,7 +662,7 @@
           "draw": "2026-07-01",
           "first_prize_hit": false,
           "last_two_hit": false,
-          "last_three_b_hit": false,
+          "last_three_b_hit": true,
           "last_three_f_hit": false
         },
         {
@@ -682,7 +682,7 @@
         {
           "draw": "2026-08-16",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },
@@ -712,22 +712,22 @@
           "first_prize_hit": false,
           "last_two_hit": false,
           "last_three_b_hit": false,
-          "last_three_f_hit": false
+          "last_three_f_hit": true
         }
       ]
     },
     "lstm": {
       "overall_accuracy": {
-        "last_two": 0.104,
+        "last_two": 0.042,
         "last_three_b": 0.0,
-        "last_three_f": 0.021,
+        "last_three_f": 0.0,
         "first_prize": 0.0
       },
       "history": [
         {
           "draw": "2025-11-16",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },
@@ -818,7 +818,7 @@
         {
           "draw": "2026-05-16",
           "first_prize_hit": false,
-          "last_two_hit": false,
+          "last_two_hit": true,
           "last_three_b_hit": false,
           "last_three_f_hit": false
         },

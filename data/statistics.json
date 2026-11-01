@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-10-19T09:37:09.235582Z",
+  "computed_at": "2026-11-01T17:01:45.278019Z",
   "total_draws": 745,
   "date_range": {
     "earliest": "1997-01-01",
@@ -7593,3727 +7593,3727 @@
   "lunar_correlation": [
     {
       "date": "1997-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.6041614151000977,
       "first_prize": "469443"
     },
     {
       "date": "1997-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.624438362121582,
       "first_prize": "218359"
     },
     {
       "date": "1997-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.48293251037597656,
       "first_prize": "743738"
     },
     {
       "date": "1997-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.6641485595703125,
       "first_prize": "799272"
     },
     {
       "date": "1997-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.6462322998046875,
       "first_prize": "057467"
     },
     {
       "date": "1997-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.5007477951049805,
       "first_prize": "907172"
     },
     {
       "date": "1997-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.4811172866821289,
       "first_prize": "780552"
     },
     {
       "date": "1997-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.623808479309082,
       "first_prize": "874225"
     },
     {
       "date": "1997-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.28980363845825197,
       "first_prize": "567513"
     },
     {
       "date": "1997-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.6453997802734375,
       "first_prize": "454527"
     },
     {
       "date": "1997-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.21354297637939454,
       "first_prize": "257677"
     },
     {
       "date": "1997-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.7584722900390625,
       "first_prize": "171030"
     },
     {
       "date": "1997-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.15225869178771972,
       "first_prize": "762136"
     },
     {
       "date": "1997-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.7931685638427735,
       "first_prize": "991696"
     },
     {
       "date": "1997-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.05448084354400635,
       "first_prize": "484976"
     },
     {
       "date": "1997-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.9130738067626953,
       "first_prize": "238580"
     },
     {
       "date": "1997-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.009194024205207825,
       "first_prize": "538703"
     },
     {
       "date": "1997-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.9905116271972656,
       "first_prize": "646100"
     },
     {
       "date": "1997-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.004517699778079987,
       "first_prize": "384640"
     },
     {
       "date": "1997-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.999083251953125,
       "first_prize": "355677"
     },
     {
       "date": "1997-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.004706021547317505,
       "first_prize": "620961"
     },
     {
       "date": "1997-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.9717943572998047,
       "first_prize": "354917"
     },
     {
       "date": "1997-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.010939203500747681,
       "first_prize": "394625"
     },
     {
       "date": "1997-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.957389907836914,
       "first_prize": "526613"
     },
     {
       "date": "1997-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.0025482231378555296,
       "first_prize": "832237"
     },
     {
       "date": "1998-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.06615260124206543,
       "first_prize": "168476"
     },
     {
       "date": "1998-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.8311320495605469,
       "first_prize": "077390"
     },
     {
       "date": "1998-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.18562660217285157,
       "first_prize": "684209"
     },
     {
       "date": "1998-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.8218332672119141,
       "first_prize": "515008"
     },
     {
       "date": "1998-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.07623979568481445,
       "first_prize": "719317"
     },
     {
       "date": "1998-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.930535659790039,
       "first_prize": "561503"
     },
     {
       "date": "1998-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.207788143157959,
       "first_prize": "341528"
     },
     {
       "date": "1998-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.8531278228759765,
       "first_prize": "607227"
     },
     {
       "date": "1998-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.3577095031738281,
       "first_prize": "035014"
     },
     {
       "date": "1998-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.8169223022460937,
       "first_prize": "378920"
     },
     {
       "date": "1998-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.39687084197998046,
       "first_prize": "732780"
     },
     {
       "date": "1998-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.6613856506347656,
       "first_prize": "863678"
     },
     {
       "date": "1998-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.4271214294433594,
       "first_prize": "787366"
     },
     {
       "date": "1998-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.5741667938232422,
       "first_prize": "186226"
     },
     {
       "date": "1998-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.5485208129882813,
       "first_prize": "733708"
     },
     {
       "date": "1998-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.3694310760498047,
       "first_prize": "148211"
     },
     {
       "date": "1998-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.6746186828613281,
       "first_prize": "757737"
     },
     {
       "date": "1998-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.20656801223754884,
       "first_prize": "238650"
     },
     {
       "date": "1998-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.7137914276123047,
       "first_prize": "358088"
     },
     {
       "date": "1998-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.17009450912475585,
       "first_prize": "892215"
     },
     {
       "date": "1998-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.8518228912353516,
       "first_prize": "061220"
     },
     {
       "date": "1998-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.08982417106628418,
       "first_prize": "531293"
     },
     {
       "date": "1998-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.897161865234375,
       "first_prize": "892789"
     },
     {
       "date": "1998-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.08119585037231446,
       "first_prize": "790484"
     },
     {
       "date": "1998-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.8671797943115235,
       "first_prize": "411958"
     },
     {
       "date": "1999-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.9813313293457031,
       "first_prize": "743271"
     },
     {
       "date": "1999-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.0052547729015350346,
       "first_prize": "027601"
     },
     {
       "date": "1999-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.9986941528320312,
       "first_prize": "241819"
     },
     {
       "date": "1999-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.0009405330568552018,
       "first_prize": "573880"
     },
     {
       "date": "1999-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.9820562744140625,
       "first_prize": "340176"
     },
     {
       "date": "1999-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.04180217742919922,
       "first_prize": "221191"
     },
     {
       "date": "1999-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.9988067626953125,
       "first_prize": "904828"
     },
     {
       "date": "1999-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.0020556293427944185,
       "first_prize": "655026"
     },
     {
       "date": "1999-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.9811005401611328,
       "first_prize": "085699"
     },
     {
       "date": "1999-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.005658988356590271,
       "first_prize": "512965"
     },
     {
       "date": "1999-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.9723299407958984,
       "first_prize": "768258"
     },
     {
       "date": "1999-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.07051648139953613,
       "first_prize": "865828"
     },
     {
       "date": "1999-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.9581307220458984,
       "first_prize": "080798"
     },
     {
       "date": "1999-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.10812653541564941,
       "first_prize": "924869"
     },
     {
       "date": "1999-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.8699849700927734,
       "first_prize": "046751"
     },
     {
       "date": "1999-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.21940189361572265,
       "first_prize": "803681"
     },
     {
       "date": "1999-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.7158243560791016,
       "first_prize": "004841"
     },
     {
       "date": "1999-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.33061344146728516,
       "first_prize": "087495"
     },
     {
       "date": "1999-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.6335339736938477,
       "first_prize": "645865"
     },
     {
       "date": "1999-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.34867511749267577,
       "first_prize": "255543"
     },
     {
       "date": "1999-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.4466919708251953,
       "first_prize": "001561"
     },
     {
       "date": "1999-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.4637282943725586,
       "first_prize": "858149"
     },
     {
       "date": "1999-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.39428421020507814,
       "first_prize": "753782"
     },
     {
       "date": "1999-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.4976337432861328,
       "first_prize": "836147"
     },
     {
       "date": "1999-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.4594125747680664,
       "first_prize": "321649"
     },
     {
       "date": "2000-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.2716080665588379,
       "first_prize": "709633"
     },
     {
       "date": "2000-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.763196792602539,
       "first_prize": "162971"
     },
     {
       "date": "2000-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.17909997940063477,
       "first_prize": "626229"
     },
     {
       "date": "2000-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.8230712127685547,
       "first_prize": "115710"
     },
     {
       "date": "2000-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.24554021835327147,
       "first_prize": "186730"
     },
     {
       "date": "2000-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.7921201324462891,
       "first_prize": "298387"
     },
     {
       "date": "2000-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.15282466888427734,
       "first_prize": "299340"
     },
     {
       "date": "2000-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.9170947265625,
       "first_prize": "113667"
     },
     {
       "date": "2000-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.06381946086883544,
       "first_prize": "449756"
     },
     {
       "date": "2000-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.9454295349121093,
       "first_prize": "757551"
     },
     {
       "date": "2000-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.035019614696502686,
       "first_prize": "847860"
     },
     {
       "date": "2000-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.9912049102783204,
       "first_prize": "295414"
     },
     {
       "date": "2000-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.010448755025863647,
       "first_prize": "805745"
     },
     {
       "date": "2000-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.9969640350341797,
       "first_prize": "967028"
     },
     {
       "date": "2000-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.0125783109664917,
       "first_prize": "622613"
     },
     {
       "date": "2000-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.9934397888183594,
       "first_prize": "216935"
     },
     {
       "date": "2000-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.08864812850952149,
       "first_prize": "286469"
     },
     {
       "date": "2000-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.947750244140625,
       "first_prize": "015594"
     },
     {
       "date": "2000-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.11720930099487305,
       "first_prize": "419881"
     },
     {
       "date": "2000-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.9168029022216797,
       "first_prize": "631969"
     },
     {
       "date": "2000-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.2078133201599121,
       "first_prize": "478103"
     },
     {
       "date": "2000-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.7868299102783203,
       "first_prize": "246693"
     },
     {
       "date": "2000-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.21841888427734374,
       "first_prize": "545663"
     },
     {
       "date": "2000-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.7230844879150391,
       "first_prize": "247242"
     },
     {
       "date": "2000-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.15550064086914062,
       "first_prize": "071953"
     },
     {
       "date": "2001-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.3150222396850586,
       "first_prize": "246954"
     },
     {
       "date": "2001-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.4511425018310547,
       "first_prize": "623384"
     },
     {
       "date": "2001-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.4403753662109375,
       "first_prize": "892819"
     },
     {
       "date": "2001-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.41554264068603514,
       "first_prize": "225748"
     },
     {
       "date": "2001-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.2860238456726074,
       "first_prize": "100603"
     },
     {
       "date": "2001-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.5860410690307617,
       "first_prize": "371769"
     },
     {
       "date": "2001-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.4506726455688477,
       "first_prize": "182741"
     },
     {
       "date": "2001-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.46781238555908206,
       "first_prize": "138748"
     },
     {
       "date": "2001-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.6469525909423828,
       "first_prize": "698552"
     },
     {
       "date": "2001-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.4467929840087891,
       "first_prize": "121912"
     },
     {
       "date": "2001-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.7281253051757812,
       "first_prize": "628661"
     },
     {
       "date": "2001-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.3229376220703125,
       "first_prize": "563538"
     },
     {
       "date": "2001-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.7940113067626953,
       "first_prize": "518486"
     },
     {
       "date": "2001-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.2807517623901367,
       "first_prize": "141708"
     },
     {
       "date": "2001-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.9053960418701172,
       "first_prize": "198820"
     },
     {
       "date": "2001-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.13889421463012697,
       "first_prize": "442972"
     },
     {
       "date": "2001-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.9668797302246094,
       "first_prize": "761177"
     },
     {
       "date": "2001-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.03304522037506104,
       "first_prize": "512580"
     },
     {
       "date": "2001-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.9753128814697266,
       "first_prize": "883093"
     },
     {
       "date": "2001-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.011330478191375733,
       "first_prize": "310252"
     },
     {
       "date": "2001-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.9981838226318359,
       "first_prize": "651759"
     },
     {
       "date": "2001-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.0068887251615524295,
       "first_prize": "441501"
     },
     {
       "date": "2001-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.9996248626708985,
       "first_prize": "505384"
     },
     {
       "date": "2001-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.014013549089431762,
       "first_prize": "360054"
     },
     {
       "date": "2001-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.9974150848388672,
       "first_prize": "623767"
     },
     {
       "date": "2002-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.9671866607666015,
       "first_prize": "489181"
     },
     {
       "date": "2002-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.10941607475280762,
       "first_prize": "477172"
     },
     {
       "date": "2002-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.866849136352539,
       "first_prize": "490996"
     },
     {
       "date": "2002-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.1192871856689453,
       "first_prize": "687988"
     },
     {
       "date": "2002-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.958432846069336,
       "first_prize": "827523"
     },
     {
       "date": "2002-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.03434389114379883,
       "first_prize": "469834"
     },
     {
       "date": "2002-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.8545535278320312,
       "first_prize": "617414"
     },
     {
       "date": "2002-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.09479284286499023,
       "first_prize": "409816"
     },
     {
       "date": "2002-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.7249774169921875,
       "first_prize": "863664"
     },
     {
       "date": "2002-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.12802366256713868,
       "first_prize": "892255"
     },
     {
       "date": "2002-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.6907270050048828,
       "first_prize": "556388"
     },
     {
       "date": "2002-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.2773451042175293,
       "first_prize": "544028"
     },
     {
       "date": "2002-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.6620834350585938,
       "first_prize": "489934"
     },
     {
       "date": "2002-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.36438976287841796,
       "first_prize": "905985"
     },
     {
       "date": "2002-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.5427202987670898,
       "first_prize": "988359"
     },
     {
       "date": "2002-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.5651546096801758,
       "first_prize": "351048"
     },
     {
       "date": "2002-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.41203746795654295,
       "first_prize": "913438"
     },
     {
       "date": "2002-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.7282443237304688,
       "first_prize": "251689"
     },
     {
       "date": "2002-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.36688617706298826,
       "first_prize": "483059"
     },
     {
       "date": "2002-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.7641835021972656,
       "first_prize": "489901"
     },
     {
       "date": "2002-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.20841220855712891,
       "first_prize": "210564"
     },
     {
       "date": "2002-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.8568377685546875,
       "first_prize": "683755"
     },
     {
       "date": "2002-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.15107645988464355,
       "first_prize": "552549"
     },
     {
       "date": "2002-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.8671054077148438,
       "first_prize": "768912"
     },
     {
       "date": "2002-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.18382343292236328,
       "first_prize": "225523"
     },
     {
       "date": "2003-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.043845229148864746,
       "first_prize": "386133"
     },
     {
       "date": "2003-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.9757202911376953,
       "first_prize": "077846"
     },
     {
       "date": "2003-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.0037381309270858765,
       "first_prize": "614313"
     },
     {
       "date": "2003-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.9854344940185547,
       "first_prize": "152360"
     },
     {
       "date": "2003-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.04697960376739502,
       "first_prize": "040585"
     },
     {
       "date": "2003-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.917015380859375,
       "first_prize": "480412"
     },
     {
       "date": "2003-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.0074658989906311035,
       "first_prize": "362942"
     },
     {
       "date": "2003-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.9887706756591796,
       "first_prize": "815665"
     },
     {
       "date": "2003-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.002249498814344406,
       "first_prize": "839765"
     },
     {
       "date": "2003-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.9996239471435547,
       "first_prize": "705792"
     },
     {
       "date": "2003-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.006486778855323791,
       "first_prize": "327416"
     },
     {
       "date": "2003-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.966194839477539,
       "first_prize": "722709"
     },
     {
       "date": "2003-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.0166354763507843,
       "first_prize": "287005"
     },
     {
       "date": "2003-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.9383358001708985,
       "first_prize": "759394"
     },
     {
       "date": "2003-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.08685623168945313,
       "first_prize": "268403"
     },
     {
       "date": "2003-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.8499594879150391,
       "first_prize": "951181"
     },
     {
       "date": "2003-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.2257811737060547,
       "first_prize": "598450"
     },
     {
       "date": "2003-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.7536444854736328,
       "first_prize": "339309"
     },
     {
       "date": "2003-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.301276912689209,
       "first_prize": "906201"
     },
     {
       "date": "2003-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.7354824066162109,
       "first_prize": "150594"
     },
     {
       "date": "2003-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.4811949157714844,
       "first_prize": "353469"
     },
     {
       "date": "2003-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.6199474334716797,
       "first_prize": "149861"
     },
     {
       "date": "2003-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.5300806045532227,
       "first_prize": "143442"
     },
     {
       "date": "2003-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.5796927261352539,
       "first_prize": "565694"
     },
     {
       "date": "2003-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.45952186584472654,
       "first_prize": "448788"
     },
     {
       "date": "2004-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.6522142791748047,
       "first_prize": "902882"
     },
     {
       "date": "2004-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.30218288421630857,
       "first_prize": "463449"
     },
     {
       "date": "2004-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.7484693908691407,
       "first_prize": "899976"
     },
     {
       "date": "2004-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.2362832832336426,
       "first_prize": "025894"
     },
     {
       "date": "2004-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.6730120849609375,
       "first_prize": "480116"
     },
     {
       "date": "2004-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.26895599365234374,
       "first_prize": "095042"
     },
     {
       "date": "2004-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.7792206573486328,
       "first_prize": "889872"
     },
     {
       "date": "2004-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.1282387351989746,
       "first_prize": "618040"
     },
     {
       "date": "2004-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.8912229919433594,
       "first_prize": "306904"
     },
     {
       "date": "2004-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.09445335388183594,
       "first_prize": "553399"
     },
     {
       "date": "2004-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.9305717468261718,
       "first_prize": "124574"
     },
     {
       "date": "2004-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.031013097763061524,
       "first_prize": "525203"
     },
     {
       "date": "2004-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.9664594268798828,
       "first_prize": "160842"
     },
     {
       "date": "2004-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.021396644115447998,
       "first_prize": "776571"
     },
     {
       "date": "2004-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.9972378540039063,
       "first_prize": "303709"
     },
     {
       "date": "2004-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.0017804355919361114,
       "first_prize": "874201"
     },
     {
       "date": "2004-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.9542398071289062,
       "first_prize": "582350"
     },
     {
       "date": "2004-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.02255343198776245,
       "first_prize": "528234"
     },
     {
       "date": "2004-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.9349605560302734,
       "first_prize": "749328"
     },
     {
       "date": "2004-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.04559672355651855,
       "first_prize": "740093"
     },
     {
       "date": "2004-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.8612405395507813,
       "first_prize": "956280"
     },
     {
       "date": "2004-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.1594771671295166,
       "first_prize": "510836"
     },
     {
       "date": "2004-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.8496257781982421,
       "first_prize": "977612"
     },
     {
       "date": "2004-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.21658241271972656,
       "first_prize": "851893"
     },
     {
       "date": "2004-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.900364990234375,
       "first_prize": "366908"
     },
     {
       "date": "2005-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.7607312774658204,
       "first_prize": "019997"
     },
     {
       "date": "2005-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.4712801361083984,
       "first_prize": "752465"
     },
     {
       "date": "2005-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.63856689453125,
       "first_prize": "702016"
     },
     {
       "date": "2005-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.5000897598266602,
       "first_prize": "403726"
     },
     {
       "date": "2005-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.7815937042236328,
       "first_prize": "414682"
     },
     {
       "date": "2005-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.3289342880249023,
       "first_prize": "602146"
     },
     {
       "date": "2005-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.6183444595336914,
       "first_prize": "544482"
     },
     {
       "date": "2005-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.44356990814208985,
       "first_prize": "673527"
     },
     {
       "date": "2005-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.41753646850585935,
       "first_prize": "307033"
     },
     {
       "date": "2005-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.465738410949707,
       "first_prize": "536211"
     },
     {
       "date": "2005-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.33580951690673827,
       "first_prize": "999904"
     },
     {
       "date": "2005-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.5944417190551757,
       "first_prize": "965573"
     },
     {
       "date": "2005-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.27150821685791016,
       "first_prize": "399221"
     },
     {
       "date": "2005-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.6414540863037109,
       "first_prize": "317421"
     },
     {
       "date": "2005-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.150310697555542,
       "first_prize": "653841"
     },
     {
       "date": "2005-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.8022409057617188,
       "first_prize": "691250"
     },
     {
       "date": "2005-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.07049503803253174,
       "first_prize": "090145"
     },
     {
       "date": "2005-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.9360884094238281,
       "first_prize": "556071"
     },
     {
       "date": "2005-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.056620936393737796,
       "first_prize": "741384"
     },
     {
       "date": "2005-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.9695786285400391,
       "first_prize": "161871"
     },
     {
       "date": "2005-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.012353998422622681,
       "first_prize": "494625"
     },
     {
       "date": "2005-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.9991416931152344,
       "first_prize": "230612"
     },
     {
       "date": "2005-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.0060640513896942135,
       "first_prize": "932710"
     },
     {
       "date": "2005-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.9971262359619141,
       "first_prize": "858940"
     },
     {
       "date": "2005-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.019704810380935668,
       "first_prize": "811147"
     },
     {
       "date": "2006-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.012691160440444946,
       "first_prize": "272763"
     },
     {
       "date": "2006-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.9392365264892578,
       "first_prize": "410766"
     },
     {
       "date": "2006-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.08606833457946778,
       "first_prize": "171165"
     },
     {
       "date": "2006-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.9320596313476562,
       "first_prize": "129639"
     },
     {
       "date": "2006-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.01475762128829956,
       "first_prize": "620598"
     },
     {
       "date": "2006-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.990701904296875,
       "first_prize": "639692"
     },
     {
       "date": "2006-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.09178244590759277,
       "first_prize": "933290"
     },
     {
       "date": "2006-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.9467192077636719,
       "first_prize": "117528"
     },
     {
       "date": "2006-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.20283103942871095,
       "first_prize": "174061"
     },
     {
       "date": "2006-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.9166354370117188,
       "first_prize": "431098"
     },
     {
       "date": "2006-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.23208309173583985,
       "first_prize": "304834"
     },
     {
       "date": "2006-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.7821338653564454,
       "first_prize": "868821"
     },
     {
       "date": "2006-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.25662778854370116,
       "first_prize": "946172"
     },
     {
       "date": "2006-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.7023512268066406,
       "first_prize": "813116"
     },
     {
       "date": "2006-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.37024837493896484,
       "first_prize": "439350"
     },
     {
       "date": "2006-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.5097396087646484,
       "first_prize": "366620"
     },
     {
       "date": "2006-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.505801887512207,
       "first_prize": "138332"
     },
     {
       "date": "2006-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.34526561737060546,
       "first_prize": "463645"
     },
     {
       "date": "2006-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.5591409301757813,
       "first_prize": "981102"
     },
     {
       "date": "2006-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.3104956817626953,
       "first_prize": "929170"
     },
     {
       "date": "2006-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.7311390686035156,
       "first_prize": "339874"
     },
     {
       "date": "2006-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.2110980224609375,
       "first_prize": "563157"
     },
     {
       "date": "2006-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.7945742034912109,
       "first_prize": "795512"
     },
     {
       "date": "2006-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.20203474044799805,
       "first_prize": "981116"
     },
     {
       "date": "2006-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.7592037963867188,
       "first_prize": "737132"
     },
     {
       "date": "2007-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.9192848968505859,
       "first_prize": "247255"
     },
     {
       "date": "2007-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.05846660137176514,
       "first_prize": "275210"
     },
     {
       "date": "2007-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.9829084777832031,
       "first_prize": "974245"
     },
     {
       "date": "2007-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.039318039417266845,
       "first_prize": "661092"
     },
     {
       "date": "2007-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.9167855834960937,
       "first_prize": "815642"
     },
     {
       "date": "2007-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.133872127532959,
       "first_prize": "887294"
     },
     {
       "date": "2007-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.9738056945800782,
       "first_prize": "221751"
     },
     {
       "date": "2007-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.033928570747375486,
       "first_prize": "703354"
     },
     {
       "date": "2007-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.9971600341796875,
       "first_prize": "328704"
     },
     {
       "date": "2007-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.011423168182373046,
       "first_prize": "460463"
     },
     {
       "date": "2007-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.9980940246582031,
       "first_prize": "567680"
     },
     {
       "date": "2007-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.011758769750595094,
       "first_prize": "421849"
     },
     {
       "date": "2007-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.9967437744140625,
       "first_prize": "120761"
     },
     {
       "date": "2007-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.02691560983657837,
       "first_prize": "288709"
     },
     {
       "date": "2007-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.952344970703125,
       "first_prize": "334520"
     },
     {
       "date": "2007-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.091839017868042,
       "first_prize": "711217"
     },
     {
       "date": "2007-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.8318925476074219,
       "first_prize": "655718"
     },
     {
       "date": "2007-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.17561677932739259,
       "first_prize": "166713"
     },
     {
       "date": "2007-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.762572021484375,
       "first_prize": "821172"
     },
     {
       "date": "2007-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.19524106979370118,
       "first_prize": "803701"
     },
     {
       "date": "2007-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.5952420043945312,
       "first_prize": "521280"
     },
     {
       "date": "2007-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.3061354446411133,
       "first_prize": "186636"
     },
     {
       "date": "2007-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.554694938659668,
       "first_prize": "415267"
     },
     {
       "date": "2007-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.3487884521484375,
       "first_prize": "935463"
     },
     {
       "date": "2007-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.6296189117431641,
       "first_prize": "346940"
     },
     {
       "date": "2008-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.4369686508178711,
       "first_prize": "617203"
     },
     {
       "date": "2008-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.6340845108032227,
       "first_prize": "874640"
     },
     {
       "date": "2008-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.3355345153808594,
       "first_prize": "292546"
     },
     {
       "date": "2008-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.7066751861572266,
       "first_prize": "612467"
     },
     {
       "date": "2008-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.4157394027709961,
       "first_prize": "028359"
     },
     {
       "date": "2008-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.6718683624267578,
       "first_prize": "907580"
     },
     {
       "date": "2008-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.2990947151184082,
       "first_prize": "790366"
     },
     {
       "date": "2008-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.8182402801513672,
       "first_prize": "145108"
     },
     {
       "date": "2008-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.1687489318847656,
       "first_prize": "414495"
     },
     {
       "date": "2008-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.8524114990234375,
       "first_prize": "078146"
     },
     {
       "date": "2008-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.11796819686889648,
       "first_prize": "804795"
     },
     {
       "date": "2008-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.9323179626464844,
       "first_prize": "520130"
     },
     {
       "date": "2008-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.06702518463134766,
       "first_prize": "307039"
     },
     {
       "date": "2008-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.9484940338134765,
       "first_prize": "054692"
     },
     {
       "date": "2008-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.00265139639377594,
       "first_prize": "007211"
     },
     {
       "date": "2008-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.9917362213134766,
       "first_prize": "676503"
     },
     {
       "date": "2008-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.016879997253417968,
       "first_prize": "968028"
     },
     {
       "date": "2008-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.9944010162353516,
       "first_prize": "121845"
     },
     {
       "date": "2008-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.030453615188598633,
       "first_prize": "660132"
     },
     {
       "date": "2008-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.9792942810058594,
       "first_prize": "844766"
     },
     {
       "date": "2008-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.08553378105163574,
       "first_prize": "138719"
     },
     {
       "date": "2008-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.8908281707763672,
       "first_prize": "984106"
     },
     {
       "date": "2008-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.09460614204406738,
       "first_prize": "274057"
     },
     {
       "date": "2008-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.8458135986328125,
       "first_prize": "228433"
     },
     {
       "date": "2008-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.05456059455871582,
       "first_prize": "214141"
     },
     {
       "date": "2009-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.17332521438598633,
       "first_prize": "411260"
     },
     {
       "date": "2009-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.613646011352539,
       "first_prize": "765175"
     },
     {
       "date": "2009-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.29393514633178713,
       "first_prize": "644089"
     },
     {
       "date": "2009-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.5885142517089844,
       "first_prize": "061316"
     },
     {
       "date": "2009-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.16400377273559572,
       "first_prize": "974240"
     },
     {
       "date": "2009-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.7526039123535156,
       "first_prize": "303222"
     },
     {
       "date": "2009-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.3212155532836914,
       "first_prize": "292109"
     },
     {
       "date": "2009-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.6471508026123047,
       "first_prize": "344915"
     },
     {
       "date": "2009-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.5166314315795898,
       "first_prize": "831712"
     },
     {
       "date": "2009-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.6259157943725586,
       "first_prize": "520374"
     },
     {
       "date": "2009-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.5949818801879883,
       "first_prize": "945115"
     },
     {
       "date": "2009-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.493986701965332,
       "first_prize": "148263"
     },
     {
       "date": "2009-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.6581739807128906,
       "first_prize": "914171"
     },
     {
       "date": "2009-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.4387637710571289,
       "first_prize": "028406"
     },
     {
       "date": "2009-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.787976303100586,
       "first_prize": "220879"
     },
     {
       "date": "2009-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.2607469367980957,
       "first_prize": "181286"
     },
     {
       "date": "2009-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.880518798828125,
       "first_prize": "058236"
     },
     {
       "date": "2009-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.10597212791442871,
       "first_prize": "557716"
     },
     {
       "date": "2009-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.8957972717285156,
       "first_prize": "602260"
     },
     {
       "date": "2009-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.06393546104431153,
       "first_prize": "435938"
     },
     {
       "date": "2009-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.9604989624023438,
       "first_prize": "412268"
     },
     {
       "date": "2009-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.008765307664871215,
       "first_prize": "695489"
     },
     {
       "date": "2009-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.9757132720947266,
       "first_prize": "336930"
     },
     {
       "date": "2009-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.0030561670660972594,
       "first_prize": "532728"
     },
     {
       "date": "2009-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.9533547973632812,
       "first_prize": "622620"
     },
     {
       "date": "2010-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.9993719482421874,
       "first_prize": "743881"
     },
     {
       "date": "2010-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.025885934829711913,
       "first_prize": "555562"
     },
     {
       "date": "2010-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.9535601806640625,
       "first_prize": "013069"
     },
     {
       "date": "2010-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.033147668838500975,
       "first_prize": "738853"
     },
     {
       "date": "2010-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.997252197265625,
       "first_prize": "792891"
     },
     {
       "date": "2010-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.0018147389590740205,
       "first_prize": "257188"
     },
     {
       "date": "2010-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.9499269104003907,
       "first_prize": "747825"
     },
     {
       "date": "2010-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.02492734432220459,
       "first_prize": "012935"
     },
     {
       "date": "2010-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.8647307586669922,
       "first_prize": "037690"
     },
     {
       "date": "2010-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.04627871036529541,
       "first_prize": "157434"
     },
     {
       "date": "2010-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.8416065979003906,
       "first_prize": "299636"
     },
     {
       "date": "2010-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.16235893249511718,
       "first_prize": "184824"
     },
     {
       "date": "2010-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.8191181182861328,
       "first_prize": "041305"
     },
     {
       "date": "2010-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.23636865615844727,
       "first_prize": "950103"
     },
     {
       "date": "2010-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.7117766571044922,
       "first_prize": "444172"
     },
     {
       "date": "2010-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.4190208053588867,
       "first_prize": "008206"
     },
     {
       "date": "2010-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.576325912475586,
       "first_prize": "329764"
     },
     {
       "date": "2010-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.5774747467041016,
       "first_prize": "914869"
     },
     {
       "date": "2010-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.5189269638061523,
       "first_prize": "789326"
     },
     {
       "date": "2010-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.6074187088012696,
       "first_prize": "722708"
     },
     {
       "date": "2010-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.33681407928466794,
       "first_prize": "446362"
     },
     {
       "date": "2010-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.7120105743408203,
       "first_prize": "272996"
     },
     {
       "date": "2010-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.264837474822998,
       "first_prize": "629316"
     },
     {
       "date": "2010-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.723199462890625,
       "first_prize": "842031"
     },
     {
       "date": "2010-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.3009704399108887,
       "first_prize": "933627"
     },
     {
       "date": "2011-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.1234815788269043,
       "first_prize": "836605"
     },
     {
       "date": "2011-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.8967774963378906,
       "first_prize": "787675"
     },
     {
       "date": "2011-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.04312862396240234,
       "first_prize": "890921"
     },
     {
       "date": "2011-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.9217878723144531,
       "first_prize": "771823"
     },
     {
       "date": "2011-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.13357363700866698,
       "first_prize": "014809"
     },
     {
       "date": "2011-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.805318603515625,
       "first_prize": "022939"
     },
     {
       "date": "2011-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.06186448097229004,
       "first_prize": "716068"
     },
     {
       "date": "2011-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.9313038635253906,
       "first_prize": "129886"
     },
     {
       "date": "2011-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.016866838932037352,
       "first_prize": "808843"
     },
     {
       "date": "2011-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.9683348846435547,
       "first_prize": "299439"
     },
     {
       "date": "2011-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.008217394948005677,
       "first_prize": "238332"
     },
     {
       "date": "2011-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.9996844482421875,
       "first_prize": "691062"
     },
     {
       "date": "2011-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.0016798312962055207,
       "first_prize": "996668"
     },
     {
       "date": "2011-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.9934385681152343,
       "first_prize": "342513"
     },
     {
       "date": "2011-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.02175117254257202,
       "first_prize": "666993"
     },
     {
       "date": "2011-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.9512210083007813,
       "first_prize": "028390"
     },
     {
       "date": "2011-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.11972304344177247,
       "first_prize": "451864"
     },
     {
       "date": "2011-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.8857962036132813,
       "first_prize": "889342"
     },
     {
       "date": "2011-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.17738073348999023,
       "first_prize": "868413"
     },
     {
       "date": "2011-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.8687418365478515,
       "first_prize": "621489"
     },
     {
       "date": "2011-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.32723178863525393,
       "first_prize": "587792"
     },
     {
       "date": "2011-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.7654733276367187,
       "first_prize": "196711"
     },
     {
       "date": "2011-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.3622867965698242,
       "first_prize": "929138"
     },
     {
       "date": "2011-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.7186737823486328,
       "first_prize": "804446"
     },
     {
       "date": "2011-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.2891233444213867,
       "first_prize": "481685"
     },
     {
       "date": "2012-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.4764686584472656,
       "first_prize": "064457"
     },
     {
       "date": "2012-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.430759162902832,
       "first_prize": "741010"
     },
     {
       "date": "2012-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.5788801193237305,
       "first_prize": "466880"
     },
     {
       "date": "2012-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.3578779602050781,
       "first_prize": "872378"
     },
     {
       "date": "2012-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.4958771514892578,
       "first_prize": "546341"
     },
     {
       "date": "2012-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.39821662902832033,
       "first_prize": "059211"
     },
     {
       "date": "2012-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.6194773864746094,
       "first_prize": "862242"
     },
     {
       "date": "2012-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.24718412399291992,
       "first_prize": "383597"
     },
     {
       "date": "2012-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.7678933715820313,
       "first_prize": "385174"
     },
     {
       "date": "2012-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.21082408905029296,
       "first_prize": "186614"
     },
     {
       "date": "2012-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.8307362365722656,
       "first_prize": "829854"
     },
     {
       "date": "2012-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.11610843658447266,
       "first_prize": "304049"
     },
     {
       "date": "2012-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.8923969268798828,
       "first_prize": "959401"
     },
     {
       "date": "2012-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.09727537155151367,
       "first_prize": "512194"
     },
     {
       "date": "2012-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.9818524932861328,
       "first_prize": "592808"
     },
     {
       "date": "2012-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.032796926498413086,
       "first_prize": "921204"
     },
     {
       "date": "2012-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.9962593078613281,
       "first_prize": "111898"
     },
     {
       "date": "2012-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.001743287891149521,
       "first_prize": "915289"
     },
     {
       "date": "2012-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.991895523071289,
       "first_prize": "465013"
     },
     {
       "date": "2012-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.004045922756195069,
       "first_prize": "805609"
     },
     {
       "date": "2012-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.9582023620605469,
       "first_prize": "545353"
     },
     {
       "date": "2012-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.0649395990371704,
       "first_prize": "982233"
     },
     {
       "date": "2012-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.9496895599365235,
       "first_prize": "757262"
     },
     {
       "date": "2012-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.10172391891479492,
       "first_prize": "793528"
     },
     {
       "date": "2012-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.9759009552001953,
       "first_prize": "631671"
     },
     {
       "date": "2013-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.8818817138671875,
       "first_prize": "386587"
     },
     {
       "date": "2013-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.30773321151733396,
       "first_prize": "897037"
     },
     {
       "date": "2013-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.7700215148925781,
       "first_prize": "646428"
     },
     {
       "date": "2013-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.32697731018066406,
       "first_prize": "004828"
     },
     {
       "date": "2013-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.8869263458251954,
       "first_prize": "928042"
     },
     {
       "date": "2013-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.1745598602294922,
       "first_prize": "491017"
     },
     {
       "date": "2013-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.7433934020996094,
       "first_prize": "397529"
     },
     {
       "date": "2013-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.2700932312011719,
       "first_prize": "470438"
     },
     {
       "date": "2013-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.5540255355834961,
       "first_prize": "550904"
     },
     {
       "date": "2013-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.2936397933959961,
       "first_prize": "107870"
     },
     {
       "date": "2013-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.47857940673828125,
       "first_prize": "507299"
     },
     {
       "date": "2013-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.42686126708984373,
       "first_prize": "550621"
     },
     {
       "date": "2013-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.41970149993896483,
       "first_prize": "226826"
     },
     {
       "date": "2013-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.48639793395996095,
       "first_prize": "532380"
     },
     {
       "date": "2013-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.2882430076599121,
       "first_prize": "709501"
     },
     {
       "date": "2013-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.6734871673583984,
       "first_prize": "362375"
     },
     {
       "date": "2013-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.18525501251220702,
       "first_prize": "278402"
     },
     {
       "date": "2013-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.8457842254638672,
       "first_prize": "516314"
     },
     {
       "date": "2013-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.16576192855834962,
       "first_prize": "336680"
     },
     {
       "date": "2013-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.8975292205810547,
       "first_prize": "060314"
     },
     {
       "date": "2013-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.07835411071777344,
       "first_prize": "944937"
     },
     {
       "date": "2013-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.9731317138671876,
       "first_prize": "369715"
     },
     {
       "date": "2013-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.05603172779083252,
       "first_prize": "328891"
     },
     {
       "date": "2013-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.9815923309326172,
       "first_prize": "344331"
     },
     {
       "date": "2013-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.08913311004638672,
       "first_prize": "827456"
     },
     {
       "date": "2014-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.00482383519411087,
       "first_prize": "746034"
     },
     {
       "date": "2014-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.9924752807617188,
       "first_prize": "739906"
     },
     {
       "date": "2014-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.02002632141113281,
       "first_prize": "670143"
     },
     {
       "date": "2014-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.9894692993164063,
       "first_prize": "664487"
     },
     {
       "date": "2014-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.002941356599330902,
       "first_prize": "794428"
     },
     {
       "date": "2014-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.9940852355957032,
       "first_prize": "508438"
     },
     {
       "date": "2014-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.018903417587280272,
       "first_prize": "893460"
     },
     {
       "date": "2014-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.994771728515625,
       "first_prize": "062082"
     },
     {
       "date": "2014-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.0811540412902832,
       "first_prize": "172333"
     },
     {
       "date": "2014-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.9805620574951172,
       "first_prize": "471684"
     },
     {
       "date": "2014-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.10108372688293457,
       "first_prize": "519814"
     },
     {
       "date": "2014-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.8862067413330078,
       "first_prize": "362924"
     },
     {
       "date": "2014-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.1206320858001709,
       "first_prize": "077428"
     },
     {
       "date": "2014-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.8234241485595704,
       "first_prize": "243994"
     },
     {
       "date": "2014-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.21587289810180665,
       "first_prize": "770434"
     },
     {
       "date": "2014-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.6599929046630859,
       "first_prize": "930058"
     },
     {
       "date": "2014-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.34785888671875,
       "first_prize": "461741"
     },
     {
       "date": "2014-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.50989501953125,
       "first_prize": "772727"
     },
     {
       "date": "2014-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.411190071105957,
       "first_prize": "784448"
     },
     {
       "date": "2014-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.48206268310546874,
       "first_prize": "591812"
     },
     {
       "date": "2014-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.6017747116088867,
       "first_prize": "079570"
     },
     {
       "date": "2014-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.3738949584960938,
       "first_prize": "950698"
     },
     {
       "date": "2014-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.67674072265625,
       "first_prize": "428195"
     },
     {
       "date": "2014-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.3629438018798828,
       "first_prize": "872139"
     },
     {
       "date": "2014-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.6358141326904296,
       "first_prize": "468950"
     },
     {
       "date": "2015-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.8242227172851563,
       "first_prize": "630052"
     },
     {
       "date": "2015-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.16426864624023438,
       "first_prize": "308385"
     },
     {
       "date": "2015-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.917783432006836,
       "first_prize": "698407"
     },
     {
       "date": "2015-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.1294232177734375,
       "first_prize": "063597"
     },
     {
       "date": "2015-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.8074825286865235,
       "first_prize": "553087"
     },
     {
       "date": "2015-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.2610386085510254,
       "first_prize": "739086"
     },
     {
       "date": "2015-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.8933366394042969,
       "first_prize": "888801"
     },
     {
       "date": "2015-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.11045215606689453,
       "first_prize": "090907"
     },
     {
       "date": "2015-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.9556515502929688,
       "first_prize": "098547"
     },
     {
       "date": "2015-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.06343165397644043,
       "first_prize": "112196"
     },
     {
       "date": "2015-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.9685823822021484,
       "first_prize": "155548"
     },
     {
       "date": "2015-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.0058413296937942505,
       "first_prize": "903263"
     },
     {
       "date": "2015-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.9831693267822266,
       "first_prize": "541699"
     },
     {
       "date": "2015-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.0017746421694755554,
       "first_prize": "127821"
     },
     {
       "date": "2015-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.9946026611328125,
       "first_prize": "926252"
     },
     {
       "date": "2015-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.018031439781188964,
       "first_prize": "193088"
     },
     {
       "date": "2015-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.927069320678711,
       "first_prize": "108401"
     },
     {
       "date": "2015-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.06504603862762451,
       "first_prize": "025456"
     },
     {
       "date": "2015-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.8802443695068359,
       "first_prize": "289607"
     },
     {
       "date": "2015-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.0819796371459961,
       "first_prize": "684389"
     },
     {
       "date": "2015-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.7488246917724609,
       "first_prize": "806347"
     },
     {
       "date": "2015-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.1769078254699707,
       "first_prize": "718050"
     },
     {
       "date": "2015-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.7202501678466797,
       "first_prize": "608245"
     },
     {
       "date": "2015-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.22273929595947264,
       "first_prize": "544581"
     },
     {
       "date": "2015-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.7900555419921875,
       "first_prize": "125213"
     },
     {
       "date": "2016-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.6161069107055664,
       "first_prize": "161310"
     },
     {
       "date": "2016-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.5038854217529297,
       "first_prize": "032315"
     },
     {
       "date": "2016-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.515078353881836,
       "first_prize": "619953"
     },
     {
       "date": "2016-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.5764854049682617,
       "first_prize": "067590"
     },
     {
       "date": "2016-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.594686393737793,
       "first_prize": "737702"
     },
     {
       "date": "2016-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.5327548599243164,
       "first_prize": "554827"
     },
     {
       "date": "2016-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.4639954376220703,
       "first_prize": "000466"
     },
     {
       "date": "2016-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.6846026611328125,
       "first_prize": "442981"
     },
     {
       "date": "2016-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.3022823715209961,
       "first_prize": "068544"
     },
     {
       "date": "2016-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.7180799865722656,
       "first_prize": "452802"
     },
     {
       "date": "2016-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.2308932685852051,
       "first_prize": "155121"
     },
     {
       "date": "2016-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.821369400024414,
       "first_prize": "765459"
     },
     {
       "date": "2016-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.15906394958496095,
       "first_prize": "534809"
     },
     {
       "date": "2016-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.8439461517333985,
       "first_prize": "382699"
     },
     {
       "date": "2016-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.04327922344207764,
       "first_prize": "847449"
     },
     {
       "date": "2016-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.9318151092529297,
       "first_prize": "212366"
     },
     {
       "date": "2016-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.0015317422151565551,
       "first_prize": "331376"
     },
     {
       "date": "2016-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.9912612915039063,
       "first_prize": "972127"
     },
     {
       "date": "2016-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.00038980208337306975,
       "first_prize": "105036"
     },
     {
       "date": "2016-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.9987135314941407,
       "first_prize": "237074"
     },
     {
       "date": "2016-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.016072703599929808,
       "first_prize": "257895"
     },
     {
       "date": "2016-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.96720458984375,
       "first_prize": "977547"
     },
     {
       "date": "2016-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.021892642974853514,
       "first_prize": "012679"
     },
     {
       "date": "2016-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.9424733734130859,
       "first_prize": "287858"
     },
     {
       "date": "2016-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.006038426160812378,
       "first_prize": "487080"
     },
     {
       "date": "2017-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.07240276336669922,
       "first_prize": "855861"
     },
     {
       "date": "2017-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.7730255889892578,
       "first_prize": "614804"
     },
     {
       "date": "2017-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.1726987648010254,
       "first_prize": "809902"
     },
     {
       "date": "2017-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.7568959045410156,
       "first_prize": "848276"
     },
     {
       "date": "2017-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.07077911853790284,
       "first_prize": "086549"
     },
     {
       "date": "2017-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.8884336853027344,
       "first_prize": "746638"
     },
     {
       "date": "2017-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.20123979568481445,
       "first_prize": "187399"
     },
     {
       "date": "2017-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.8048682403564453,
       "first_prize": "621992"
     },
     {
       "date": "2017-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.3784556198120117,
       "first_prize": "414380"
     },
     {
       "date": "2017-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.782162094116211,
       "first_prize": "565646"
     },
     {
       "date": "2017-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.4451943969726562,
       "first_prize": "947931"
     },
     {
       "date": "2017-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.6543138885498047,
       "first_prize": "426668"
     },
     {
       "date": "2017-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.4975836181640625,
       "first_prize": "323616"
     },
     {
       "date": "2017-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.5902148056030273,
       "first_prize": "322614"
     },
     {
       "date": "2017-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.6305987548828125,
       "first_prize": "462275"
     },
     {
       "date": "2017-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.3930755615234375,
       "first_prize": "487687"
     },
     {
       "date": "2017-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.7430731201171875,
       "first_prize": "634454"
     },
     {
       "date": "2017-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.20711896896362306,
       "first_prize": "435159"
     },
     {
       "date": "2017-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.7646223449707031,
       "first_prize": "349346"
     },
     {
       "date": "2017-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.15165778160095214,
       "first_prize": "069732"
     },
     {
       "date": "2017-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.8684666442871094,
       "first_prize": "754905"
     },
     {
       "date": "2017-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.06079934597015381,
       "first_prize": "435732"
     },
     {
       "date": "2017-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.8985430908203125,
       "first_prize": "979464"
     },
     {
       "date": "2017-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.047948474884033206,
       "first_prize": "930762"
     },
     {
       "date": "2017-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.8606285858154297,
       "first_prize": "612383"
     },
     {
       "date": "2018-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.980230941772461,
       "first_prize": "161605"
     },
     {
       "date": "2018-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.0003121151402592659,
       "first_prize": "789399"
     },
     {
       "date": "2018-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.9971674346923828,
       "first_prize": "503947"
     },
     {
       "date": "2018-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.0002610796503722668,
       "first_prize": "013491"
     },
     {
       "date": "2018-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.9852229309082031,
       "first_prize": "583282"
     },
     {
       "date": "2018-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.02541853666305542,
       "first_prize": "582805"
     },
     {
       "date": "2018-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.9957275390625,
       "first_prize": "660679"
     },
     {
       "date": "2018-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.0018502888083457947,
       "first_prize": "201549"
     },
     {
       "date": "2018-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.9591273498535157,
       "first_prize": "799964"
     },
     {
       "date": "2018-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.005260269045829773,
       "first_prize": "245838"
     },
     {
       "date": "2018-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.9461833190917969,
       "first_prize": "324488"
     },
     {
       "date": "2018-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.07008468627929687,
       "first_prize": "922842"
     },
     {
       "date": "2018-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.9316539764404297,
       "first_prize": "303078"
     },
     {
       "date": "2018-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.1208478832244873,
       "first_prize": "646917"
     },
     {
       "date": "2018-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.8490910339355469,
       "first_prize": "240236"
     },
     {
       "date": "2018-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.26643253326416017,
       "first_prize": "916791"
     },
     {
       "date": "2018-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.7217985534667969,
       "first_prize": "844649"
     },
     {
       "date": "2018-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.40661991119384766,
       "first_prize": "382790"
     },
     {
       "date": "2018-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.65655029296875,
       "first_prize": "453577"
     },
     {
       "date": "2018-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.4300967788696289,
       "first_prize": "431434"
     },
     {
       "date": "2018-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.4664560317993164,
       "first_prize": "793244"
     },
     {
       "date": "2018-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.5370258331298828,
       "first_prize": "206054"
     },
     {
       "date": "2018-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.39111183166503904,
       "first_prize": "646914"
     },
     {
       "date": "2018-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.5504415893554687,
       "first_prize": "973263"
     },
     {
       "date": "2018-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.43539947509765625,
       "first_prize": "265881"
     },
     {
       "date": "2019-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.23615800857543945,
       "first_prize": "841554"
     },
     {
       "date": "2019-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.7713920593261718,
       "first_prize": "423734"
     },
     {
       "date": "2019-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.13060020446777343,
       "first_prize": "062637"
     },
     {
       "date": "2019-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.8146527862548828,
       "first_prize": "931379"
     },
     {
       "date": "2019-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.26209781646728514,
       "first_prize": "614782"
     },
     {
       "date": "2019-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.6725010681152344,
       "first_prize": "652298"
     },
     {
       "date": "2019-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.16817636489868165,
       "first_prize": "199996"
     },
     {
       "date": "2019-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.8386210632324219,
       "first_prize": "891419"
     },
     {
       "date": "2019-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.08939008712768555,
       "first_prize": "862482"
     },
     {
       "date": "2019-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.8954201507568359,
       "first_prize": "407403"
     },
     {
       "date": "2019-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.06856600761413574,
       "first_prize": "495555"
     },
     {
       "date": "2019-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.9790934753417969,
       "first_prize": "271006"
     },
     {
       "date": "2019-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.04297830581665039,
       "first_prize": "130310"
     },
     {
       "date": "2019-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.9920545959472656,
       "first_prize": "467155"
     },
     {
       "date": "2019-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.0004924819245934486,
       "first_prize": "270886"
     },
     {
       "date": "2019-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.9970552825927734,
       "first_prize": "771861"
     },
     {
       "date": "2019-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.03913187026977539,
       "first_prize": "779922"
     },
     {
       "date": "2019-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.9687370300292969,
       "first_prize": "334638"
     },
     {
       "date": "2019-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.07418930053710937,
       "first_prize": "301652"
     },
     {
       "date": "2019-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.9562503814697265,
       "first_prize": "578933"
     },
     {
       "date": "2019-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.18125314712524415,
       "first_prize": "741068"
     },
     {
       "date": "2019-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.8782234954833984,
       "first_prize": "328053"
     },
     {
       "date": "2019-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.20346216201782227,
       "first_prize": "760072"
     },
     {
       "date": "2019-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.8351737213134766,
       "first_prize": "525306"
     },
     {
       "date": "2019-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.14217684745788575,
       "first_prize": "888559"
     },
     {
       "date": "2020-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.29941204071044925,
       "first_prize": "622862"
     },
     {
       "date": "2020-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.5626660537719727,
       "first_prize": "695536"
     },
     {
       "date": "2020-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.3993085479736328,
       "first_prize": "878907"
     },
     {
       "date": "2020-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.4934238815307617,
       "first_prize": "479304"
     },
     {
       "date": "2020-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.3250080871582031,
       "first_prize": "664000"
     },
     {
       "date": "2020-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.5438240432739258,
       "first_prize": "170000"
     },
     {
       "date": "2020-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.4562163162231445,
       "first_prize": "794675"
     },
     {
       "date": "2020-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.3972372817993164,
       "first_prize": "778112"
     },
     {
       "date": "2020-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.627391586303711,
       "first_prize": "210327"
     },
     {
       "date": "2020-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.36593040466308596,
       "first_prize": "933922"
     },
     {
       "date": "2020-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.7087869262695312,
       "first_prize": "050992"
     },
     {
       "date": "2020-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.2524983787536621,
       "first_prize": "524881"
     },
     {
       "date": "2020-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.7895560455322266,
       "first_prize": "749914"
     },
     {
       "date": "2020-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.2263677215576172,
       "first_prize": "071606"
     },
     {
       "date": "2020-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.9221263122558594,
       "first_prize": "164775"
     },
     {
       "date": "2020-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.11941812515258789,
       "first_prize": "910611"
     },
     {
       "date": "2020-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.9838651275634765,
       "first_prize": "669244"
     },
     {
       "date": "2020-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.03281967163085937,
       "first_prize": "999017"
     },
     {
       "date": "2020-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.9910675811767579,
       "first_prize": "857209"
     },
     {
       "date": "2020-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.012045168876647949,
       "first_prize": "259784"
     },
     {
       "date": "2020-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.997958984375,
       "first_prize": "860720"
     },
     {
       "date": "2020-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.00946128487586975,
       "first_prize": "985364"
     },
     {
       "date": "2020-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.9965922546386718,
       "first_prize": "760855"
     },
     {
       "date": "2020-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.02420259952545166,
       "first_prize": "180144"
     },
     {
       "date": "2020-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.9996035766601562,
       "first_prize": "092812"
     },
     {
       "date": "2021-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.9630477905273438,
       "first_prize": "885210"
     },
     {
       "date": "2021-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.1591789436340332,
       "first_prize": "861330"
     },
     {
       "date": "2021-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.8768104553222656,
       "first_prize": "460219"
     },
     {
       "date": "2021-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.17275333404541016,
       "first_prize": "101609"
     },
     {
       "date": "2021-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.9613890075683593,
       "first_prize": "072640"
     },
     {
       "date": "2021-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.06358547210693359,
       "first_prize": "661974"
     },
     {
       "date": "2021-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.8550025177001953,
       "first_prize": "064503"
     },
     {
       "date": "2021-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.13086599349975586,
       "first_prize": "734766"
     },
     {
       "date": "2021-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.6963121032714844,
       "first_prize": "287748"
     },
     {
       "date": "2021-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.15309024810791017,
       "first_prize": "039144"
     },
     {
       "date": "2021-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.6362936401367187,
       "first_prize": "897461"
     },
     {
       "date": "2021-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.2770609092712402,
       "first_prize": "780418"
     },
     {
       "date": "2021-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.5885942459106446,
       "first_prize": "648378"
     },
     {
       "date": "2021-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.3444805526733398,
       "first_prize": "397570"
     },
     {
       "date": "2021-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.4587065124511719,
       "first_prize": "898104"
     },
     {
       "date": "2021-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.54266845703125,
       "first_prize": "393725"
     },
     {
       "date": "2021-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.342599983215332,
       "first_prize": "553170"
     },
     {
       "date": "2021-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.7335977935791016,
       "first_prize": "674203"
     },
     {
       "date": "2021-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.3184280014038086,
       "first_prize": "743029"
     },
     {
       "date": "2021-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.7924290466308593,
       "first_prize": "769504"
     },
     {
       "date": "2021-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.19540971755981446,
       "first_prize": "034435"
     },
     {
       "date": "2021-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.8978816986083984,
       "first_prize": "580050"
     },
     {
       "date": "2021-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.15516379356384277,
       "first_prize": "237707"
     },
     {
       "date": "2021-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.9126789093017578,
       "first_prize": "363119"
     },
     {
       "date": "2021-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.19732276916503907,
       "first_prize": "336460"
     },
     {
       "date": "2022-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.04739161491394043,
       "first_prize": "403189"
     },
     {
       "date": "2022-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.9898756408691406,
       "first_prize": "939024"
     },
     {
       "date": "2022-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.002535635828971863,
       "first_prize": "183086"
     },
     {
       "date": "2022-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.9930127716064453,
       "first_prize": "583406"
     },
     {
       "date": "2022-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.040896821022033694,
       "first_prize": "410109"
     },
     {
       "date": "2022-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.9398629760742188,
       "first_prize": "548886"
     },
     {
       "date": "2022-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.001826317310333252,
       "first_prize": "129194"
     },
     {
       "date": "2022-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.9911795043945313,
       "first_prize": "884783"
     },
     {
       "date": "2022-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.012804042100906372,
       "first_prize": "713386"
     },
     {
       "date": "2022-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.9995471954345703,
       "first_prize": "642734"
     },
     {
       "date": "2022-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.021635417938232423,
       "first_prize": "347463"
     },
     {
       "date": "2022-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.9642070770263672,
       "first_prize": "555395"
     },
     {
       "date": "2022-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.03342242002487183,
       "first_prize": "350450"
     },
     {
       "date": "2022-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.9252967834472656,
       "first_prize": "029325"
     },
     {
       "date": "2022-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.10010284423828125,
       "first_prize": "564033"
     },
     {
       "date": "2022-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.8054206848144532,
       "first_prize": "469875"
     },
     {
       "date": "2022-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.21555179595947266,
       "first_prize": "987536"
     },
     {
       "date": "2022-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.6819019317626953,
       "first_prize": "532122"
     },
     {
       "date": "2022-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.2798526954650879,
       "first_prize": "201694"
     },
     {
       "date": "2022-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.6611786651611328,
       "first_prize": "031443"
     },
     {
       "date": "2022-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.4696364974975586,
       "first_prize": "574469"
     },
     {
       "date": "2022-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.5547080230712891,
       "first_prize": "675608"
     },
     {
       "date": "2022-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.5447134399414062,
       "first_prize": "088922"
     },
     {
       "date": "2022-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.5379436111450195,
       "first_prize": "403737"
     },
     {
       "date": "2022-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.49513252258300783,
       "first_prize": "681881"
     },
     {
       "date": "2023-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.6992453002929687,
       "first_prize": "855254"
     },
     {
       "date": "2023-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.3034076309204102,
       "first_prize": "185980"
     },
     {
       "date": "2023-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.8086981201171874,
       "first_prize": "372910"
     },
     {
       "date": "2023-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.25183151245117186,
       "first_prize": "264510"
     },
     {
       "date": "2023-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.6596529388427734,
       "first_prize": "917795"
     },
     {
       "date": "2023-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.39898445129394533,
       "first_prize": "329362"
     },
     {
       "date": "2023-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.7618067932128906,
       "first_prize": "822476"
     },
     {
       "date": "2023-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.2159425735473633,
       "first_prize": "453566"
     },
     {
       "date": "2023-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.8565222930908203,
       "first_prize": "672251"
     },
     {
       "date": "2023-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.15125388145446778,
       "first_prize": "464673"
     },
     {
       "date": "2023-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.8827454376220704,
       "first_prize": "353054"
     },
     {
       "date": "2023-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.04956151962280273,
       "first_prize": "515940"
     },
     {
       "date": "2023-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.9157965087890625,
       "first_prize": "392889"
     },
     {
       "date": "2023-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.031107571125030518,
       "first_prize": "834531"
     },
     {
       "date": "2023-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.9889264678955079,
       "first_prize": "505431"
     },
     {
       "date": "2023-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.003144693076610565,
       "first_prize": "929555"
     },
     {
       "date": "2023-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.9860841369628907,
       "first_prize": "821610"
     },
     {
       "date": "2023-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.008295964002609253,
       "first_prize": "643374"
     },
     {
       "date": "2023-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.9648717498779297,
       "first_prize": "528082"
     },
     {
       "date": "2023-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.015844767093658448,
       "first_prize": "441866"
     },
     {
       "date": "2023-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.8821350860595704,
       "first_prize": "541404"
     },
     {
       "date": "2023-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.07882617473602295,
       "first_prize": "227315"
     },
     {
       "date": "2023-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.8633841705322266,
       "first_prize": "196978"
     },
     {
       "date": "2023-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.11836424827575684,
       "first_prize": "049275"
     },
     {
       "date": "2023-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.9133587646484375,
       "first_prize": "767542"
     },
     {
       "date": "2024-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.7803078460693359,
       "first_prize": "379134"
     },
     {
       "date": "2024-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.3718876266479492,
       "first_prize": "360812"
     },
     {
       "date": "2024-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.68772705078125,
       "first_prize": "524136"
     },
     {
       "date": "2024-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.43351036071777344,
       "first_prize": "336634"
     },
     {
       "date": "2024-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.7539432525634766,
       "first_prize": "187492"
     },
     {
       "date": "2024-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.3787314987182617,
       "first_prize": "164552"
     },
     {
       "date": "2024-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.6217457580566407,
       "first_prize": "558933"
     },
     {
       "date": "2024-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.5209169006347656,
       "first_prize": "580777"
     },
     {
       "date": "2024-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.4423310089111328,
       "first_prize": "013638"
     },
     {
       "date": "2024-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.5498451614379882,
       "first_prize": "561188"
     },
     {
       "date": "2024-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.35556976318359373,
       "first_prize": "965090"
     },
     {
       "date": "2024-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.6667372131347656,
       "first_prize": "949994"
     },
     {
       "date": "2024-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.27167387008666993,
       "first_prize": "467455"
     },
     {
       "date": "2024-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.6945304870605469,
       "first_prize": "054348"
     },
     {
       "date": "2024-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.12500835418701173,
       "first_prize": "055595"
     },
     {
       "date": "2024-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.8196157836914062,
       "first_prize": "558322"
     },
     {
       "date": "2024-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.041613378524780274,
       "first_prize": "498457"
     },
     {
       "date": "2024-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.9343170928955078,
       "first_prize": "029765"
     },
     {
       "date": "2024-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.028429079055786132,
       "first_prize": "823880"
     },
     {
       "date": "2024-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.9670437622070313,
       "first_prize": "978644"
     },
     {
       "date": "2024-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.003023550808429718,
       "first_prize": "419328"
     },
     {
       "date": "2024-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.9986708831787109,
       "first_prize": "859502"
     },
     {
       "date": "2024-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.002216091752052307,
       "first_prize": "369882"
     },
     {
       "date": "2024-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.9930158233642579,
       "first_prize": "627482"
     },
     {
       "date": "2024-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.01157345175743103,
       "first_prize": "135615"
     },
     {
       "date": "2025-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.014654694795608521,
       "first_prize": "864484"
     },
     {
       "date": "2025-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.9012483978271484,
       "first_prize": "532694"
     },
     {
       "date": "2025-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.07917084217071534,
       "first_prize": "768310"
     },
     {
       "date": "2025-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.8914226531982422,
       "first_prize": "198730"
     },
     {
       "date": "2025-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.013424690961837769,
       "first_prize": "051114"
     },
     {
       "date": "2025-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.9733042907714844,
       "first_prize": "828687"
     },
     {
       "date": "2025-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.09628508567810058,
       "first_prize": "492112"
     },
     {
       "date": "2025-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.9210312652587891,
       "first_prize": "623480"
     },
     {
       "date": "2025-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.23666778564453125,
       "first_prize": "783188"
     },
     {
       "date": "2025-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.8999504089355469,
       "first_prize": "137800"
     },
     {
       "date": "2025-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.28777610778808593,
       "first_prize": "772362"
     },
     {
       "date": "2025-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.7882217407226563,
       "first_prize": "991969"
     },
     {
       "date": "2025-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.3275127792358398,
       "first_prize": "762151"
     },
     {
       "date": "2025-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.7229940032958985,
       "first_prize": "985515"
     },
     {
       "date": "2025-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.45107967376708985,
       "first_prize": "168051"
     },
     {
       "date": "2025-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.5262809371948243,
       "first_prize": "074277"
     },
     {
       "date": "2025-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.571327896118164,
       "first_prize": "997082"
     },
     {
       "date": "2025-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.32986629486083985,
       "first_prize": "617565"
     },
     {
       "date": "2025-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.6001140594482421,
       "first_prize": "166175"
     },
     {
       "date": "2025-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.2704859733581543,
       "first_prize": "700049"
     },
     {
       "date": "2025-11-01",
-      "moon_phase": null,
+      "moon_phase": 0.7360819244384765,
       "first_prize": "360681"
     },
     {
       "date": "2025-11-16",
-      "moon_phase": null,
+      "moon_phase": 0.1577931213378906,
       "first_prize": "009329"
     },
     {
       "date": "2025-12-01",
-      "moon_phase": null,
+      "moon_phase": 0.7832108306884765,
       "first_prize": "120732"
     },
     {
       "date": "2025-12-16",
-      "moon_phase": null,
+      "moon_phase": 0.14389201164245605,
       "first_prize": "466469"
     },
     {
       "date": "2025-12-30",
-      "moon_phase": null,
+      "moon_phase": 0.7402553558349609,
       "first_prize": "625544"
     },
     {
       "date": "2026-01-01",
-      "moon_phase": null,
+      "moon_phase": 0.9140003967285156,
       "first_prize": "520013"
     },
     {
       "date": "2026-01-17",
-      "moon_phase": null,
+      "moon_phase": 0.03394173860549927,
       "first_prize": "807779"
     },
     {
       "date": "2026-02-01",
-      "moon_phase": null,
+      "moon_phase": 0.9879209899902344,
       "first_prize": "174629"
     },
     {
       "date": "2026-02-16",
-      "moon_phase": null,
+      "moon_phase": 0.024981775283813477,
       "first_prize": "340563"
     },
     {
       "date": "2026-03-01",
-      "moon_phase": null,
+      "moon_phase": 0.9271401214599609,
       "first_prize": "820866"
     },
     {
       "date": "2026-03-16",
-      "moon_phase": null,
+      "moon_phase": 0.10722747802734375,
       "first_prize": "833009"
     },
     {
       "date": "2026-04-01",
-      "moon_phase": null,
+      "moon_phase": 0.987408447265625,
       "first_prize": "292514"
     },
     {
       "date": "2026-04-16",
-      "moon_phase": null,
+      "moon_phase": 0.03126543998718262,
       "first_prize": "309612"
     },
     {
       "date": "2026-05-02",
-      "moon_phase": null,
+      "moon_phase": 0.9976415252685547,
       "first_prize": "536077"
     },
     {
       "date": "2026-05-16",
-      "moon_phase": null,
+      "moon_phase": 0.012281744480133057,
       "first_prize": "107387"
     },
     {
       "date": "2026-06-01",
-      "moon_phase": null,
+      "moon_phase": 0.9945934295654297,
       "first_prize": "173770"
     },
     {
       "date": "2026-06-16",
-      "moon_phase": null,
+      "moon_phase": 0.013321712017059326,
       "first_prize": "287184"
     },
     {
       "date": "2026-07-01",
-      "moon_phase": null,
+      "moon_phase": 0.9900218200683594,
       "first_prize": "751495"
     },
     {
       "date": "2026-07-16",
-      "moon_phase": null,
+      "moon_phase": 0.0369631290435791,
       "first_prize": "639214"
     },
     {
       "date": "2026-08-01",
-      "moon_phase": null,
+      "moon_phase": 0.9442845916748047,
       "first_prize": "932479"
     },
     {
       "date": "2026-08-16",
-      "moon_phase": null,
+      "moon_phase": 0.13068598747253418,
       "first_prize": "004615"
     },
     {
       "date": "2026-09-01",
-      "moon_phase": null,
+      "moon_phase": 0.8418166351318359,
       "first_prize": "417212"
     },
     {
       "date": "2026-09-16",
-      "moon_phase": null,
+      "moon_phase": 0.23958600997924806,
       "first_prize": "730640"
     },
     {
       "date": "2026-10-01",
-      "moon_phase": null,
+      "moon_phase": 0.7789054870605469,
       "first_prize": "402701"
     },
     {
       "date": "2026-10-16",
-      "moon_phase": null,
+      "moon_phase": 0.2588590431213379,
       "first_prize": "011781"
     }
   ],

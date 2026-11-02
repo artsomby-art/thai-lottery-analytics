@@ -15,6 +15,8 @@ import logging
 import os
 import re
 import time
+import urllib.parse
+import urllib.request
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
@@ -105,31 +107,44 @@ def _session() -> Any:
     return s
 
 
-def _fetch(url: str, session: requests.Session, timeout: int = 15) -> Optional[str]:
+def _fetch(url: str, session: Optional[Any] = None, timeout: int = 15) -> Optional[str]:
     """
     Fetch a URL with exponential-backoff retry.
+    Uses requests.Session if available, or urllib.request fallback.
     Returns HTML text or None on failure.
     """
+    safe_url = urllib.parse.quote(url, safe=":/?=&%")
     for attempt in range(MAX_RETRIES):
         try:
-            logger.debug("GET %s (attempt %d/%d)", url, attempt + 1, MAX_RETRIES)
-            resp = session.get(url, timeout=timeout)
-            if resp.status_code == 403:
-                # Rotate UA and retry
-                session.headers["User-Agent"] = _random_ua()
-                logger.warning("403 Forbidden from %s — rotating UA", url)
-            elif resp.status_code == 200:
-                return resp.text
+            logger.debug("GET %s (attempt %d/%d)", safe_url, attempt + 1, MAX_RETRIES)
+            if session is not None and HAS_SCRAPER_DEPS:
+                resp = session.get(safe_url, timeout=timeout)
+                if resp.status_code == 403:
+                    session.headers["User-Agent"] = _random_ua()
+                    logger.warning("403 Forbidden from %s — rotating UA", safe_url)
+                elif resp.status_code == 200:
+                    return resp.text
+                else:
+                    logger.warning("HTTP %s from %s", resp.status_code, safe_url)
             else:
-                logger.warning("HTTP %s from %s", resp.status_code, url)
-        except requests.RequestException as exc:
+                req = urllib.request.Request(
+                    safe_url,
+                    headers={
+                        "User-Agent": _random_ua(),
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                        "Accept-Language": "th-TH,th;q=0.9,en-US;q=0.8,en;q=0.7",
+                    }
+                )
+                with urllib.request.urlopen(req, timeout=timeout) as resp:
+                    return resp.read().decode("utf-8", errors="replace")
+        except Exception as exc:
             logger.warning("Request error: %s", exc)
 
         wait = BACKOFF_BASE ** attempt
         logger.info("Waiting %ss before retry…", wait)
         time.sleep(wait)
 
-    logger.error("Failed to fetch %s after %d attempts", url, MAX_RETRIES)
+    logger.error("Failed to fetch %s after %d attempts", safe_url, MAX_RETRIES)
     return None
 
 
@@ -211,20 +226,120 @@ def _iso_to_thai(iso: str) -> str:
 # Source 1: myhora.com
 # ---------------------------------------------------------------------------
 
+def _parse_myhora_meta(html: str) -> Optional[DrawRecord]:
+    """Parse draw record from HTML meta description tags if present."""
+    meta_desc = ""
+    if HAS_SCRAPER_DEPS:
+        try:
+            soup = BeautifulSoup(html, "lxml")
+            for m in soup.find_all("meta"):
+                name = m.get("name", "").lower()
+                prop = m.get("property", "").lower()
+                if name == "description" or prop in ("og:description", "twitter:description"):
+                    c = m.get("content", "")
+                    if "รางวัลที่ 1" in c or "ตรวจหวย" in c:
+                        meta_desc = c
+                        break
+        except Exception:
+            pass
+
+    if not meta_desc:
+        match = re.search(r'<meta[^>]+content=[\'"]([^\'"]+)[\'"][^>]+name=[\'"]Description[\'"]', html, re.I)
+        if not match:
+            match = re.search(r'<meta[^>]+name=[\'"]Description[\'"][^>]+content=[\'"]([^\'"]+)[\'"]', html, re.I)
+        if match:
+            meta_desc = match.group(1)
+
+    if not meta_desc:
+        return None
+
+    date_match = re.search(
+        r"(\d{1,2})\s*(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|"
+        r"กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม)\s*(\d{4})",
+        meta_desc,
+    )
+    if not date_match:
+        return None
+    date_thai = date_match.group(0).strip()
+    iso_date = _thai_to_iso(date_thai)
+    if not iso_date:
+        return None
+
+    # First prize
+    fp_match = re.search(r"รางวัลที่\s*1\s*(?:\()?\s*(\d{6})\s*(?:\))?", meta_desc)
+    first_prize = fp_match.group(1) if fp_match else None
+    if not first_prize:
+        fps = re.findall(r"\b(\d{6})\b", meta_desc)
+        first_prize = fps[0] if fps else None
+    if not first_prize:
+        return None
+
+    # Front 3
+    f3_match = re.search(r"(?:3\s*ตัวหน้า|เลขหน้า\s*3\s*ตัว)\s*(?:\()?\s*(\d{3})(?:&nbsp;|\s+)+(\d{3})\s*(?:\))?", meta_desc)
+    front_three = [f3_match.group(1), f3_match.group(2)] if f3_match else []
+
+    # Back 3
+    b3_match = re.search(r"(?:3\s*ตัวท้าย|เลขท้าย\s*3\s*ตัว)\s*(?:\()?\s*(\d{3})(?:&nbsp;|\s+)+(\d{3})\s*(?:\))?", meta_desc)
+    back_three = [b3_match.group(1), b3_match.group(2)] if b3_match else []
+
+    # Last 2
+    l2_match = re.search(r"(?:2\s*ตัวท้าย|เลขท้าย\s*2\s*ตัว)\s*(?:\()?\s*(\d{2})\s*(?:\))?", meta_desc)
+    last_two = l2_match.group(1) if l2_match else None
+
+    # Fallbacks if regex groups didn't capture 3-digit or 2-digit
+    if not front_three or not back_three:
+        three_digit = re.findall(r"\b(\d{3})\b", meta_desc)
+        if len(three_digit) >= 4:
+            if not front_three:
+                front_three = three_digit[:2]
+            if not back_three:
+                back_three = three_digit[2:4]
+        elif len(three_digit) >= 2:
+            if not back_three:
+                back_three = three_digit[:2]
+            if not front_three:
+                front_three = ["000", "000"]
+        else:
+            front_three = ["000", "000"]
+            back_three = ["000", "000"]
+
+    if not last_two:
+        two_digit = re.findall(r"(?<!\d)(\d{2})(?!\d)", meta_desc)
+        last_two = two_digit[0] if two_digit else "00"
+
+    return {
+        "date": iso_date,
+        "date_thai": date_thai,
+        "first_prize": first_prize,
+        "front_three": front_three[:2],
+        "back_three": back_three[:2],
+        "last_two": last_two,
+    }
+
+
 def _parse_myhora_page(html: str) -> list[DrawRecord]:
     """Parse a single myhora.com lottery result page."""
     records: list[DrawRecord] = []
+
+    # 1. Try meta description first
+    meta_rec = _parse_myhora_meta(html)
+    if meta_rec:
+        records.append(meta_rec)
+
+    if not HAS_SCRAPER_DEPS:
+        return records
+
     soup = BeautifulSoup(html, "lxml")
 
-    # myhora typically wraps each draw in a div/table with class patterns
-    # We search for prize data in multiple possible container structures
+    # myhora wraps each draw in a div/table with class patterns
     containers = (
+        soup.select("div.lot-dr") or
         soup.select("div.lotto-result") or
         soup.select("div.lottery-result") or
         soup.select("table.lotto") or
         soup.select("div[class*='lotto']") or
         soup.select("article") or
-        soup.find_all("div", {"class": re.compile(r"result|lottery|lotto", re.I)})
+        soup.find_all("div", {"class": re.compile(r"result|lottery|lotto|lot-dr", re.I)})
     )
 
     for container in containers:
@@ -293,9 +408,11 @@ def scrape_myhora(session: requests.Session) -> list[DrawRecord]:
         records.extend(_parse_myhora_page(html))
         _sleep()
 
-    # Try year-based pages (พ.ศ. 2549 = 2006 up to current year + 543)
+    # Incremental by default: only scrape previous and current year unless FORCE_FULL_SCRAPE is set
+    force_full = os.getenv("FORCE_FULL_SCRAPE", "false").lower() in ("true", "1", "yes")
     current_be = datetime.now().year + 543
-    for be_year in range(2549, current_be + 1):
+    start_be = 2549 if force_full else max(2549, current_be - 1)
+    for be_year in range(start_be, current_be + 1):
         url = f"https://myhora.com/lottery/งวด-{be_year}.aspx"
         html = _fetch(url, session)
         if html:
@@ -505,34 +622,36 @@ def scrape_all() -> list[DrawRecord]:
     existing_records = load_raw()
     session = _session()
     all_records: list[DrawRecord] = list(existing_records)
+    newly_scraped: list[DrawRecord] = []
 
-    if session is not None:
-        newly_scraped: list[DrawRecord] = []
-        # Source 1
+    # Source 1: myhora
+    try:
+        myhora_records = scrape_myhora(session)
+        newly_scraped.extend(myhora_records)
+        logger.info("Scraped %d records from myhora", len(myhora_records))
+    except Exception as exc:
+        logger.error("myhora scrape failed: %s", exc)
+
+    # Source 2 (fallback)
+    if len(newly_scraped) < 1:
         try:
-            myhora_records = scrape_myhora(session)
-            newly_scraped.extend(myhora_records)
+            sanook_records = scrape_sanook(session)
+            newly_scraped.extend(sanook_records)
+            logger.info("Scraped %d records from sanook", len(sanook_records))
         except Exception as exc:
-            logger.error("myhora scrape failed: %s", exc)
+            logger.error("sanook scrape failed: %s", exc)
 
-        # Source 2 (fallback)
-        if len(newly_scraped) < 10:
-            try:
-                sanook_records = scrape_sanook(session)
-                newly_scraped.extend(sanook_records)
-            except Exception as exc:
-                logger.error("sanook scrape failed: %s", exc)
+    # Source 3 (fallback)
+    if len(newly_scraped) < 1:
+        try:
+            glo_records = scrape_glo(session)
+            newly_scraped.extend(glo_records)
+            logger.info("Scraped %d records from glo", len(glo_records))
+        except Exception as exc:
+            logger.error("glo scrape failed: %s", exc)
 
-        # Source 3 (fallback)
-        if len(newly_scraped) < 10:
-            try:
-                glo_records = scrape_glo(session)
-                newly_scraped.extend(glo_records)
-            except Exception as exc:
-                logger.error("glo scrape failed: %s", exc)
-
-        if newly_scraped:
-            all_records.extend(newly_scraped)
+    if newly_scraped:
+        all_records.extend(newly_scraped)
 
     if not all_records:
         logger.warning("All scrapers and cache empty — using built-in sample data")
@@ -572,6 +691,12 @@ def load_raw() -> list[DrawRecord]:
 
 if __name__ == "__main__":
     import argparse
+    import sys
+
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
     parser = argparse.ArgumentParser(description="Thai Lottery Scraper")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")

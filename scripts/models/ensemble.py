@@ -17,6 +17,7 @@ from .arima_model import ARIMAModel
 from .prophet_model import ProphetModel
 from .lstm_model import LSTMModel
 from .monte_carlo import MonteCarloEngine
+from .feature_pattern_model import FeaturePatternModel
 
 logger = logging.getLogger("models.ensemble")
 
@@ -29,18 +30,19 @@ PRIZE_LENGTHS = {
 }
 
 DEFAULT_WEIGHTS = {
-    "frequency": 0.20,
-    "markov": 0.25,
-    "arima": 0.15,
-    "prophet": 0.15,
-    "lstm": 0.15,
-    "monte_carlo": 0.10,
+    "feature_pattern": 0.25,
+    "markov": 0.20,
+    "frequency": 0.15,
+    "monte_carlo": 0.15,
+    "arima": 0.10,
+    "prophet": 0.08,
+    "lstm": 0.07,
 }
 
 
 class EnsembleModel:
     """
-    Two-Stage Stacking Ensemble Combiner with Monte Carlo Synthesis.
+    Two-Stage Stacking Ensemble Combiner with Monte Carlo Synthesis & Feature Pattern Engine.
     """
 
     def __init__(self, weights: dict[str, float] | None = None) -> None:
@@ -51,21 +53,23 @@ class EnsembleModel:
         self.prophet_model = ProphetModel()
         self.lstm_model = LSTMModel()
         self.monte_carlo_engine = MonteCarloEngine(simulations=50000)
+        self.feature_pattern_model = FeaturePatternModel()
         self._trained = False
 
     def train_all(self, records: list[dict[str, Any]]) -> None:
         """
         Train all underlying sub-models.
         """
-        logger.info("Training all 6 ensemble sub-models on %d records…", len(records))
+        logger.info("Training all 7 ensemble sub-models on %d records…", len(records))
         self.frequency_model.train(records)
         self.markov_model.train(records)
         self.arima_model.train(records)
         self.prophet_model.train(records)
         self.lstm_model.train(records)
         self.monte_carlo_engine.train(records)
+        self.feature_pattern_model.train(records)
         self._trained = True
-        logger.info("All 6 sub-models trained successfully.")
+        logger.info("All 7 sub-models trained successfully.")
 
     def set_weights(self, weights: dict[str, float]) -> None:
         """Update ensemble weights based on backtesting results."""
@@ -124,12 +128,15 @@ class EnsembleModel:
         """
         # Stage 1: Gather top predictions from individual sub-models
         sub_preds = {
+            "feature_pattern": self.feature_pattern_model.predict_prize(prize_type, top_n=top_n),
             "frequency": self.frequency_model.predict().get(prize_type, {}).get("top10", []),
             "markov": self.markov_model.predict().get(prize_type, {}).get("top10", []),
             "arima": self.arima_model.predict().get(prize_type, {}).get("top10", []),
             "prophet": self.prophet_model.predict().get(prize_type, {}).get("top10", []),
             "lstm": self.lstm_model.predict().get(prize_type, {}).get("top10", []),
         }
+
+        radar_profile = self.feature_pattern_model.get_radar_profile(prize_type)
 
         # Stage 2: Combine probability distributions & run Monte Carlo Simulation (50,000 draws)
         combined_pos_probs = self._build_combined_pos_probs(prize_type)
@@ -161,11 +168,31 @@ class EnsembleModel:
         sorted_combined = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
         max_score = sorted_combined[0][1] if sorted_combined else 1.0
 
+        num_len = PRIZE_LENGTHS.get(prize_type, 2)
+        def _get_feature_breakdown(num_str: str) -> dict[str, Any]:
+            digits = [int(c) for c in num_str if c.isdigit()]
+            if not digits:
+                return {}
+            d_sum = sum(digits)
+            ev_cnt = sum(1 for d in digits if d % 2 == 0)
+            hi_cnt = sum(1 for d in digits if d >= 5)
+            u_cnt = len(set(digits))
+            span = max(digits) - min(digits)
+            return {
+                "digit_sum": d_sum,
+                "even_odd": f"{ev_cnt}:{num_len - ev_cnt}",
+                "high_low": f"{hi_cnt}:{num_len - hi_cnt}",
+                "unique_digits": u_cnt,
+                "span": span,
+                "pattern_label": f"แต้ม {d_sum} | คู่:คี่ {ev_cnt}:{num_len - ev_cnt} | ห่าง {span}",
+            }
+
         ensemble_top = [
             {
                 "number": num,
                 "score": round(score / max_score, 4),
                 "model_votes": model_support.get(num, ["monte_carlo"]),
+                "feature_breakdown": _get_feature_breakdown(num),
             }
             for num, score in sorted_combined[:top_n]
         ]
@@ -185,6 +212,7 @@ class EnsembleModel:
                 "weights": self.weights,
                 "positional_breakdown": mc_result.get("positional_breakdown", []),
                 "digit_sum_analysis": mc_result.get("digit_sum_analysis", {}),
+                "radar_profile": radar_profile,
             },
         }
 

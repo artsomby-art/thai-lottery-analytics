@@ -98,7 +98,7 @@
           </div>
           <div class="overflow-hidden">
             <div class="text-muted small text-truncate">โมเดลคาดการณ์</div>
-            <div class="fs-5 fs-sm-4 fw-bold text-light">6 โมเดล</div>
+            <div class="fs-5 fs-sm-4 fw-bold text-light">7 โมเดล</div>
           </div>
         </div>
       </div>
@@ -154,9 +154,9 @@
         
         <!-- Hero: Latest Draw Results -->
         <div class="dash-card p-4 mb-4">
-          <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-2 mb-3 border-bottom border-dark pb-3">
-            <h5 class="fw-bold mb-0 text-light"><i class="bi bi-trophy-fill text-warning me-2"></i>ผลรางวัลสลากกินแบ่งรัฐบาลล่าสุด</h5>
-            <span id="hero-draw-date" class="badge bg-dark border border-secondary text-warning fs-6 text-wrap text-start text-sm-end px-3 py-2">กำลังโหลด...</span>
+          <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-2 mb-3 border-bottom border-dark pb-3">
+            <h5 class="fw-bold mb-0 text-light flex-grow-1"><i class="bi bi-trophy-fill text-warning me-2"></i>ผลรางวัลสลากกินแบ่งรัฐบาลล่าสุด</h5>
+            <span id="hero-draw-date" class="badge bg-dark border border-secondary text-warning fs-6 px-3 py-2 text-nowrap">กำลังโหลด...</span>
           </div>
 
           <div class="row g-3 text-center">
@@ -355,121 +355,179 @@
           </div>
         </div>
 
-        <!-- 6 Model Gauges Row -->
-        <div class="row g-3 mb-4">
-          <div class="col-6 col-md-4 col-lg-2">
+        <!-- 7 Model Gauges Row -->
+        <div class="row g-2 g-md-3 mb-4">
+          <div class="col-6 col-md-3 col-lg">
             <div class="dash-card p-2 text-center h-100">
-              <div class="text-muted small mb-1 fw-bold">Frequency</div>
-              <div id="chart-gauge-frequency" style="height: 120px;"></div>
-              <small class="text-warning small">Backtest Hit</small>
+              <div class="text-truncate small mb-1 fw-bold" style="color: #10b981;">Feature Pattern</div>
+              <div id="chart-gauge-feature_pattern" style="height: 110px;"></div>
+              <small class="small text-truncate" style="color: #10b981;">5D Fit</small>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-3 col-lg">
             <div class="dash-card p-2 text-center h-100">
-              <div class="text-muted small mb-1 fw-bold">Markov Chain</div>
-              <div id="chart-gauge-markov" style="height: 120px;"></div>
-              <small class="text-info small">Backtest Hit</small>
+              <div class="text-muted small mb-1 fw-bold text-truncate">Frequency</div>
+              <div id="chart-gauge-frequency" style="height: 110px;"></div>
+              <small class="text-warning small text-truncate">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-3 col-lg">
             <div class="dash-card p-2 text-center h-100">
-              <div class="text-muted small mb-1 fw-bold">ARIMA (2,1,2)</div>
-              <div id="chart-gauge-arima" style="height: 120px;"></div>
-              <small class="text-primary small">Backtest Hit</small>
+              <div class="text-muted small mb-1 fw-bold text-truncate">Markov Chain</div>
+              <div id="chart-gauge-markov" style="height: 110px;"></div>
+              <small class="text-info small text-truncate">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-3 col-lg">
             <div class="dash-card p-2 text-center h-100">
-              <div class="text-muted small mb-1 fw-bold">Prophet</div>
-              <div id="chart-gauge-prophet" style="height: 120px;"></div>
-              <small class="text-success small">Backtest Hit</small>
+              <div class="text-muted small mb-1 fw-bold text-truncate">ARIMA (2,1,2)</div>
+              <div id="chart-gauge-arima" style="height: 110px;"></div>
+              <small class="text-primary small text-truncate">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-3 col-lg">
             <div class="dash-card p-2 text-center h-100">
-              <div class="text-muted small mb-1 fw-bold">LSTM Net</div>
-              <div id="chart-gauge-lstm" style="height: 120px;"></div>
-              <small class="text-purple small" style="color: var(--accent-purple);">Backtest Hit</small>
+              <div class="text-muted small mb-1 fw-bold text-truncate">Prophet</div>
+              <div id="chart-gauge-prophet" style="height: 110px;"></div>
+              <small class="text-success small text-truncate">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-3 col-lg">
             <div class="dash-card p-2 text-center h-100">
-              <div class="text-muted small mb-1 fw-bold">Monte Carlo</div>
-              <div id="chart-gauge-monte_carlo" style="height: 120px;"></div>
-              <small class="text-danger small" style="color: #ec4899;">Backtest Hit</small>
+              <div class="text-muted small mb-1 fw-bold text-truncate">LSTM Net</div>
+              <div id="chart-gauge-lstm" style="height: 110px;"></div>
+              <small class="small text-truncate" style="color: var(--accent-purple);">Backtest Hit</small>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 col-lg">
+            <div class="dash-card p-2 text-center h-100">
+              <div class="text-muted small mb-1 fw-bold text-truncate">Monte Carlo</div>
+              <div id="chart-gauge-monte_carlo" style="height: 110px;"></div>
+              <small class="small text-truncate" style="color: #ec4899;">Backtest Hit</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-Dimension Quantitative Feature Profile Radar & Pillars -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-6">
+            <div class="dash-card p-3 h-100">
+              <div class="dash-card-header mb-2 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-2">
+                <span><i class="bi bi-radar text-warning me-2"></i>เรดาร์วิเคราะห์คุณลักษณะ 5 มิติ (5-Feature Profile)</span>
+                <span id="radar-number-badge" class="badge bg-warning text-dark px-2 py-1">อันดับ 1: --</span>
+              </div>
+              <div id="chart-radar-profile" style="width: 100%; height: 320px;"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="dash-card p-3 h-100 d-flex flex-column justify-content-between">
+              <div class="dash-card-header mb-2 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-2">
+                <span><i class="bi bi-diagram-3-fill text-info me-2"></i>หลักการวิเคราะห์ 5 มิติ (Feature Pattern Engine)</span>
+                <span class="badge bg-dark border border-secondary text-info px-2 py-1">Vectorized Exhaustive</span>
+              </div>
+              <div class="p-2 small text-muted">
+                <div class="mb-2">
+                  <strong class="text-light"><i class="bi bi-calculator text-warning me-1"></i>1. ผลรวมแต้ม (Digit Sum):</strong> คำนวณความน่าจะเป็นแบบ Normal Gaussian Likelihood เทียบค่าสถิติย้อนหลัง 30 ปี
+                </div>
+                <div class="mb-2">
+                  <strong class="text-light"><i class="bi bi-circle-half text-info me-1"></i>2. สัดส่วน คู่-คี่ (Even/Odd):</strong> วิเคราะห์ทฤษฎีทวินาม (Binomial) เพื่อความสมดุลของโครงสร้างเลข
+                </div>
+                <div class="mb-2">
+                  <strong class="text-light"><i class="bi bi-arrow-up-right text-success me-1"></i>3. สัดส่วน สูง-ต่ำ (High/Low):</strong> ตรวจสอบอัตราส่วนกลุ่มต่ำ (0-4) และกลุ่มสูง (5-9)
+                </div>
+                <div class="mb-2">
+                  <strong class="text-light"><i class="bi bi-grid text-purple me-1" style="color: var(--accent-purple);"></i>4. ความหลากหลาย (Multiplicity):</strong> ตรวจสอบจำนวนเลขไม่ซ้ำ (Unique Digits) ป้องกันการเกิดเลขซ้ำผิดปกติ
+                </div>
+                <div class="mb-2">
+                  <strong class="text-light"><i class="bi bi-arrows-expand text-danger me-1"></i>5. ระยะกระจายตัว (Span):</strong> คำนวณช่วงห่างระหว่างค่าสูงสุดและต่ำสุด (&max; &minus; &min;)
+                </div>
+              </div>
+              <div class="alert alert-dark border border-secondary small mb-0 mt-2">
+                <i class="bi bi-check-circle-fill text-success me-1"></i>
+                คำนวณแบบ <strong>Vectorized NumPy 1,000,000 หมายเลข</strong> ครบ 5 มิติ เพื่อคัดกรองตัวเลขที่มีโครงสร้างสถิติตรงตามธรรมชาติมากที่สุด
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Ensemble Top 10 Ranked Table -->
         <div class="dash-card p-4 mb-4">
-          <div class="dash-card-header mb-3">
-            <span><i class="bi bi-award-fill text-warning me-2"></i>อันดับความน่าจะเป็นสูงสุด (Two-Stage Monte Carlo Stacking Top 10)</span>
-            <span class="badge bg-warning text-dark">จำลอง 50,000 ครั้ง + ถ่วงน้ำหนัก Walk-Forward</span>
+          <div class="dash-card-header mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-2">
+            <span><i class="bi bi-award-fill text-warning me-2"></i>อันดับความน่าจะเป็นสูงสุด (7-Model Stacking Ensemble Top 10)</span>
+            <span class="badge bg-warning text-dark">จำลอง 50,000 ครั้ง + 5D Pattern Filter</span>
           </div>
           <div class="table-responsive">
             <table class="table table-custom table-hover align-middle mb-0">
               <thead>
                 <tr>
-                  <th class="text-center" style="width: 80px;">อันดับ</th>
-                  <th style="width: 140px;">ตัวเลข</th>
-                  <th>คะแนนความเชื่อมั่น (Confidence Score)</th>
-                  <th>โมเดลที่ให้คะแนนตรงกัน</th>
+                  <th class="text-center" style="width: 70px;">อันดับ</th>
+                  <th style="width: 130px;">ตัวเลข</th>
+                  <th style="min-width: 140px;">คะแนนความเชื่อมั่น (Confidence)</th>
+                  <th style="min-width: 220px;">วิเคราะห์คุณลักษณะ 5 มิติ (Feature Pattern)</th>
+                  <th style="min-width: 160px;">โมเดลที่สนับสนุน</th>
                 </tr>
               </thead>
               <tbody id="pred-ensemble-table-body">
-                <tr><td colspan="4" class="text-center text-muted py-3">กำลังโหลดข้อมูล...</td></tr>
+                <tr><td colspan="5" class="text-center text-muted py-3">กำลังโหลดข้อมูล...</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <!-- Per-Model Breakdown Columns (6 Models) -->
-        <div class="row g-3 mb-4">
-          <div class="col-6 col-md-4 col-lg-2">
+        <!-- Per-Model Breakdown Columns (7 Models) -->
+        <div class="row g-2 g-md-3 mb-4">
+          <div class="col-6 col-md-4 col-lg">
+            <div class="dash-card p-3 h-100">
+              <div class="fw-bold small text-truncate mb-2 border-bottom border-dark pb-1" style="color: #10b981;">
+                <i class="bi bi-calculator"></i> 1. Pattern (5D)
+              </div>
+              <div id="pred-list-feature_pattern"></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg">
             <div class="dash-card p-3 h-100">
               <div class="fw-bold small text-warning mb-2 border-bottom border-dark pb-1 text-truncate">
-                <i class="bi bi-bar-chart"></i> 1. Frequency
+                <i class="bi bi-bar-chart"></i> 2. Frequency
               </div>
               <div id="pred-list-frequency"></div>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-4 col-lg">
             <div class="dash-card p-3 h-100">
               <div class="fw-bold small text-info mb-2 border-bottom border-dark pb-1 text-truncate">
-                <i class="bi bi-diagram-3"></i> 2. Markov
+                <i class="bi bi-diagram-3"></i> 3. Markov
               </div>
               <div id="pred-list-markov"></div>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-4 col-lg">
             <div class="dash-card p-3 h-100">
               <div class="fw-bold small text-primary mb-2 border-bottom border-dark pb-1 text-truncate">
-                <i class="bi bi-graph-up"></i> 3. ARIMA
+                <i class="bi bi-graph-up"></i> 4. ARIMA
               </div>
               <div id="pred-list-arima"></div>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-4 col-lg">
             <div class="dash-card p-3 h-100">
               <div class="fw-bold small text-success mb-2 border-bottom border-dark pb-1 text-truncate">
-                <i class="bi bi-calendar2-range"></i> 4. Prophet
+                <i class="bi bi-calendar2-range"></i> 5. Prophet
               </div>
               <div id="pred-list-prophet"></div>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-4 col-lg">
             <div class="dash-card p-3 h-100">
               <div class="fw-bold small text-purple mb-2 border-bottom border-dark pb-1 text-truncate" style="color: var(--accent-purple);">
-                <i class="bi bi-layers"></i> 5. LSTM
+                <i class="bi bi-layers"></i> 6. LSTM
               </div>
               <div id="pred-list-lstm"></div>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-2">
+          <div class="col-6 col-md-4 col-lg">
             <div class="dash-card p-3 h-100">
               <div class="fw-bold small mb-2 border-bottom border-dark pb-1 text-truncate" style="color: #ec4899;">
-                <i class="bi bi-cpu"></i> 6. Monte Carlo
+                <i class="bi bi-cpu"></i> 7. Monte Carlo
               </div>
               <div id="pred-list-monte_carlo"></div>
             </div>
@@ -581,9 +639,10 @@
               <ol class="text-light small d-flex flex-column gap-2 mb-0">
                 <li><strong>Data Ingestion:</strong> รวบรวมข้อมูลด้วยสถาปัตยกรรม Fallback 3 แหล่ง (myhora.com → sanook.com → glo.or.th) เพื่อความต่อเนื่องของข้อมูล</li>
                 <li><strong>Feature Engineering:</strong> คำนวณความถี่, Gap Analysis (ระยะห่างการไม่ออก), คู่/คี่, สูง/ต่ำ, ข้างขึ้นข้างแรม และ Pattern รายเดือน</li>
-                <li><strong>Machine Learning Ensemble (6 โมเดล + Two-Stage Stacking):</strong>
+                <li><strong>Machine Learning Ensemble (7 โมเดล + Two-Stage Stacking):</strong>
                   <ul>
-                    <li><strong>Frequency Model:</strong> คำนวณการแจกแจงความถี่ถ่วงน้ำหนักตามประวัติศาสตร์ 30 ปี (745+ งวด)</li>
+                    <li><strong>Feature Pattern Model:</strong> คำนวณความน่าจะเป็นร่วม 5 มิติ (ผลรวมแต้ม, คู่/คี่, สูง/ต่ำ, ความหลากหลาย, ระยะกระจาย) ผ่านการประมวลผล Vectorized 1,000,000 หมายเลข</li>
+                    <li><strong>Frequency Model:</strong> คำนวณการแจกแจงความถี่ถ่วงน้ำหนักตามประวัติศาสตร์ 30 ปี (746+ งวด)</li>
                     <li><strong>Markov Chain Model:</strong> วิเคราะห์ความน่าจะเป็นแบบมีเงื่อนไข (100-State Transition Matrix และ Positional Matrix)</li>
                     <li><strong>ARIMA (2,1,2):</strong> ตรวจจับแนวโน้มความถี่และ Autocorrelation ตามลำดับเวลา</li>
                     <li><strong>Prophet:</strong> วิเคราะห์ปัจจัยฤดูกาลและผลกระทบของช่วงวัน/เดือน</li>

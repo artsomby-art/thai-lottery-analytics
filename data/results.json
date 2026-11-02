@@ -1,7 +1,31 @@
 {
-  "last_updated": "2026-10-16",
-  "total_draws": 745,
+  "last_updated": "2026-11-01",
+  "total_draws": 746,
   "results": [
+    {
+      "date": "2026-11-01",
+      "date_thai": "1 พฤศจิกายน 2569",
+      "draw_id": "2026-11-01",
+      "first_prize": "423224",
+      "first": "423224",
+      "front_three": [
+        "300",
+        "950"
+      ],
+      "last_three_f": [
+        "300",
+        "950"
+      ],
+      "back_three": [
+        "393",
+        "804"
+      ],
+      "last_three_b": [
+        "393",
+        "804"
+      ],
+      "last_two": "85"
+    },
     {
       "date": "2026-10-16",
       "date_thai": "16 ตุลาคม 2569",
@@ -17884,6 +17908,30 @@
     }
   ],
   "draws": [
+    {
+      "date": "2026-11-01",
+      "date_thai": "1 พฤศจิกายน 2569",
+      "draw_id": "2026-11-01",
+      "first_prize": "423224",
+      "first": "423224",
+      "front_three": [
+        "300",
+        "950"
+      ],
+      "last_three_f": [
+        "300",
+        "950"
+      ],
+      "back_three": [
+        "393",
+        "804"
+      ],
+      "last_three_b": [
+        "393",
+        "804"
+      ],
+      "last_two": "85"
+    },
     {
       "date": "2026-10-16",
       "date_thai": "16 ตุลาคม 2569",

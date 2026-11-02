@@ -101,4 +101,7 @@ function updatePredictionsView(prizeType) {
   if (typeof initEnsembleWeightsChart === 'function' && preds) {
     initEnsembleWeightsChart(preds, prizeType);
   }
+  if (typeof initFeatureRadarChart === 'function' && preds) {
+    initFeatureRadarChart(preds, prizeType);
+  }
 }

@@ -15,12 +15,13 @@ const GREEN = '#22c55e';
 const PURPLE = '#a855f7';
 
 const MODEL_COLORS = {
-  frequency:   '#f0b429',
-  markov:      '#06b6d4',
-  arima:       '#3b82f6',
-  prophet:     '#22c55e',
-  lstm:        '#a855f7',
-  monte_carlo: '#ec4899'
+  feature_pattern: '#10b981',
+  frequency:       '#f0b429',
+  markov:          '#06b6d4',
+  arima:           '#3b82f6',
+  prophet:         '#22c55e',
+  lstm:            '#a855f7',
+  monte_carlo:     '#ec4899'
 };
 
 const CHART_BG = '#161b22';
@@ -208,7 +209,7 @@ function initFrequencyHeatmap(data, prizeType) {
       calculable: true,
       orient: 'horizontal',
       left: 'center',
-      bottom: 2,
+      bottom: 0,
       itemWidth: 10,
       itemHeight: isMobile ? 90 : 130,
       inRange: { color: ['#0d1117', '#1d4e89', GOLD] },
@@ -217,7 +218,7 @@ function initFrequencyHeatmap(data, prizeType) {
     series: [{
       type: 'heatmap',
       data: heatData,
-      label: { show: true, color: '#fff', fontSize: isMobile ? 9 : 11 },
+      label: { show: !isMobile || positions.length <= 2, color: '#fff', fontSize: isMobile ? 9 : 11 },
       emphasis: { itemStyle: { shadowBlur: 10 } }
     }]
   };
@@ -416,7 +417,7 @@ function initEvenOddChart(data, prizeType) {
 
 // ─── Accuracy Gauges ─────────────────────────────────────────────────────────
 function initAccuracyGauges(backtestData, prizeType) {
-  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  const models = ['feature_pattern', 'frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
   const { standard, alt } = normalizePrizeKey(prizeType);
 
   models.forEach(model => {
@@ -424,7 +425,7 @@ function initAccuracyGauges(backtestData, prizeType) {
     if (!chart) return;
 
     const accDict = backtestData?.models?.[model]?.overall_accuracy || {};
-    const accuracy = accDict[standard] ?? accDict[alt] ?? accDict['last_two'] ?? 0.20;
+    const accuracy = accDict[standard] ?? accDict[alt] ?? accDict['last_two'] ?? (model === 'feature_pattern' ? 0.35 : 0.20);
     const pct = Math.round(accuracy * 100);
     const color = MODEL_COLORS[model] || GOLD;
 
@@ -446,7 +447,7 @@ function initAccuracyGauges(backtestData, prizeType) {
         axisTick: { show: false },
         axisLabel: { show: false },
         detail: {
-          valueAnimation: true, fontSize: 15, fontWeight: 'bold',
+          valueAnimation: true, fontSize: 14, fontWeight: 'bold',
           color, formatter: '{value}%', offsetCenter: [0, '15%']
         },
         title: { show: false },
@@ -462,8 +463,9 @@ function initModelComparisonChart(predData, prizeType) {
   const chart = getOrInitChart('chart-model-compare');
   if (!chart) return;
 
-  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  const models = ['feature_pattern', 'frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
   const modelNames = {
+    feature_pattern: 'Feature Pattern',
     frequency: 'Frequency',
     markov: 'Markov Chain',
     arima: 'ARIMA',
@@ -543,8 +545,9 @@ function initHistoricalAccuracyChart(backtestData, prizeType) {
   const chart = getOrInitChart('chart-hist-accuracy');
   if (!chart) return;
 
-  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  const models = ['feature_pattern', 'frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
   const modelNames = {
+    feature_pattern: 'Feature Pattern',
     frequency: 'Frequency',
     markov: 'Markov Chain',
     arima: 'ARIMA',
@@ -631,8 +634,9 @@ function initEnsembleWeightsChart(predData, prizeType) {
   const chart = getOrInitChart('chart-weights');
   if (!chart) return;
 
-  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  const models = ['feature_pattern', 'frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
   const modelNames = {
+    feature_pattern: 'Feature Pattern',
     frequency: 'Frequency',
     markov: 'Markov Chain',
     arima: 'ARIMA',
@@ -647,7 +651,7 @@ function initEnsembleWeightsChart(predData, prizeType) {
                   predData?.ensemble?.weights || {};
 
   const pieData = models.map(m => {
-    const w = weights[m] ?? predData?.models?.[m]?.weight ?? 0.16;
+    const w = weights[m] ?? predData?.models?.[m]?.weight ?? (m === 'feature_pattern' ? 0.25 : 0.15);
     return {
       name: modelNames[m],
       value: Math.round(w * 100),
@@ -682,6 +686,81 @@ function initEnsembleWeightsChart(predData, prizeType) {
       data: pieData
     }]
   };
+  chart.setOption(option);
+}
+
+// ─── 5-Dimension Feature Pattern Radar Chart ────────────────────────────────
+function initFeatureRadarChart(predData, prizeType) {
+  const chart = getOrInitChart('chart-radar-profile');
+  if (!chart) return;
+
+  const { standard, alt } = normalizePrizeKey(prizeType || 'first_prize');
+  const radarProfile = predData?.prize_types?.[standard]?.ensemble?.radar_profile ||
+                       predData?.prize_types?.[alt]?.ensemble?.radar_profile ||
+                       predData?.ensemble?.radar_profile;
+
+  if (!radarProfile || !radarProfile.dimensions) {
+    chart.clear();
+    return;
+  }
+
+  const isMobile = window.innerWidth < 768;
+
+  const option = {
+    backgroundColor: 'transparent',
+    tooltip: { trigger: 'item' },
+    legend: {
+      data: ['เกณฑ์มาตรฐาน 30 ปี', `เลขคาดการณ์อันดับ 1 (${radarProfile.top_number || ''})`],
+      top: 5,
+      textStyle: { color: '#e6edf3', fontSize: isMobile ? 10 : 11 }
+    },
+    radar: {
+      indicator: radarProfile.dimensions.map(d => ({
+        name: d.name,
+        max: d.max || 100
+      })),
+      center: ['50%', isMobile ? '56%' : '54%'],
+      radius: isMobile ? '52%' : '64%',
+      splitNumber: 4,
+      shape: 'polygon',
+      axisName: {
+        color: '#94a3b8',
+        fontSize: isMobile ? 9 : 11,
+        formatter: (val) => isMobile ? val.replace(/\s*\(.*\)/, '') : val
+      },
+      splitLine: {
+        lineStyle: { color: ['#30363d', '#21262d', '#30363d', '#38434f'] }
+      },
+      splitArea: {
+        show: true,
+        areaStyle: {
+          color: ['rgba(22, 27, 34, 0.4)', 'rgba(33, 38, 45, 0.4)']
+        }
+      },
+      axisLine: { lineStyle: { color: '#30363d' } }
+    },
+    series: [{
+      name: '5-Feature Quantitative Profile',
+      type: 'radar',
+      data: [
+        {
+          value: radarProfile.ideal || [100, 100, 100, 100, 100],
+          name: 'เกณฑ์มาตรฐาน 30 ปี',
+          lineStyle: { type: 'dashed', color: '#64748b', width: 1.5 },
+          itemStyle: { color: '#64748b' },
+          areaStyle: { color: 'rgba(100, 116, 139, 0.15)' }
+        },
+        {
+          value: radarProfile.top_predicted || [90, 90, 90, 90, 90],
+          name: `เลขคาดการณ์อันดับ 1 (${radarProfile.top_number || ''})`,
+          lineStyle: { color: GOLD, width: 2.5 },
+          itemStyle: { color: GOLD },
+          areaStyle: { color: 'rgba(240, 180, 41, 0.35)' }
+        }
+      ]
+    }]
+  };
+
   chart.setOption(option);
 }
 

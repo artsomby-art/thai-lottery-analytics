@@ -18,6 +18,7 @@ from models.arima_model import ARIMAModel
 from models.prophet_model import ProphetModel
 from models.lstm_model import LSTMModel
 from models.monte_carlo import MonteCarloEngine
+from models.feature_pattern_model import FeaturePatternModel
 
 logger = logging.getLogger("backtester")
 
@@ -50,6 +51,7 @@ class Backtester:
         num_eval = min(test_draws, total - self.window_size)
 
         models = {
+            "feature_pattern": FeaturePatternModel(),
             "frequency": FrequencyModel(),
             "markov": MarkovChainModel(),
             "arima": ARIMAModel(),

@@ -7,6 +7,7 @@ from .prophet_model import ProphetModel
 from .lstm_model import LSTMModel
 from .markov_model import MarkovChainModel
 from .monte_carlo import MonteCarloEngine
+from .feature_pattern_model import FeaturePatternModel
 from .ensemble import EnsembleModel
 
 __all__ = [
@@ -16,5 +17,6 @@ __all__ = [
     "LSTMModel",
     "MarkovChainModel",
     "MonteCarloEngine",
+    "FeaturePatternModel",
     "EnsembleModel",
 ]

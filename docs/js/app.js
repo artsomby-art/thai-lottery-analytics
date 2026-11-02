@@ -238,18 +238,31 @@ function renderPredictionsTables(prizeType) {
   const ensembleTableBody = document.getElementById('pred-ensemble-table-body');
   if (ensembleTableBody) {
     if (ensembleList.length === 0) {
-      ensembleTableBody.innerHTML = '<tr><td colspan="4" class="text-center text-muted py-3">ไม่มีข้อมูลคาดการณ์</td></tr>';
+      ensembleTableBody.innerHTML = '<tr><td colspan="5" class="text-center text-muted py-3">ไม่มีข้อมูลคาดการณ์</td></tr>';
     } else {
       ensembleTableBody.innerHTML = ensembleList.slice(0, 10).map((item, idx) => {
         const pct = Math.round((item.score || 0) * 100);
         const votes = (item.model_votes && item.model_votes.length > 0)
           ? item.model_votes.join(', ')
           : 'Ensemble Consensus';
+
+        let featureBadges = '<span class="text-muted small">-</span>';
+        if (item.feature_breakdown) {
+          const fb = item.feature_breakdown;
+          featureBadges = `
+            <div class="d-flex flex-wrap gap-1">
+              <span class="badge bg-dark border border-secondary text-warning" title="ผลรวมแต้ม">แต้ม ${fb.digit_sum}</span>
+              <span class="badge bg-dark border border-secondary text-info" title="สัดส่วนคู่:คี่">คู่ ${fb.even_odd}</span>
+              <span class="badge bg-dark border border-secondary text-light" title="ระยะกระจาย (max - min)">ห่าง ${fb.span}</span>
+            </div>
+          `;
+        }
+
         return `
           <tr>
             <td class="text-center"><span class="badge ${idx === 0 ? 'bg-warning text-dark' : 'bg-dark border border-secondary'} rounded-pill">${idx + 1}</span></td>
             <td><span class="prize-number fs-5 text-warning">${item.number}</span></td>
-            <td style="width: 40%;">
+            <td style="min-width: 140px;">
               <div class="d-flex align-items-center gap-2">
                 <div class="confidence-bar-bg flex-grow-1">
                   <div class="confidence-bar-fill" style="width: ${pct}%;"></div>
@@ -257,6 +270,7 @@ function renderPredictionsTables(prizeType) {
                 <span class="small text-muted font-monospace">${pct}%</span>
               </div>
             </td>
+            <td>${featureBadges}</td>
             <td class="text-muted small">${votes}</td>
           </tr>
         `;
@@ -264,8 +278,21 @@ function renderPredictionsTables(prizeType) {
     }
   }
 
-  // 2. Per-Model Predictions Comparison (6 Models)
-  const models = ['frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
+  // Update Radar Badge and Radar Chart
+  const radarProfile = preds?.prize_types?.[prizeType]?.ensemble?.radar_profile ||
+                       preds?.prize_types?.[altKey]?.ensemble?.radar_profile ||
+                       preds?.ensemble?.radar_profile;
+  const radarBadge = document.getElementById('radar-number-badge');
+  if (radarBadge) {
+    const topNum = radarProfile?.top_number || (ensembleList[0] ? ensembleList[0].number : '--');
+    radarBadge.textContent = `อันดับ 1: ${topNum}`;
+  }
+  if (typeof initFeatureRadarChart === 'function') {
+    initFeatureRadarChart(preds, prizeType);
+  }
+
+  // 2. Per-Model Predictions Comparison (7 Models)
+  const models = ['feature_pattern', 'frequency', 'markov', 'arima', 'prophet', 'lstm', 'monte_carlo'];
   models.forEach(m => {
     const listEl = document.getElementById(`pred-list-${m}`);
     if (!listEl) return;

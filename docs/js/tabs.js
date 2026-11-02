@@ -37,9 +37,14 @@ function initTabs() {
   const statsFilterBtns = document.querySelectorAll('.stats-filter-btn');
   statsFilterBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      statsFilterBtns.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      currentStatsPrize = e.target.getAttribute('data-prize');
+      const target = e.currentTarget;
+      statsFilterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      target.classList.add('active');
+      target.setAttribute('aria-pressed', 'true');
+      currentStatsPrize = target.getAttribute('data-prize');
       updateStatsView(currentStatsPrize);
     });
   });
@@ -48,9 +53,14 @@ function initTabs() {
   const predFilterBtns = document.querySelectorAll('.pred-filter-btn');
   predFilterBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      predFilterBtns.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      currentPredPrize = e.target.getAttribute('data-prize');
+      const target = e.currentTarget;
+      predFilterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      target.classList.add('active');
+      target.setAttribute('aria-pressed', 'true');
+      currentPredPrize = target.getAttribute('data-prize');
       updatePredictionsView(currentPredPrize);
     });
   });

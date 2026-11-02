@@ -262,6 +262,33 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Custom Selection & Focus */
+::selection {
+  background-color: rgba(240, 180, 41, 0.3);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-gold) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 12px rgba(240, 180, 41, 0.4) !important;
+}
+
+/* Tabular Numerals for Numerical Integrity */
+.prize-number,
+.font-monospace,
+table td,
+.dash-card .fw-bold,
+.badge {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Button Micro-Interactions */
+.btn:active,
+.nav-link:active {
+  transform: scale(0.98);
+}
+
 /* Filter scroll wrapper for mobile */
 .filter-scroll-wrapper {
   overflow-x: auto;
@@ -276,12 +303,44 @@ footer {
 .btn-filter-group {
   display: inline-flex;
   flex-wrap: nowrap;
+  gap: 2px;
 }
 .btn-filter-group .btn {
-  min-height: 40px;
-  padding: 0.45rem 0.85rem;
+  min-height: 44px; /* WCAG 44x44px target requirement */
+  padding: 0.5rem 0.95rem;
   white-space: nowrap;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Table Responsive Sleek Scrollbar */
+.table-responsive {
+  -webkit-overflow-scrolling: touch;
+}
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+.table-responsive::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 999px;
+}
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Responsive adjustments */

@@ -461,7 +461,17 @@ function renderHistoryTable() {
   if (nextBtn) nextBtn.disabled = historyCurrentPage >= maxPages;
 
   if (pageItems.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="5" class="text-center text-muted py-4">ไม่พบผลรางวัลที่ค้นหา</td></tr>';
+    tableBody.innerHTML = `
+      <tr>
+        <td colspan="5" class="text-center text-muted py-5">
+          <div class="d-flex flex-column align-items-center gap-2">
+            <i class="bi bi-search fs-3 text-secondary"></i>
+            <div class="fw-medium text-light">ไม่พบผลรางวัลที่ตรงกับคำค้นหา</div>
+            <small class="text-secondary">ลองค้นหาด้วยตัวเลข 2 หรือ 3 หลัก หรือค้นหาตามชื่อเดือนหรือปี พ.ศ.</small>
+          </div>
+        </td>
+      </tr>
+    `;
     return;
   }
 

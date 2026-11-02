@@ -23,12 +23,12 @@
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="แถบนำทางหลัก">
     <div class="container-xl">
       <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="#">
         <span class="fs-3">🎰</span>
         <div>
-          <div class="brand-title lh-1">THAI LOTTERY <span class="accent">ANALYTICS</span></div>
+          <h1 class="brand-title lh-1 fs-5 m-0">THAI LOTTERY <span class="accent">ANALYTICS</span></h1>
           <small class="text-muted" style="font-size: 0.75rem;">ระบบสถิติและความน่าจะเป็นสลากกินแบ่งรัฐบาลไทย</small>
         </div>
       </a>
@@ -116,29 +116,29 @@
     </div>
 
     <!-- 5 Tabs Navigation -->
-    <ul class="nav nav-pills nav-pills-custom mb-4" id="mainTab" role="tablist">
+    <ul class="nav nav-pills nav-pills-custom mb-4" id="mainTab" role="tablist" aria-label="หมวดหมู่การวิเคราะห์">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="tab-overview-btn" data-bs-toggle="pill" data-bs-target="#tab-overview" type="button" role="tab">
+        <button class="nav-link active" id="tab-overview-btn" data-bs-toggle="pill" data-bs-target="#tab-overview" type="button" role="tab" aria-selected="true" aria-controls="tab-overview">
           <i class="bi bi-bar-chart-fill me-1"></i> 📊 ภาพรวม
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="tab-stats-btn" data-bs-toggle="pill" data-bs-target="#tab-stats" type="button" role="tab">
+        <button class="nav-link" id="tab-stats-btn" data-bs-toggle="pill" data-bs-target="#tab-stats" type="button" role="tab" aria-selected="false" aria-controls="tab-stats">
           <i class="bi bi-graph-up-arrow me-1"></i> 📈 สถิติเชิงลึก
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="tab-predictions-btn" data-bs-toggle="pill" data-bs-target="#tab-predictions" type="button" role="tab">
+        <button class="nav-link" id="tab-predictions-btn" data-bs-toggle="pill" data-bs-target="#tab-predictions" type="button" role="tab" aria-selected="false" aria-controls="tab-predictions">
           <i class="bi bi-robot me-1"></i> 🤖 คาดการณ์ ML
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="tab-history-btn" data-bs-toggle="pill" data-bs-target="#tab-history" type="button" role="tab">
+        <button class="nav-link" id="tab-history-btn" data-bs-toggle="pill" data-bs-target="#tab-history" type="button" role="tab" aria-selected="false" aria-controls="tab-history">
           <i class="bi bi-table me-1"></i> 📋 ผลย้อนหลัง
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="tab-about-btn" data-bs-toggle="pill" data-bs-target="#tab-about" type="button" role="tab">
+        <button class="nav-link" id="tab-about-btn" data-bs-toggle="pill" data-bs-target="#tab-about" type="button" role="tab" aria-selected="false" aria-controls="tab-about">
           <i class="bi bi-info-circle-fill me-1"></i> ℹ️ เกี่ยวกับ
         </button>
       </li>
@@ -150,7 +150,7 @@
       <!-- ========================================== -->
       <!-- TAB 1: 📊 ภาพรวม (Overview)                 -->
       <!-- ========================================== -->
-      <div class="tab-pane fade show active" id="tab-overview" role="tabpanel">
+      <div class="tab-pane fade show active" id="tab-overview" role="tabpanel" aria-labelledby="tab-overview-btn">
         
         <!-- Hero: Latest Draw Results -->
         <div class="dash-card p-4 mb-4">
@@ -247,7 +247,7 @@
       <!-- ========================================== -->
       <!-- TAB 2: 📈 สถิติเชิงลึก (Deep Statistics)     -->
       <!-- ========================================== -->
-      <div class="tab-pane fade" id="tab-stats" role="tabpanel">
+      <div class="tab-pane fade" id="tab-stats" role="tabpanel" aria-labelledby="tab-stats-btn">
         
         <!-- Sub-filter buttons -->
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
@@ -329,7 +329,7 @@
       <!-- ========================================== -->
       <!-- TAB 3: 🤖 คาดการณ์ ML (ML Predictions)       -->
       <!-- ========================================== -->
-      <div class="tab-pane fade" id="tab-predictions" role="tabpanel">
+      <div class="tab-pane fade" id="tab-predictions" role="tabpanel" aria-labelledby="tab-predictions-btn">
         
         <!-- Sub-filter buttons -->
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
@@ -399,7 +399,7 @@
               <small class="small text-truncate" style="color: var(--accent-purple);">Backtest Hit</small>
             </div>
           </div>
-          <div class="col-6 col-md-3 col-lg">
+          <div class="col-12 col-sm-6 col-md-3 col-lg">
             <div class="dash-card p-2 text-center h-100">
               <div class="text-muted small mb-1 fw-bold text-truncate">Monte Carlo</div>
               <div id="chart-gauge-monte_carlo" style="height: 110px;"></div>
@@ -453,8 +453,11 @@
         <!-- Ensemble Top 10 Ranked Table -->
         <div class="dash-card p-4 mb-4">
           <div class="dash-card-header mb-3 d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-2">
-            <span><i class="bi bi-award-fill text-warning me-2"></i>อันดับความน่าจะเป็นสูงสุด (7-Model Stacking Ensemble Top 10)</span>
-            <span class="badge bg-warning text-dark">จำลอง 50,000 ครั้ง + 5D Pattern Filter</span>
+            <div>
+              <span><i class="bi bi-award-fill text-warning me-2"></i>อันดับความน่าจะเป็นสูงสุด (7-Model Stacking Ensemble Top 10)</span>
+              <small class="text-muted d-block d-sm-inline ms-sm-2">จำลอง 50,000 ครั้ง + 5D Pattern Filter</small>
+            </div>
+            <span class="badge bg-dark border border-secondary text-muted d-md-none"><i class="bi bi-arrows-expand me-1"></i>เลื่อนแนวนอน</span>
           </div>
           <div class="table-responsive">
             <table class="table table-custom table-hover align-middle mb-0">
@@ -524,7 +527,7 @@
               <div id="pred-list-lstm"></div>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg">
+          <div class="col-12 col-sm-6 col-md-4 col-lg">
             <div class="dash-card p-3 h-100">
               <div class="fw-bold small mb-2 border-bottom border-dark pb-1 text-truncate" style="color: #ec4899;">
                 <i class="bi bi-cpu"></i> 7. Monte Carlo
@@ -559,14 +562,14 @@
       <!-- ========================================== -->
       <!-- TAB 4: 📋 ผลย้อนหลัง (Historical Results)   -->
       <!-- ========================================== -->
-      <div class="tab-pane fade" id="tab-history" role="tabpanel">
+      <div class="tab-pane fade" id="tab-history" role="tabpanel" aria-labelledby="tab-history-btn">
         
         <div class="dash-card p-4">
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
             <div class="d-flex align-items-center gap-2 flex-grow-1" style="max-width: 450px;">
               <div class="input-group">
                 <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
-                <input type="text" id="history-search-input" class="form-control bg-dark border-secondary text-light" placeholder="ค้นหาตัวเลข เช่น 23, 567 หรือ วันที่...">
+                <input type="text" id="history-search-input" class="form-control bg-dark border-secondary text-light" placeholder="ค้นหาตัวเลข เช่น 23, 567 หรือ วันที่..." aria-label="ค้นหาตัวเลขหรือวันที่">
               </div>
             </div>
 
@@ -599,10 +602,10 @@
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-4 pt-3 border-top border-dark">
             <span id="history-page-info" class="text-muted small">กำลังคำนวณ...</span>
             <div class="btn-group">
-              <button id="history-prev-btn" class="btn btn-dark border-secondary btn-sm px-3" disabled>
+              <button id="history-prev-btn" class="btn btn-dark border-secondary btn-sm px-3" disabled aria-label="หน้าก่อนหน้า">
                 <i class="bi bi-chevron-left me-1"></i> ก่อนหน้า
               </button>
-              <button id="history-next-btn" class="btn btn-dark border-secondary btn-sm px-3">
+              <button id="history-next-btn" class="btn btn-dark border-secondary btn-sm px-3" aria-label="หน้าถัดไป">
                 ถัดไป <i class="bi bi-chevron-right ms-1"></i>
               </button>
             </div>
@@ -615,7 +618,7 @@
       <!-- ========================================== -->
       <!-- TAB 5: ℹ️ เกี่ยวกับ (About & Methodology)     -->
       <!-- ========================================== -->
-      <div class="tab-pane fade" id="tab-about" role="tabpanel">
+      <div class="tab-pane fade" id="tab-about" role="tabpanel" aria-labelledby="tab-about-btn">
         
         <div class="row g-4">
           <div class="col-lg-8">

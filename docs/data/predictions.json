@@ -222,134 +222,134 @@
         "arima": {
           "top10": [
             {
-              "number": "761614",
-              "score": 3e-06
+              "number": "547237",
+              "score": 6e-06
             },
             {
-              "number": "761684",
-              "score": 3e-06
+              "number": "547232",
+              "score": 6e-06
             },
             {
-              "number": "761612",
-              "score": 3e-06
+              "number": "547337",
+              "score": 5e-06
             },
             {
-              "number": "761682",
-              "score": 3e-06
+              "number": "527237",
+              "score": 5e-06
             },
             {
-              "number": "762614",
-              "score": 2e-06
+              "number": "547287",
+              "score": 5e-06
             },
             {
-              "number": "762684",
-              "score": 2e-06
+              "number": "547332",
+              "score": 5e-06
             },
             {
-              "number": "461614",
-              "score": 2e-06
+              "number": "527232",
+              "score": 5e-06
             },
             {
-              "number": "461684",
-              "score": 2e-06
+              "number": "547282",
+              "score": 5e-06
             },
             {
-              "number": "561614",
-              "score": 2e-06
+              "number": "527337",
+              "score": 5e-06
             },
             {
-              "number": "561684",
-              "score": 2e-06
+              "number": "547387",
+              "score": 5e-06
             }
           ],
-          "weight": 0.104
+          "weight": 0.125
         },
         "prophet": {
           "top10": [
             {
-              "number": "761614",
-              "score": 3e-06
+              "number": "120612",
+              "score": 4.7e-05
             },
             {
-              "number": "761684",
-              "score": 3e-06
+              "number": "320612",
+              "score": 4.6e-05
             },
             {
-              "number": "761612",
-              "score": 3e-06
+              "number": "420612",
+              "score": 4.4e-05
             },
             {
-              "number": "761682",
-              "score": 3e-06
+              "number": "120610",
+              "score": 4.3e-05
             },
             {
-              "number": "762614",
-              "score": 2e-06
+              "number": "320610",
+              "score": 4.2e-05
             },
             {
-              "number": "762684",
-              "score": 2e-06
+              "number": "420610",
+              "score": 4e-05
             },
             {
-              "number": "461614",
-              "score": 2e-06
+              "number": "180612",
+              "score": 3.8e-05
             },
             {
-              "number": "461684",
-              "score": 2e-06
+              "number": "120652",
+              "score": 3.8e-05
             },
             {
-              "number": "561614",
-              "score": 2e-06
+              "number": "380612",
+              "score": 3.8e-05
             },
             {
-              "number": "561684",
-              "score": 2e-06
+              "number": "320652",
+              "score": 3.8e-05
             }
           ],
-          "weight": 0.104
+          "weight": 0.083
         },
         "lstm": {
           "top10": [
             {
-              "number": "127612",
-              "score": 0.163
+              "number": "423234",
+              "score": 0.2061
             },
             {
-              "number": "127612",
-              "score": 0.163
+              "number": "423234",
+              "score": 0.2061
             },
             {
-              "number": "127612",
-              "score": 0.163
+              "number": "423234",
+              "score": 0.2061
             },
             {
-              "number": "127612",
-              "score": 0.163
+              "number": "423234",
+              "score": 0.2061
             },
             {
-              "number": "730084",
-              "score": 0.1451
+              "number": "611321",
+              "score": 0.1599
             },
             {
-              "number": "730084",
-              "score": 0.1451
+              "number": "611321",
+              "score": 0.1599
             },
             {
-              "number": "730084",
-              "score": 0.1451
+              "number": "611321",
+              "score": 0.1599
             },
             {
-              "number": "862169",
-              "score": 0.1297
+              "number": "042712",
+              "score": 0.1343
             },
             {
-              "number": "862169",
-              "score": 0.1297
+              "number": "042712",
+              "score": 0.1343
             },
             {
-              "number": "862169",
-              "score": 0.1297
+              "number": "042712",
+              "score": 0.1343
             }
           ],
           "weight": 0.104
@@ -357,25 +357,13 @@
         "monte_carlo": {
           "top10": [
             {
-              "number": "539972",
+              "number": "452736",
               "score": 1.0,
               "sim_hits": 3,
               "percentage": 0.01
             },
             {
-              "number": "263429",
-              "score": 1.0,
-              "sim_hits": 3,
-              "percentage": 0.01
-            },
-            {
-              "number": "747985",
-              "score": 1.0,
-              "sim_hits": 3,
-              "percentage": 0.01
-            },
-            {
-              "number": "303915",
+              "number": "347215",
               "score": 1.0,
               "sim_hits": 3,
               "percentage": 0.01
@@ -387,31 +375,43 @@
               "percentage": 0.01
             },
             {
-              "number": "042612",
+              "number": "347361",
               "score": 1.0,
               "sim_hits": 3,
               "percentage": 0.01
             },
             {
-              "number": "567672",
+              "number": "537244",
               "score": 1.0,
               "sim_hits": 3,
               "percentage": 0.01
             },
             {
-              "number": "154484",
+              "number": "689589",
               "score": 1.0,
               "sim_hits": 3,
               "percentage": 0.01
             },
             {
-              "number": "343083",
+              "number": "648987",
               "score": 1.0,
               "sim_hits": 3,
               "percentage": 0.01
             },
             {
-              "number": "564533",
+              "number": "522115",
+              "score": 1.0,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "627050",
+              "score": 1.0,
+              "sim_hits": 3,
+              "percentage": 0.01
+            },
+            {
+              "number": "436275",
               "score": 1.0,
               "sim_hits": 3,
               "percentage": 0.01
@@ -423,63 +423,33 @@
       "ensemble": {
         "top10": [
           {
-            "number": "539972",
+            "number": "452736",
             "score": 1.0,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 35,
-              "even_odd": "1:5",
-              "high_low": "4:2",
-              "unique_digits": 5,
-              "span": 7,
-              "pattern_label": "แต้ม 35 | คู่:คี่ 1:5 | ห่าง 7"
-            }
-          },
-          {
-            "number": "263429",
-            "score": 1.0,
-            "model_votes": [
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 26,
-              "even_odd": "4:2",
-              "high_low": "2:4",
-              "unique_digits": 5,
-              "span": 7,
-              "pattern_label": "แต้ม 26 | คู่:คี่ 4:2 | ห่าง 7"
-            }
-          },
-          {
-            "number": "747985",
-            "score": 1.0,
-            "model_votes": [
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 40,
-              "even_odd": "2:4",
-              "high_low": "5:1",
-              "unique_digits": 5,
+              "digit_sum": 27,
+              "even_odd": "3:3",
+              "high_low": "3:3",
+              "unique_digits": 6,
               "span": 5,
-              "pattern_label": "แต้ม 40 | คู่:คี่ 2:4 | ห่าง 5"
+              "pattern_label": "แต้ม 27 | คู่:คี่ 3:3 | ห่าง 5"
             }
           },
           {
-            "number": "303915",
+            "number": "347215",
             "score": 1.0,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 21,
-              "even_odd": "1:5",
+              "digit_sum": 22,
+              "even_odd": "2:4",
               "high_low": "2:4",
-              "unique_digits": 5,
-              "span": 9,
-              "pattern_label": "แต้ม 21 | คู่:คี่ 1:5 | ห่าง 9"
+              "unique_digits": 6,
+              "span": 6,
+              "pattern_label": "แต้ม 22 | คู่:คี่ 2:4 | ห่าง 6"
             }
           },
           {
@@ -498,78 +468,108 @@
             }
           },
           {
-            "number": "042612",
+            "number": "347361",
             "score": 1.0,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 15,
-              "even_odd": "5:1",
-              "high_low": "1:5",
+              "digit_sum": 24,
+              "even_odd": "2:4",
+              "high_low": "2:4",
               "unique_digits": 5,
               "span": 6,
-              "pattern_label": "แต้ม 15 | คู่:คี่ 5:1 | ห่าง 6"
+              "pattern_label": "แต้ม 24 | คู่:คี่ 2:4 | ห่าง 6"
             }
           },
           {
-            "number": "567672",
+            "number": "537244",
             "score": 1.0,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 33,
+              "digit_sum": 25,
               "even_odd": "3:3",
-              "high_low": "5:1",
-              "unique_digits": 4,
-              "span": 5,
-              "pattern_label": "แต้ม 33 | คู่:คี่ 3:3 | ห่าง 5"
-            }
-          },
-          {
-            "number": "154484",
-            "score": 1.0,
-            "model_votes": [
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 26,
-              "even_odd": "4:2",
               "high_low": "2:4",
-              "unique_digits": 4,
-              "span": 7,
-              "pattern_label": "แต้ม 26 | คู่:คี่ 4:2 | ห่าง 7"
+              "unique_digits": 5,
+              "span": 5,
+              "pattern_label": "แต้ม 25 | คู่:คี่ 3:3 | ห่าง 5"
             }
           },
           {
-            "number": "343083",
+            "number": "689589",
             "score": 1.0,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 21,
+              "digit_sum": 45,
               "even_odd": "3:3",
-              "high_low": "1:5",
+              "high_low": "6:0",
               "unique_digits": 4,
-              "span": 8,
-              "pattern_label": "แต้ม 21 | คู่:คี่ 3:3 | ห่าง 8"
+              "span": 4,
+              "pattern_label": "แต้ม 45 | คู่:คี่ 3:3 | ห่าง 4"
             }
           },
           {
-            "number": "564533",
+            "number": "648987",
             "score": 1.0,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 26,
+              "digit_sum": 42,
+              "even_odd": "4:2",
+              "high_low": "5:1",
+              "unique_digits": 5,
+              "span": 5,
+              "pattern_label": "แต้ม 42 | คู่:คี่ 4:2 | ห่าง 5"
+            }
+          },
+          {
+            "number": "522115",
+            "score": 1.0,
+            "model_votes": [
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 16,
               "even_odd": "2:4",
+              "high_low": "2:4",
+              "unique_digits": 3,
+              "span": 4,
+              "pattern_label": "แต้ม 16 | คู่:คี่ 2:4 | ห่าง 4"
+            }
+          },
+          {
+            "number": "627050",
+            "score": 1.0,
+            "model_votes": [
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 20,
+              "even_odd": "4:2",
               "high_low": "3:3",
-              "unique_digits": 4,
-              "span": 3,
-              "pattern_label": "แต้ม 26 | คู่:คี่ 2:4 | ห่าง 3"
+              "unique_digits": 5,
+              "span": 7,
+              "pattern_label": "แต้ม 20 | คู่:คี่ 4:2 | ห่าง 7"
+            }
+          },
+          {
+            "number": "436275",
+            "score": 1.0,
+            "model_votes": [
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 27,
+              "even_odd": "3:3",
+              "high_low": "3:3",
+              "unique_digits": 6,
+              "span": 5,
+              "pattern_label": "แต้ม 27 | คู่:คี่ 3:3 | ห่าง 5"
             }
           }
         ],
@@ -577,8 +577,8 @@
           "feature_pattern": 0.08,
           "frequency": 0.083,
           "markov": 0.146,
-          "arima": 0.104,
-          "prophet": 0.104,
+          "arima": 0.125,
+          "prophet": 0.083,
           "lstm": 0.104,
           "monte_carlo": 0.104
         },
@@ -588,16 +588,16 @@
             "position_name": "หลักแสน",
             "top_digits": [
               {
-                "digit": "6",
-                "probability": 11.4
+                "digit": "5",
+                "probability": 12.1
               },
               {
                 "digit": "4",
-                "probability": 10.5
+                "probability": 11.6
               },
               {
-                "digit": "7",
-                "probability": 10.4
+                "digit": "0",
+                "probability": 11.4
               }
             ]
           },
@@ -606,16 +606,16 @@
             "position_name": "หลักหมื่น",
             "top_digits": [
               {
-                "digit": "6",
-                "probability": 12.7
+                "digit": "2",
+                "probability": 13.2
               },
               {
-                "digit": "2",
+                "digit": "4",
                 "probability": 12.7
               },
               {
                 "digit": "8",
-                "probability": 11.2
+                "probability": 12.0
               }
             ]
           },
@@ -624,16 +624,16 @@
             "position_name": "หลักพัน",
             "top_digits": [
               {
+                "digit": "7",
+                "probability": 13.3
+              },
+              {
                 "digit": "2",
-                "probability": 12.1
+                "probability": 12.6
               },
               {
-                "digit": "1",
-                "probability": 11.8
-              },
-              {
-                "digit": "9",
-                "probability": 11.0
+                "digit": "8",
+                "probability": 10.7
               }
             ]
           },
@@ -642,16 +642,16 @@
             "position_name": "หลักร้อย",
             "top_digits": [
               {
-                "digit": "6",
-                "probability": 11.8
+                "digit": "2",
+                "probability": 11.6
               },
               {
-                "digit": "7",
-                "probability": 11.3
+                "digit": "6",
+                "probability": 11.6
               },
               {
                 "digit": "5",
-                "probability": 10.3
+                "probability": 10.6
               }
             ]
           },
@@ -661,15 +661,15 @@
             "top_digits": [
               {
                 "digit": "3",
-                "probability": 12.3
+                "probability": 13.7
               },
               {
                 "digit": "0",
-                "probability": 11.5
+                "probability": 11.3
               },
               {
-                "digit": "1",
-                "probability": 11.1
+                "digit": "8",
+                "probability": 11.0
               }
             ]
           },
@@ -678,16 +678,16 @@
             "position_name": "หลักหน่วย",
             "top_digits": [
               {
-                "digit": "4",
-                "probability": 12.6
+                "digit": "2",
+                "probability": 11.5
               },
               {
-                "digit": "2",
-                "probability": 11.2
+                "digit": "0",
+                "probability": 10.9
               },
               {
                 "digit": "5",
-                "probability": 10.8
+                "probability": 10.6
               }
             ]
           }
@@ -957,134 +957,134 @@
         "arima": {
           "top10": [
             {
-              "number": "991",
-              "score": 0.001468
-            },
-            {
-              "number": "491",
-              "score": 0.001442
+              "number": "920",
+              "score": 0.001843
             },
             {
               "number": "921",
-              "score": 0.001441
+              "score": 0.001828
             },
             {
-              "number": "421",
-              "score": 0.001416
+              "number": "320",
+              "score": 0.001797
             },
             {
-              "number": "951",
-              "score": 0.001405
+              "number": "970",
+              "score": 0.001792
             },
             {
-              "number": "911",
-              "score": 0.001386
-            },
-            {
-              "number": "451",
-              "score": 0.00138
-            },
-            {
-              "number": "411",
-              "score": 0.001362
-            },
-            {
-              "number": "961",
-              "score": 0.00135
+              "number": "321",
+              "score": 0.001783
             },
             {
               "number": "971",
-              "score": 0.001332
+              "score": 0.001777
+            },
+            {
+              "number": "370",
+              "score": 0.001747
+            },
+            {
+              "number": "371",
+              "score": 0.001733
+            },
+            {
+              "number": "926",
+              "score": 0.001693
+            },
+            {
+              "number": "910",
+              "score": 0.001691
             }
           ],
-          "weight": 0.104
+          "weight": 0.125
         },
         "prophet": {
           "top10": [
             {
               "number": "991",
-              "score": 0.001468
+              "score": 0.006571
             },
             {
-              "number": "491",
-              "score": 0.001442
+              "number": "996",
+              "score": 0.004962
+            },
+            {
+              "number": "941",
+              "score": 0.004872
             },
             {
               "number": "921",
-              "score": 0.001441
+              "score": 0.004753
             },
             {
-              "number": "421",
-              "score": 0.001416
+              "number": "791",
+              "score": 0.004562
             },
             {
-              "number": "951",
-              "score": 0.001405
+              "number": "995",
+              "score": 0.004505
             },
             {
-              "number": "911",
-              "score": 0.001386
+              "number": "997",
+              "score": 0.004381
             },
             {
-              "number": "451",
-              "score": 0.00138
+              "number": "931",
+              "score": 0.004326
             },
             {
-              "number": "411",
-              "score": 0.001362
+              "number": "901",
+              "score": 0.004114
             },
             {
-              "number": "961",
-              "score": 0.00135
-            },
-            {
-              "number": "971",
-              "score": 0.001332
+              "number": "990",
+              "score": 0.003956
             }
           ],
-          "weight": 0.104
+          "weight": 0.083
         },
         "lstm": {
           "top10": [
             {
-              "number": "407",
-              "score": 0.1661
+              "number": "300",
+              "score": 0.2307
             },
             {
-              "number": "407",
-              "score": 0.1661
+              "number": "300",
+              "score": 0.2307
             },
             {
-              "number": "407",
-              "score": 0.1661
+              "number": "300",
+              "score": 0.2307
             },
             {
-              "number": "407",
-              "score": 0.1661
+              "number": "300",
+              "score": 0.2307
             },
             {
-              "number": "711",
-              "score": 0.1547
+              "number": "298",
+              "score": 0.1241
             },
             {
-              "number": "711",
-              "score": 0.1547
+              "number": "298",
+              "score": 0.1241
             },
             {
-              "number": "711",
-              "score": 0.1547
+              "number": "298",
+              "score": 0.1241
             },
             {
-              "number": "123",
-              "score": 0.122
+              "number": "974",
+              "score": 0.1011
             },
             {
-              "number": "123",
-              "score": 0.122
+              "number": "974",
+              "score": 0.1011
             },
             {
-              "number": "123",
-              "score": 0.122
+              "number": "974",
+              "score": 0.1011
             }
           ],
           "weight": 0.104
@@ -1094,62 +1094,62 @@
             {
               "number": "871",
               "score": 1.0,
-              "sim_hits": 92,
-              "percentage": 0.18
+              "sim_hits": 114,
+              "percentage": 0.23
+            },
+            {
+              "number": "971",
+              "score": 0.9474,
+              "sim_hits": 108,
+              "percentage": 0.22
             },
             {
               "number": "975",
-              "score": 0.9891,
-              "sim_hits": 91,
-              "percentage": 0.18
-            },
-            {
-              "number": "941",
-              "score": 0.9457,
-              "sim_hits": 87,
-              "percentage": 0.17
-            },
-            {
-              "number": "998",
-              "score": 0.9457,
-              "sim_hits": 87,
-              "percentage": 0.17
-            },
-            {
-              "number": "051",
-              "score": 0.9457,
-              "sim_hits": 87,
-              "percentage": 0.17
-            },
-            {
-              "number": "961",
-              "score": 0.9348,
-              "sim_hits": 86,
-              "percentage": 0.17
-            },
-            {
-              "number": "972",
-              "score": 0.9348,
-              "sim_hits": 86,
-              "percentage": 0.17
-            },
-            {
-              "number": "981",
-              "score": 0.913,
-              "sim_hits": 84,
-              "percentage": 0.17
+              "score": 0.9386,
+              "sim_hits": 107,
+              "percentage": 0.21
             },
             {
               "number": "974",
-              "score": 0.9022,
-              "sim_hits": 83,
-              "percentage": 0.17
+              "score": 0.8596,
+              "sim_hits": 98,
+              "percentage": 0.2
             },
             {
-              "number": "911",
-              "score": 0.8913,
-              "sim_hits": 82,
-              "percentage": 0.16
+              "number": "961",
+              "score": 0.8596,
+              "sim_hits": 98,
+              "percentage": 0.2
+            },
+            {
+              "number": "076",
+              "score": 0.8246,
+              "sim_hits": 94,
+              "percentage": 0.19
+            },
+            {
+              "number": "972",
+              "score": 0.7807,
+              "sim_hits": 89,
+              "percentage": 0.18
+            },
+            {
+              "number": "921",
+              "score": 0.7807,
+              "sim_hits": 89,
+              "percentage": 0.18
+            },
+            {
+              "number": "571",
+              "score": 0.7719,
+              "sim_hits": 88,
+              "percentage": 0.18
+            },
+            {
+              "number": "878",
+              "score": 0.7719,
+              "sim_hits": 88,
+              "percentage": 0.18
             }
           ],
           "weight": 0.104
@@ -1158,13 +1158,29 @@
       "ensemble": {
         "top10": [
           {
-            "number": "961",
+            "number": "971",
             "score": 1.0,
             "model_votes": [
               "frequency",
               "markov",
               "arima",
-              "prophet",
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 17,
+              "even_odd": "0:3",
+              "high_low": "2:1",
+              "unique_digits": 3,
+              "span": 8,
+              "pattern_label": "แต้ม 17 | คู่:คี่ 0:3 | ห่าง 8"
+            }
+          },
+          {
+            "number": "961",
+            "score": 0.9029,
+            "model_votes": [
+              "frequency",
+              "markov",
               "monte_carlo"
             ],
             "feature_breakdown": {
@@ -1178,7 +1194,7 @@
           },
           {
             "number": "975",
-            "score": 0.8532,
+            "score": 0.7782,
             "model_votes": [
               "markov",
               "monte_carlo"
@@ -1193,8 +1209,8 @@
             }
           },
           {
-            "number": "911",
-            "score": 0.7107,
+            "number": "921",
+            "score": 0.6143,
             "model_votes": [
               "frequency",
               "arima",
@@ -1202,17 +1218,17 @@
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 11,
-              "even_odd": "0:3",
+              "digit_sum": 12,
+              "even_odd": "1:2",
               "high_low": "1:2",
-              "unique_digits": 2,
+              "unique_digits": 3,
               "span": 8,
-              "pattern_label": "แต้ม 11 | คู่:คี่ 0:3 | ห่าง 8"
+              "pattern_label": "แต้ม 12 | คู่:คี่ 1:2 | ห่าง 8"
             }
           },
           {
             "number": "871",
-            "score": 0.569,
+            "score": 0.537,
             "model_votes": [
               "monte_carlo"
             ],
@@ -1226,53 +1242,39 @@
             }
           },
           {
-            "number": "941",
-            "score": 0.5381,
+            "number": "974",
+            "score": 0.5268,
             "model_votes": [
+              "lstm",
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 14,
+              "digit_sum": 20,
               "even_odd": "1:2",
-              "high_low": "1:2",
-              "unique_digits": 3,
-              "span": 8,
-              "pattern_label": "แต้ม 14 | คู่:คี่ 1:2 | ห่าง 8"
-            }
-          },
-          {
-            "number": "998",
-            "score": 0.5381,
-            "model_votes": [
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 26,
-              "even_odd": "1:2",
-              "high_low": "3:0",
-              "unique_digits": 2,
-              "span": 1,
-              "pattern_label": "แต้ม 26 | คู่:คี่ 1:2 | ห่าง 1"
-            }
-          },
-          {
-            "number": "051",
-            "score": 0.5381,
-            "model_votes": [
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 6,
-              "even_odd": "1:2",
-              "high_low": "1:2",
+              "high_low": "2:1",
               "unique_digits": 3,
               "span": 5,
-              "pattern_label": "แต้ม 6 | คู่:คี่ 1:2 | ห่าง 5"
+              "pattern_label": "แต้ม 20 | คู่:คี่ 1:2 | ห่าง 5"
+            }
+          },
+          {
+            "number": "076",
+            "score": 0.4428,
+            "model_votes": [
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 13,
+              "even_odd": "2:1",
+              "high_low": "2:1",
+              "unique_digits": 3,
+              "span": 7,
+              "pattern_label": "แต้ม 13 | คู่:คี่ 2:1 | ห่าง 7"
             }
           },
           {
             "number": "972",
-            "score": 0.5319,
+            "score": 0.4193,
             "model_votes": [
               "monte_carlo"
             ],
@@ -1286,36 +1288,33 @@
             }
           },
           {
-            "number": "971",
-            "score": 0.5206,
-            "model_votes": [
-              "frequency",
-              "markov",
-              "arima",
-              "prophet"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 17,
-              "even_odd": "0:3",
-              "high_low": "2:1",
-              "unique_digits": 3,
-              "span": 8,
-              "pattern_label": "แต้ม 17 | คู่:คี่ 0:3 | ห่าง 8"
-            }
-          },
-          {
-            "number": "981",
-            "score": 0.5195,
+            "number": "571",
+            "score": 0.4145,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 18,
-              "even_odd": "1:2",
+              "digit_sum": 13,
+              "even_odd": "0:3",
               "high_low": "2:1",
               "unique_digits": 3,
-              "span": 8,
-              "pattern_label": "แต้ม 18 | คู่:คี่ 1:2 | ห่าง 8"
+              "span": 6,
+              "pattern_label": "แต้ม 13 | คู่:คี่ 0:3 | ห่าง 6"
+            }
+          },
+          {
+            "number": "878",
+            "score": 0.4145,
+            "model_votes": [
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 23,
+              "even_odd": "2:1",
+              "high_low": "3:0",
+              "unique_digits": 2,
+              "span": 1,
+              "pattern_label": "แต้ม 23 | คู่:คี่ 2:1 | ห่าง 1"
             }
           }
         ],
@@ -1323,8 +1322,8 @@
           "feature_pattern": 0.08,
           "frequency": 0.083,
           "markov": 0.146,
-          "arima": 0.104,
-          "prophet": 0.104,
+          "arima": 0.125,
+          "prophet": 0.083,
           "lstm": 0.104,
           "monte_carlo": 0.104
         },
@@ -1335,15 +1334,15 @@
             "top_digits": [
               {
                 "digit": "9",
-                "probability": 12.8
+                "probability": 13.3
               },
               {
-                "digit": "8",
-                "probability": 10.5
+                "digit": "3",
+                "probability": 11.4
               },
               {
                 "digit": "0",
-                "probability": 10.3
+                "probability": 10.9
               }
             ]
           },
@@ -1353,15 +1352,15 @@
             "top_digits": [
               {
                 "digit": "7",
-                "probability": 11.3
-              },
-              {
-                "digit": "9",
-                "probability": 10.9
+                "probability": 12.7
               },
               {
                 "digit": "6",
-                "probability": 10.8
+                "probability": 11.3
+              },
+              {
+                "digit": "1",
+                "probability": 11.2
               }
             ]
           },
@@ -1371,21 +1370,21 @@
             "top_digits": [
               {
                 "digit": "1",
-                "probability": 12.7
+                "probability": 12.8
               },
               {
                 "digit": "6",
-                "probability": 10.9
+                "probability": 11.2
               },
               {
-                "digit": "8",
-                "probability": 10.7
+                "digit": "5",
+                "probability": 10.5
               }
             ]
           }
         ],
         "digit_sum_analysis": {
-          "average_sum": 13.9,
+          "average_sum": 13.7,
           "expected_range": "6 - 20"
         },
         "radar_profile": {
@@ -1649,134 +1648,134 @@
         "arima": {
           "top10": [
             {
-              "number": "719",
-              "score": 0.001348
+              "number": "916",
+              "score": 0.002421
             },
             {
-              "number": "919",
-              "score": 0.001339
+              "number": "816",
+              "score": 0.002388
             },
             {
-              "number": "119",
-              "score": 0.001331
+              "number": "616",
+              "score": 0.002197
             },
             {
-              "number": "819",
-              "score": 0.001331
+              "number": "516",
+              "score": 0.002184
             },
             {
-              "number": "219",
-              "score": 0.001322
+              "number": "216",
+              "score": 0.002076
             },
             {
-              "number": "714",
-              "score": 0.001315
+              "number": "936",
+              "score": 0.002075
             },
             {
-              "number": "914",
-              "score": 0.001307
+              "number": "836",
+              "score": 0.002047
             },
             {
-              "number": "519",
-              "score": 0.001304
+              "number": "016",
+              "score": 0.002
             },
             {
-              "number": "114",
-              "score": 0.001299
+              "number": "946",
+              "score": 0.001985
             },
             {
-              "number": "814",
-              "score": 0.001299
+              "number": "917",
+              "score": 0.001969
             }
           ],
-          "weight": 0.104
+          "weight": 0.125
         },
         "prophet": {
           "top10": [
             {
-              "number": "719",
-              "score": 0.001348
+              "number": "440",
+              "score": 0.007712
             },
             {
-              "number": "919",
-              "score": 0.001339
+              "number": "040",
+              "score": 0.006641
             },
             {
-              "number": "119",
-              "score": 0.001331
+              "number": "449",
+              "score": 0.006057
             },
             {
-              "number": "819",
-              "score": 0.001331
+              "number": "444",
+              "score": 0.006044
             },
             {
-              "number": "219",
-              "score": 0.001322
+              "number": "430",
+              "score": 0.005656
             },
             {
-              "number": "714",
-              "score": 0.001315
+              "number": "049",
+              "score": 0.005216
             },
             {
-              "number": "914",
-              "score": 0.001307
+              "number": "448",
+              "score": 0.005213
             },
             {
-              "number": "519",
-              "score": 0.001304
+              "number": "044",
+              "score": 0.005205
             },
             {
-              "number": "114",
-              "score": 0.001299
+              "number": "030",
+              "score": 0.004871
             },
             {
-              "number": "814",
-              "score": 0.001299
+              "number": "740",
+              "score": 0.004527
             }
           ],
-          "weight": 0.104
+          "weight": 0.083
         },
         "lstm": {
           "top10": [
             {
-              "number": "008",
-              "score": 0.1776
+              "number": "193",
+              "score": 0.2249
             },
             {
-              "number": "008",
-              "score": 0.1776
+              "number": "193",
+              "score": 0.2249
             },
             {
-              "number": "008",
-              "score": 0.1776
+              "number": "193",
+              "score": 0.2249
             },
             {
-              "number": "008",
-              "score": 0.1776
+              "number": "193",
+              "score": 0.2249
             },
             {
-              "number": "567",
-              "score": 0.1333
+              "number": "312",
+              "score": 0.1709
             },
             {
-              "number": "567",
-              "score": 0.1333
+              "number": "312",
+              "score": 0.1709
             },
             {
-              "number": "567",
-              "score": 0.1333
+              "number": "312",
+              "score": 0.1709
             },
             {
-              "number": "430",
-              "score": 0.1167
+              "number": "531",
+              "score": 0.1101
             },
             {
-              "number": "430",
-              "score": 0.1167
+              "number": "531",
+              "score": 0.1101
             },
             {
-              "number": "430",
-              "score": 0.1167
+              "number": "531",
+              "score": 0.1101
             }
           ],
           "weight": 0.104
@@ -1784,64 +1783,64 @@
         "monte_carlo": {
           "top10": [
             {
-              "number": "115",
+              "number": "615",
               "score": 1.0,
+              "sim_hits": 110,
+              "percentage": 0.22
+            },
+            {
+              "number": "535",
+              "score": 0.9818,
               "sim_hits": 108,
               "percentage": 0.22
             },
             {
-              "number": "619",
-              "score": 0.8704,
-              "sim_hits": 94,
-              "percentage": 0.19
+              "number": "516",
+              "score": 0.9818,
+              "sim_hits": 108,
+              "percentage": 0.22
             },
             {
-              "number": "831",
-              "score": 0.8519,
-              "sim_hits": 92,
-              "percentage": 0.18
+              "number": "936",
+              "score": 0.9636,
+              "sim_hits": 106,
+              "percentage": 0.21
             },
             {
-              "number": "531",
-              "score": 0.8519,
-              "sim_hits": 92,
-              "percentage": 0.18
+              "number": "816",
+              "score": 0.9636,
+              "sim_hits": 106,
+              "percentage": 0.21
             },
             {
-              "number": "535",
-              "score": 0.8426,
-              "sim_hits": 91,
-              "percentage": 0.18
+              "number": "616",
+              "score": 0.9364,
+              "sim_hits": 103,
+              "percentage": 0.21
+            },
+            {
+              "number": "836",
+              "score": 0.9091,
+              "sim_hits": 100,
+              "percentage": 0.2
             },
             {
               "number": "814",
-              "score": 0.8241,
-              "sim_hits": 89,
-              "percentage": 0.18
+              "score": 0.9,
+              "sim_hits": 99,
+              "percentage": 0.2
             },
             {
-              "number": "819",
-              "score": 0.8056,
-              "sim_hits": 87,
-              "percentage": 0.17
+              "number": "815",
+              "score": 0.9,
+              "sim_hits": 99,
+              "percentage": 0.2
             },
             {
-              "number": "835",
-              "score": 0.7778,
-              "sim_hits": 84,
-              "percentage": 0.17
-            },
-            {
-              "number": "139",
-              "score": 0.7685,
-              "sim_hits": 83,
-              "percentage": 0.17
-            },
-            {
-              "number": "519",
-              "score": 0.7593,
-              "sim_hits": 82,
-              "percentage": 0.16
+              "number": "818",
+              "score": 0.8909,
+              "sim_hits": 98,
+              "percentage": 0.2
             }
           ],
           "weight": 0.104
@@ -1866,44 +1865,57 @@
             }
           },
           {
-            "number": "531",
-            "score": 0.94,
+            "number": "615",
+            "score": 0.6479,
             "model_votes": [
-              "markov",
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 9,
-              "even_odd": "0:3",
-              "high_low": "1:2",
-              "unique_digits": 3,
-              "span": 4,
-              "pattern_label": "แต้ม 9 | คู่:คี่ 0:3 | ห่าง 4"
-            }
-          },
-          {
-            "number": "835",
-            "score": 0.9139,
-            "model_votes": [
-              "markov",
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 16,
+              "digit_sum": 12,
               "even_odd": "1:2",
               "high_low": "2:1",
               "unique_digits": 3,
               "span": 5,
-              "pattern_label": "แต้ม 16 | คู่:คี่ 1:2 | ห่าง 5"
+              "pattern_label": "แต้ม 12 | คู่:คี่ 1:2 | ห่าง 5"
             }
           },
           {
-            "number": "819",
-            "score": 0.8249,
+            "number": "516",
+            "score": 0.6368,
             "model_votes": [
-              "frequency",
               "arima",
-              "prophet",
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 12,
+              "even_odd": "1:2",
+              "high_low": "2:1",
+              "unique_digits": 3,
+              "span": 5,
+              "pattern_label": "แต้ม 12 | คู่:คี่ 1:2 | ห่าง 5"
+            }
+          },
+          {
+            "number": "816",
+            "score": 0.6251,
+            "model_votes": [
+              "arima",
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 15,
+              "even_odd": "2:1",
+              "high_low": "2:1",
+              "unique_digits": 3,
+              "span": 7,
+              "pattern_label": "แต้ม 15 | คู่:คี่ 2:1 | ห่าง 7"
+            }
+          },
+          {
+            "number": "936",
+            "score": 0.625,
+            "model_votes": [
+              "arima",
               "monte_carlo"
             ],
             "feature_breakdown": {
@@ -1911,79 +1923,46 @@
               "even_odd": "1:2",
               "high_low": "2:1",
               "unique_digits": 3,
-              "span": 8,
-              "pattern_label": "แต้ม 18 | คู่:คี่ 1:2 | ห่าง 8"
+              "span": 6,
+              "pattern_label": "แต้ม 18 | คู่:คี่ 1:2 | ห่าง 6"
             }
           },
           {
-            "number": "519",
-            "score": 0.7904,
+            "number": "616",
+            "score": 0.6074,
             "model_votes": [
-              "frequency",
               "arima",
-              "prophet",
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 15,
-              "even_odd": "0:3",
+              "digit_sum": 13,
+              "even_odd": "2:1",
               "high_low": "2:1",
-              "unique_digits": 3,
-              "span": 8,
-              "pattern_label": "แต้ม 15 | คู่:คี่ 0:3 | ห่าง 8"
-            }
-          },
-          {
-            "number": "115",
-            "score": 0.7122,
-            "model_votes": [
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 7,
-              "even_odd": "0:3",
-              "high_low": "1:2",
               "unique_digits": 2,
-              "span": 4,
-              "pattern_label": "แต้ม 7 | คู่:คี่ 0:3 | ห่าง 4"
+              "span": 5,
+              "pattern_label": "แต้ม 13 | คู่:คี่ 2:1 | ห่าง 5"
             }
           },
           {
-            "number": "619",
-            "score": 0.6199,
+            "number": "836",
+            "score": 0.5897,
             "model_votes": [
+              "arima",
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 16,
-              "even_odd": "1:2",
+              "digit_sum": 17,
+              "even_odd": "2:1",
               "high_low": "2:1",
               "unique_digits": 3,
-              "span": 8,
-              "pattern_label": "แต้ม 16 | คู่:คี่ 1:2 | ห่าง 8"
-            }
-          },
-          {
-            "number": "831",
-            "score": 0.6067,
-            "model_votes": [
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 12,
-              "even_odd": "1:2",
-              "high_low": "1:2",
-              "unique_digits": 3,
-              "span": 7,
-              "pattern_label": "แต้ม 12 | คู่:คี่ 1:2 | ห่าง 7"
+              "span": 5,
+              "pattern_label": "แต้ม 17 | คู่:คี่ 2:1 | ห่าง 5"
             }
           },
           {
             "number": "814",
-            "score": 0.5876,
+            "score": 0.5832,
             "model_votes": [
-              "arima",
-              "prophet",
               "monte_carlo"
             ],
             "feature_breakdown": {
@@ -1996,18 +1975,33 @@
             }
           },
           {
-            "number": "139",
-            "score": 0.5473,
+            "number": "815",
+            "score": 0.5832,
             "model_votes": [
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 13,
-              "even_odd": "0:3",
-              "high_low": "1:2",
+              "digit_sum": 14,
+              "even_odd": "1:2",
+              "high_low": "2:1",
               "unique_digits": 3,
-              "span": 8,
-              "pattern_label": "แต้ม 13 | คู่:คี่ 0:3 | ห่าง 8"
+              "span": 7,
+              "pattern_label": "แต้ม 14 | คู่:คี่ 1:2 | ห่าง 7"
+            }
+          },
+          {
+            "number": "818",
+            "score": 0.5773,
+            "model_votes": [
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 17,
+              "even_odd": "2:1",
+              "high_low": "2:1",
+              "unique_digits": 2,
+              "span": 7,
+              "pattern_label": "แต้ม 17 | คู่:คี่ 2:1 | ห่าง 7"
             }
           }
         ],
@@ -2015,8 +2009,8 @@
           "feature_pattern": 0.08,
           "frequency": 0.083,
           "markov": 0.146,
-          "arima": 0.104,
-          "prophet": 0.104,
+          "arima": 0.125,
+          "prophet": 0.083,
           "lstm": 0.104,
           "monte_carlo": 0.104
         },
@@ -2026,16 +2020,16 @@
             "position_name": "หลักที่ 1",
             "top_digits": [
               {
-                "digit": "5",
-                "probability": 10.9
+                "digit": "8",
+                "probability": 11.8
               },
               {
-                "digit": "8",
-                "probability": 10.8
+                "digit": "5",
+                "probability": 11.4
               },
               {
                 "digit": "6",
-                "probability": 10.6
+                "probability": 11.3
               }
             ]
           },
@@ -2044,16 +2038,16 @@
             "position_name": "หลักที่ 2",
             "top_digits": [
               {
-                "digit": "3",
-                "probability": 12.9
+                "digit": "1",
+                "probability": 14.0
               },
               {
-                "digit": "1",
-                "probability": 12.3
+                "digit": "3",
+                "probability": 13.5
               },
               {
                 "digit": "4",
-                "probability": 10.7
+                "probability": 11.5
               }
             ]
           },
@@ -2062,22 +2056,22 @@
             "position_name": "หลักที่ 3",
             "top_digits": [
               {
-                "digit": "9",
-                "probability": 11.4
-              },
-              {
-                "digit": "4",
-                "probability": 11.3
+                "digit": "6",
+                "probability": 12.3
               },
               {
                 "digit": "5",
-                "probability": 11.2
+                "probability": 11.3
+              },
+              {
+                "digit": "1",
+                "probability": 10.9
               }
             ]
           }
         ],
         "digit_sum_analysis": {
-          "average_sum": 13.3,
+          "average_sum": 13.6,
           "expected_range": "6 - 20"
         },
         "radar_profile": {
@@ -2341,134 +2335,134 @@
         "arima": {
           "top10": [
             {
-              "number": "76",
-              "score": 0.017412
-            },
-            {
-              "number": "78",
-              "score": 0.015213
-            },
-            {
               "number": "71",
-              "score": 0.015029
+              "score": 0.021608
+            },
+            {
+              "number": "41",
+              "score": 0.020853
+            },
+            {
+              "number": "91",
+              "score": 0.019525
+            },
+            {
+              "number": "11",
+              "score": 0.019456
+            },
+            {
+              "number": "31",
+              "score": 0.018416
+            },
+            {
+              "number": "76",
+              "score": 0.015527
             },
             {
               "number": "73",
-              "score": 0.014846
-            },
-            {
-              "number": "66",
-              "score": 0.013656
-            },
-            {
-              "number": "72",
-              "score": 0.013563
-            },
-            {
-              "number": "26",
-              "score": 0.012974
+              "score": 0.015014
             },
             {
               "number": "46",
-              "score": 0.012974
+              "score": 0.014985
             },
             {
-              "number": "79",
-              "score": 0.01283
+              "number": "01",
+              "score": 0.01492
             },
             {
-              "number": "70",
-              "score": 0.012647
+              "number": "43",
+              "score": 0.014489
             }
           ],
-          "weight": 0.104
+          "weight": 0.125
         },
         "prophet": {
           "top10": [
             {
-              "number": "76",
-              "score": 0.017412
+              "number": "20",
+              "score": 0.033304
             },
             {
-              "number": "78",
-              "score": 0.015213
+              "number": "10",
+              "score": 0.03148
             },
             {
-              "number": "71",
-              "score": 0.015029
+              "number": "28",
+              "score": 0.030562
             },
             {
-              "number": "73",
-              "score": 0.014846
+              "number": "18",
+              "score": 0.028888
             },
             {
-              "number": "66",
-              "score": 0.013656
+              "number": "40",
+              "score": 0.022964
             },
             {
-              "number": "72",
-              "score": 0.013563
+              "number": "80",
+              "score": 0.022176
             },
             {
-              "number": "26",
-              "score": 0.012974
+              "number": "25",
+              "score": 0.021574
             },
             {
-              "number": "46",
-              "score": 0.012974
+              "number": "50",
+              "score": 0.02119
             },
             {
-              "number": "79",
-              "score": 0.01283
+              "number": "48",
+              "score": 0.021073
             },
             {
-              "number": "70",
-              "score": 0.012647
+              "number": "27",
+              "score": 0.020862
             }
           ],
-          "weight": 0.104
+          "weight": 0.083
         },
         "lstm": {
           "top10": [
             {
-              "number": "08",
+              "number": "88",
               "score": 1.0
-            },
-            {
-              "number": "68",
-              "score": 1.0
-            },
-            {
-              "number": "07",
-              "score": 0.8887
-            },
-            {
-              "number": "67",
-              "score": 0.8887
             },
             {
               "number": "48",
-              "score": 0.8755
+              "score": 0.809
             },
             {
-              "number": "58",
-              "score": 0.8755
+              "number": "83",
+              "score": 0.7722
             },
             {
-              "number": "78",
-              "score": 0.8755
+              "number": "86",
+              "score": 0.7135
             },
             {
-              "number": "00",
-              "score": 0.778
+              "number": "85",
+              "score": 0.7076
             },
             {
-              "number": "05",
-              "score": 0.778
+              "number": "81",
+              "score": 0.6862
             },
             {
-              "number": "06",
-              "score": 0.778
+              "number": "82",
+              "score": 0.6531
+            },
+            {
+              "number": "43",
+              "score": 0.6247
+            },
+            {
+              "number": "89",
+              "score": 0.6005
+            },
+            {
+              "number": "46",
+              "score": 0.5772
             }
           ],
           "weight": 0.104
@@ -2476,64 +2470,64 @@
         "monte_carlo": {
           "top10": [
             {
-              "number": "78",
-              "score": 1.0,
-              "sim_hits": 871,
-              "percentage": 1.74
-            },
-            {
               "number": "71",
-              "score": 0.9392,
-              "sim_hits": 818,
-              "percentage": 1.64
+              "score": 1.0,
+              "sim_hits": 1035,
+              "percentage": 2.07
             },
             {
-              "number": "76",
-              "score": 0.9162,
-              "sim_hits": 798,
-              "percentage": 1.6
+              "number": "91",
+              "score": 0.8164,
+              "sim_hits": 845,
+              "percentage": 1.69
+            },
+            {
+              "number": "11",
+              "score": 0.801,
+              "sim_hits": 829,
+              "percentage": 1.66
             },
             {
               "number": "73",
-              "score": 0.9082,
-              "sim_hits": 791,
-              "percentage": 1.58
+              "score": 0.7913,
+              "sim_hits": 819,
+              "percentage": 1.64
             },
             {
-              "number": "72",
-              "score": 0.8393,
-              "sim_hits": 731,
-              "percentage": 1.46
+              "number": "78",
+              "score": 0.7662,
+              "sim_hits": 793,
+              "percentage": 1.59
             },
             {
-              "number": "68",
-              "score": 0.7623,
-              "sim_hits": 664,
-              "percentage": 1.33
+              "number": "41",
+              "score": 0.7275,
+              "sim_hits": 753,
+              "percentage": 1.51
             },
             {
-              "number": "79",
-              "score": 0.7463,
-              "sim_hits": 650,
-              "percentage": 1.3
+              "number": "76",
+              "score": 0.6889,
+              "sim_hits": 713,
+              "percentage": 1.43
             },
             {
-              "number": "77",
-              "score": 0.7268,
-              "sim_hits": 633,
-              "percentage": 1.27
+              "number": "31",
+              "score": 0.6763,
+              "sim_hits": 700,
+              "percentage": 1.4
             },
             {
-              "number": "74",
-              "score": 0.7245,
-              "sim_hits": 631,
-              "percentage": 1.26
+              "number": "96",
+              "score": 0.6522,
+              "sim_hits": 675,
+              "percentage": 1.35
             },
             {
-              "number": "70",
-              "score": 0.6831,
-              "sim_hits": 595,
-              "percentage": 1.19
+              "number": "51",
+              "score": 0.6512,
+              "sim_hits": 674,
+              "percentage": 1.35
             }
           ],
           "weight": 0.104
@@ -2542,13 +2536,61 @@
       "ensemble": {
         "top10": [
           {
-            "number": "78",
+            "number": "71",
             "score": 1.0,
             "model_votes": [
               "frequency",
               "arima",
-              "prophet",
-              "lstm",
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 8,
+              "even_odd": "0:2",
+              "high_low": "1:1",
+              "unique_digits": 2,
+              "span": 6,
+              "pattern_label": "แต้ม 8 | คู่:คี่ 0:2 | ห่าง 6"
+            }
+          },
+          {
+            "number": "11",
+            "score": 0.9771,
+            "model_votes": [
+              "markov",
+              "arima",
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 2,
+              "even_odd": "0:2",
+              "high_low": "0:2",
+              "unique_digits": 1,
+              "span": 0,
+              "pattern_label": "แต้ม 2 | คู่:คี่ 0:2 | ห่าง 0"
+            }
+          },
+          {
+            "number": "73",
+            "score": 0.8476,
+            "model_votes": [
+              "frequency",
+              "arima",
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 10,
+              "even_odd": "0:2",
+              "high_low": "1:1",
+              "unique_digits": 2,
+              "span": 4,
+              "pattern_label": "แต้ม 10 | คู่:คี่ 0:2 | ห่าง 4"
+            }
+          },
+          {
+            "number": "78",
+            "score": 0.8276,
+            "model_votes": [
+              "frequency",
               "monte_carlo"
             ],
             "feature_breakdown": {
@@ -2562,11 +2604,10 @@
           },
           {
             "number": "76",
-            "score": 0.7688,
+            "score": 0.7962,
             "model_votes": [
               "frequency",
               "arima",
-              "prophet",
               "monte_carlo"
             ],
             "feature_breakdown": {
@@ -2579,30 +2620,10 @@
             }
           },
           {
-            "number": "71",
-            "score": 0.7649,
+            "number": "91",
+            "score": 0.5881,
             "model_votes": [
-              "frequency",
               "arima",
-              "prophet",
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 8,
-              "even_odd": "0:2",
-              "high_low": "1:1",
-              "unique_digits": 2,
-              "span": 6,
-              "pattern_label": "แต้ม 8 | คู่:คี่ 0:2 | ห่าง 6"
-            }
-          },
-          {
-            "number": "73",
-            "score": 0.746,
-            "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
               "monte_carlo"
             ],
             "feature_breakdown": {
@@ -2610,109 +2631,75 @@
               "even_odd": "0:2",
               "high_low": "1:1",
               "unique_digits": 2,
-              "span": 4,
-              "pattern_label": "แต้ม 10 | คู่:คี่ 0:2 | ห่าง 4"
+              "span": 8,
+              "pattern_label": "แต้ม 10 | คู่:คี่ 0:2 | ห่าง 8"
             }
           },
           {
-            "number": "72",
-            "score": 0.6977,
+            "number": "43",
+            "score": 0.5829,
             "model_votes": [
-              "frequency",
+              "markov",
               "arima",
-              "prophet",
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 9,
-              "even_odd": "1:1",
-              "high_low": "1:1",
-              "unique_digits": 2,
-              "span": 5,
-              "pattern_label": "แต้ม 9 | คู่:คี่ 1:1 | ห่าง 5"
-            }
-          },
-          {
-            "number": "68",
-            "score": 0.6611,
-            "model_votes": [
-              "lstm",
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 14,
-              "even_odd": "2:0",
-              "high_low": "2:0",
-              "unique_digits": 2,
-              "span": 2,
-              "pattern_label": "แต้ม 14 | คู่:คี่ 2:0 | ห่าง 2"
-            }
-          },
-          {
-            "number": "79",
-            "score": 0.6396,
-            "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "monte_carlo"
-            ],
-            "feature_breakdown": {
-              "digit_sum": 16,
-              "even_odd": "0:2",
-              "high_low": "2:0",
-              "unique_digits": 2,
-              "span": 2,
-              "pattern_label": "แต้ม 16 | คู่:คี่ 0:2 | ห่าง 2"
-            }
-          },
-          {
-            "number": "70",
-            "score": 0.6024,
-            "model_votes": [
-              "frequency",
-              "arima",
-              "prophet",
-              "monte_carlo"
+              "lstm"
             ],
             "feature_breakdown": {
               "digit_sum": 7,
               "even_odd": "1:1",
-              "high_low": "1:1",
+              "high_low": "0:2",
               "unique_digits": 2,
-              "span": 7,
-              "pattern_label": "แต้ม 7 | คู่:คี่ 1:1 | ห่าง 7"
+              "span": 1,
+              "pattern_label": "แต้ม 7 | คู่:คี่ 1:1 | ห่าง 1"
             }
           },
           {
-            "number": "74",
-            "score": 0.5468,
+            "number": "46",
+            "score": 0.5634,
             "model_votes": [
               "feature_pattern",
-              "monte_carlo"
+              "frequency",
+              "arima",
+              "lstm"
             ],
             "feature_breakdown": {
-              "digit_sum": 11,
-              "even_odd": "1:1",
+              "digit_sum": 10,
+              "even_odd": "2:0",
               "high_low": "1:1",
               "unique_digits": 2,
-              "span": 3,
-              "pattern_label": "แต้ม 11 | คู่:คี่ 1:1 | ห่าง 3"
+              "span": 2,
+              "pattern_label": "แต้ม 10 | คู่:คี่ 2:0 | ห่าง 2"
             }
           },
           {
-            "number": "77",
-            "score": 0.4134,
+            "number": "41",
+            "score": 0.5253,
             "model_votes": [
+              "arima",
               "monte_carlo"
             ],
             "feature_breakdown": {
-              "digit_sum": 14,
+              "digit_sum": 5,
+              "even_odd": "1:1",
+              "high_low": "0:2",
+              "unique_digits": 2,
+              "span": 3,
+              "pattern_label": "แต้ม 5 | คู่:คี่ 1:1 | ห่าง 3"
+            }
+          },
+          {
+            "number": "31",
+            "score": 0.488,
+            "model_votes": [
+              "arima",
+              "monte_carlo"
+            ],
+            "feature_breakdown": {
+              "digit_sum": 4,
               "even_odd": "0:2",
-              "high_low": "2:0",
-              "unique_digits": 1,
-              "span": 0,
-              "pattern_label": "แต้ม 14 | คู่:คี่ 0:2 | ห่าง 0"
+              "high_low": "0:2",
+              "unique_digits": 2,
+              "span": 2,
+              "pattern_label": "แต้ม 4 | คู่:คี่ 0:2 | ห่าง 2"
             }
           }
         ],
@@ -2720,8 +2707,8 @@
           "feature_pattern": 0.08,
           "frequency": 0.083,
           "markov": 0.146,
-          "arima": 0.104,
-          "prophet": 0.104,
+          "arima": 0.125,
+          "prophet": 0.083,
           "lstm": 0.104,
           "monte_carlo": 0.104
         },
@@ -2732,15 +2719,15 @@
             "top_digits": [
               {
                 "digit": "7",
-                "probability": 14.2
+                "probability": 13.7
               },
               {
                 "digit": "9",
-                "probability": 10.2
+                "probability": 11.7
               },
               {
-                "digit": "6",
-                "probability": 10.2
+                "digit": "1",
+                "probability": 11.4
               }
             ]
           },
@@ -2749,22 +2736,22 @@
             "position_name": "หลักที่ 2",
             "top_digits": [
               {
-                "digit": "8",
-                "probability": 12.0
-              },
-              {
-                "digit": "6",
-                "probability": 11.3
+                "digit": "1",
+                "probability": 14.4
               },
               {
                 "digit": "3",
+                "probability": 11.6
+              },
+              {
+                "digit": "8",
                 "probability": 11.2
               }
             ]
           }
         ],
         "digit_sum_analysis": {
-          "average_sum": 9.2,
+          "average_sum": 9.0,
           "expected_range": "2 - 16"
         },
         "radar_profile": {
